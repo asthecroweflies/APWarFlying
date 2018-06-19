@@ -14,7 +14,7 @@
   
     width: 750px;
     height: 750px;
-    border: 2px solid #db8d08;
+    border: 1px solid #f7c97b;
     background-color: #ffe8c4;
     margin: auto;
     display: inline-block;
@@ -43,7 +43,7 @@
   .options {
     width: 200px;
     height: 100px;
-    margin-left: -200px;
+    margin-left: -220px;
     margin-top: -20px;
     position: relative;
     padding: 10px;
