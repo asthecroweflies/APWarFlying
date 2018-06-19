@@ -3,6 +3,7 @@
     <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="d3.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <meta charset="utf-8">
     <title>AP War Flying Simulator</title>
@@ -14,16 +15,19 @@
 
         </div>
         <div class="options">
-                <form>
-                        Dimensions (x, y):
-                        <br><br>
-                        <input type="text" name="xDim" value="20" size="5" style="text-align: center">
-                        <input type="text" name="yDim" value="20" size="5" style="text-align: center">
-                        <br><br>
-                        <input type="submit" id="generateButton" value="Generate!" style=" margin: auto; align-self: center; width: 120px">
-                    </form>
+            <form>
+                Dimensions (x, y):
+                <br><br>
+                <input type="text" id="xDim" value="20" size="5" style="text-align: center">
+                <input type="text" id="yDim" value="20" size="5" style="text-align: center">
+                <br><br>
+                <input type="button" id="generateButton" value="Generate!" style=" margin: auto; align-self: center; width: 120px" onclick="craftGrid()">
+                <input type="button" id="toggleAP" value="Place AP" onclick="plotAP()">
+                <input type="button" id="toggleDrone" value="Place drone location" onclick="plotDrone()">
+
+            </form>
         </div>
-        <div class="graph"></div>
+        <div class="graph" style="display: none;"></div>
     </div>
  
 </body>

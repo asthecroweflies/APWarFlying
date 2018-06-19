@@ -4,7 +4,7 @@
     width: 750px;
     height: 750px;
     top: 50%;
-    left: 30%;
+    left: 60%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 
@@ -20,8 +20,7 @@
     display: inline-block;
     z-index: 0;
     float: left;
-    padding: 5px;
-    
+
     position: absolute;
     top: 50%;
     left: 50%;
@@ -42,10 +41,9 @@
   }
 
   .options {
-
     width: 200px;
     height: 100px;
-    margin-left: -160px;
+    margin-left: -200px;
     margin-top: -20px;
     position: relative;
     padding: 10px;
