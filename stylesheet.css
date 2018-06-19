@@ -1,2 +1,52 @@
-/*d
-*/
+.container {
+    position: fixed;
+    padding: 0;
+    width: 750px;
+    height: 750px;
+    top: 50%;
+    left: 30%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+.gridContainer {
+  
+    width: 750px;
+    height: 750px;
+    border: 2px solid #db8d08;
+    background-color: #ffe8c4;
+    margin: auto;
+    display: inline-block;
+    z-index: 0;
+    float: left;
+    padding: 5px;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+  }
+
+  .graph {
+    width: 650px;
+    height: 500px;
+    border: 2px solid #db8d08;
+    position: relative;
+    float: right;
+    margin-right: -100%;
+    top: -15%;
+    background-color: #ffe8c4;
+  }
+
+  .options {
+
+    width: 200px;
+    height: 100px;
+    margin-left: -160px;
+    margin-top: -20px;
+    position: relative;
+    padding: 10px;
+  }
