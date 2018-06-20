@@ -9,6 +9,7 @@ var APs = [];
 var DroneLocations = {};
 var pi = 3.141592653589793238462643383279502884197;
 var spaceSelected = 0;
+var id = 0;
 
 $(document).ready(function() {
 
@@ -34,7 +35,8 @@ function gridData(xDim, yDim) {
                 width: cellWidth,
                 height: cellHeight,
                 clickCount: clickCount,
-                type: type
+                type: type,
+                id: id
             })
             xpos += cellWidth;
         }
@@ -86,6 +88,9 @@ var craftGrid = function() {
         .on('mouseout', handleMouseOut)
         .on('contextmenu', function (d, i) {
             d3.event.preventDefault();
+            if (d.type == "AP") {
+                id--;
+            }
             d.type = "blank";
             d3.select(this).style("fill", "#ffffff");
         })
@@ -108,6 +113,8 @@ function handleClick(d, i) {
     if (APToggled == 1) {
         //d.type = (d.type == "AP") ? "blank" : (d.type == "both") ? "both" : "AP";
         if (d.type == "blank") {
+            id++;
+            d.id = id;
             d3.select(this).style("fill", "#23AC23");
             d.type = "AP";
         }
@@ -143,25 +150,20 @@ function generateSignalGradient(d, radius) {
     APs.push(d);
     console.log("creating circle at: " + cX + ", " + cY);
     loadCircles(APs);
-    var gradientSpace = d3.select("#gradients").ent()
+    var gradientSpace = d3.select("#gradients")
         .append("svg")
         .attr("width", "752px")
         .attr("height", "752px");
-    //if (spaceSelected == 0) {
-
-        spaceSelected = 1;
-    //}
 
     var dataArr = [10, 20, 30, 40];
     //create circle
-    gradientSpace.append("g").selectAll("circle")
+    /*gradientSpace.append("g").selectAll("circle")
         .data(eval("dataArr"))
-        .enter()
         .append("circle")
         .attr("cx", cX)
         .attr("cy", cY)
         .attr("r", radius);
-/*
+    */
     var circleSelection = gradientSpace.append("circle")
         .attr("cx", cX)
         .attr("cy", cY)
@@ -169,7 +171,7 @@ function generateSignalGradient(d, radius) {
         .style("fill-opacity", 0.2)
         .style("stroke", "red")
         .style("fill", "green");
-    */
+    
 }
 
 function loadCircles(APs) {
