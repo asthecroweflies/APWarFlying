@@ -1,12 +1,14 @@
+//TODO: Add lines between DronePos
 
-//http://www.d3noob.org/2014/02/styles-in-d3js.html
-var divWidth, divHeight;
+var divWidth, divHeight, cellWidth, cellHeight;
 var APToggled = 0;
 var DroneToggled = 0;
 var generated = 0;
 var gridArray;
-var APs = {};
+var APs = [];
 var DroneLocations = {};
+var pi = 3.141592653589793238462643383279502884197;
+var spaceSelected = 0;
 
 $(document).ready(function() {
 
@@ -17,8 +19,8 @@ function gridData(xDim, yDim) {
     var data = new Array();
     var xpos = 1;
     var ypos = 1;
-    var cellWidth = Math.floor(divWidth / xDim);
-    var cellHeight = Math.floor(divHeight / yDim);
+    cellWidth = Math.floor(divWidth / xDim);
+    cellHeight = Math.floor(divHeight / yDim);
     var clickCount = 0;
     var type = "blank";
 
@@ -44,21 +46,25 @@ function gridData(xDim, yDim) {
 
 var craftGrid = function() {
     if (generated == 1) return;
-    if (generated == 0) generated = 1;
+    if (generated == 0) {
+        document.getElementById("generateButton").disabled = true;
+        generated = 1;
+    } 
 
     var xDim = $("#xDim").val();
     var yDim = $("#yDim").val();
+    var divFactor = 5;
 
-    if ( ((xDim <= 0) || ((xDim % 25) != 0) ) ||
-          (yDim <= 0) || ((yDim % 25) != 0) ) {
-            alert("Dimensions must be (0, 75] & evenly divisible by 25.");
+    if ( ((xDim <= 0) || ((xDim % divFactor) != 0) ) ||
+          (yDim <= 0) || ((yDim % divFactor) != 0) ) {
+            alert("Dimensions must be (0, 75] & evenly divisible by " + divFactor + ".");
             return;
          }
     gridArray = gridData(xDim, yDim);
     var grid = d3.select("#grid")
         .append("svg")
-        .attr("width", "750px")
-        .attr("height", "750px");
+        .attr("width", "752px")
+        .attr("height", "752px");
 
     var row = grid.selectAll(".row")
         .data(gridArray)
@@ -75,8 +81,14 @@ var craftGrid = function() {
         .attr("height", function(d) { return d.height; })
         .style("fill", "#ffffff")
         .style("stroke", "#222")
+        .style("stroke-width", 2)
         .on('mouseover', handleMouseOver)
         .on('mouseout', handleMouseOut)
+        .on('contextmenu', function (d, i) {
+            d3.event.preventDefault();
+            d.type = "blank";
+            d3.select(this).style("fill", "#ffffff");
+        })
         .on('click', handleClick);
         //.on('click', function(d) {
             
@@ -90,23 +102,80 @@ function handleClick(d, i) {
     d.clickCount++;
     console.clear();
     console.log(gridArray);
-    console.log(d.x + ", " + d.y);
-    radius = 10;
+
+    radius = cellWidth * pi;
 
     if (APToggled == 1) {
-        d3.select(this).style("fill", "#23AC23");
-        d.type = "AP";
-        generateSignalGradient(radius);
+        //d.type = (d.type == "AP") ? "blank" : (d.type == "both") ? "both" : "AP";
+        if (d.type == "blank") {
+            d3.select(this).style("fill", "#23AC23");
+            d.type = "AP";
+        }
+        else if (d.type == "AP") {
+            d3.select(this).style("fill", "#ffffff");
+            d.type = "blank";
+        }
+        else if (d.type == "both") {
+            
+        }
+        generateSignalGradient(d, radius);
     }
     if (DroneToggled == 1) {
-        d3.select(this).style("fill", "#aa3c36");
-        d.type = "DronePos";
+        if (d.type == "blank") {
+            d3.select(this).style("fill", "#aa3c36");
+            d.type = "DronePos";
+        }
+        else if (d.type == "DronePos") {
+            d3.select(this).style("fill", "#ffffff");
+            d.type = "blank";
+        }
+
+        else if (d.type == "AP") {
+            d3.select(this).style("fill", "#f4ce42");
+            d.type = "both";
+        }
     }
 }
 
-function generateSignalGradient(radius) {
+function generateSignalGradient(d, radius) {
+    var cX = d.x + d.width / 2;
+    var cY = d.y + d.height / 2;
+    APs.push(d);
+    console.log("creating circle at: " + cX + ", " + cY);
+    loadCircles(APs);
+    var gradientSpace = d3.select("#gradients").ent()
+        .append("svg")
+        .attr("width", "752px")
+        .attr("height", "752px");
+    //if (spaceSelected == 0) {
+
+        spaceSelected = 1;
+    //}
+
+    var dataArr = [10, 20, 30, 40];
+    //create circle
+    gradientSpace.append("g").selectAll("circle")
+        .data(eval("dataArr"))
+        .enter()
+        .append("circle")
+        .attr("cx", cX)
+        .attr("cy", cY)
+        .attr("r", radius);
+/*
+    var circleSelection = gradientSpace.append("circle")
+        .attr("cx", cX)
+        .attr("cy", cY)
+        .attr("r", radius)
+        .style("fill-opacity", 0.2)
+        .style("stroke", "red")
+        .style("fill", "green");
+    */
+}
+
+function loadCircles(APs) {
 
 }
+
 
 function handleMouseOver(d, i) {
     if (d.type == "blank" && APToggled) {
@@ -115,11 +184,17 @@ function handleMouseOver(d, i) {
     else if (d.type == "blank" && DroneToggled) {
         d3.select(this).style("fill", "#ff928c");
     }
+    else if (d.type == "AP" && DroneToggled) {
+        d3.select(this).style("fill", "#f4ce42");
+    }
 }
 
 function handleMouseOut(d, i) {
     if (d.type == "blank") {
         d3.select(this).style("fill", "#fff");
+    } else if (d.type == "AP") {
+        d3.select(this).style("fill", "#23AC23");
+
     }
 }
 

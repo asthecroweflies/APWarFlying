@@ -1,20 +1,27 @@
 .container {
     position: fixed;
     padding: 0;
-    width: 750px;
-    height: 750px;
+    width: 752px;
+    height: 752px;
     top: 50%;
     left: 60%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    box-shadow: 10px 10px 30px 1px #331f00;
 
+}
+
+p {
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
 }
 
 .gridContainer {
   
-    width: 750px;
-    height: 750px;
-    border: 1px solid #f7c97b;
+    width: 752px;
+    height: 752px;
+    /*border: 1px solid #f7c97b;*/
     background-color: #ffe8c4;
     margin: auto;
     display: inline-block;
@@ -48,3 +55,11 @@
     position: relative;
     padding: 10px;
   }
+
+  .optionButtons {
+    width: 100%;
+  }
+  
+input[type=button] {
+  width: 100%;
+}
