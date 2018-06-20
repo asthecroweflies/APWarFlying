@@ -6,10 +6,11 @@ var DroneToggled = 0;
 var generated = 0;
 var gridArray;
 var APs = [];
-var DroneLocations = {};
+var DroneLocations = [];
 var pi = 3.141592653589793238462643383279502884197;
-var spaceSelected = 0;
-var id = 0;
+var svgUsed = 0;
+var AP_id = 0;
+var Drone_id = 0;
 
 $(document).ready(function() {
 
@@ -24,8 +25,6 @@ function gridData(xDim, yDim) {
     cellHeight = Math.floor(divHeight / yDim);
     var clickCount = 0;
     var type = "blank";
-    var xCoord = 1;
-    var yCoord = 1;
 
     for (var row = 0; row < xDim; row++) {
         data.push( new Array() );
@@ -38,9 +37,10 @@ function gridData(xDim, yDim) {
                 height: cellHeight,
                 clickCount: clickCount,
                 type: type,
-                id: id,
-                xCoord: xCoord,
-                yCoord: yCoord
+                AP_id: AP_id,
+                Drone_id: Drone_id,
+                gridX: Math.floor(xpos / cellWidth),
+                gridY: Math.floor(ypos / cellHeight)
             })
             xpos += cellWidth;
         }
@@ -95,8 +95,12 @@ var craftGrid = function() {
             if (d.type == "AP") {
                 var removeIndex = APs.map(function(AP) { return AP.id; }).indexOf(d.id);
                 ~removeIndex && APs.splice(removeIndex, 1);
-                d.id = 0;
-                id--;
+                d.AP_id = 0;
+                d.Drone_id = 0;
+                AP_id--;
+                Drone_id--;
+                var svgContainer = d3.select("#gradients");
+                svgContainer.exit().remove();
             }
             d.type = "blank";
             d3.select(this).style("fill", "#ffffff");
@@ -108,113 +112,131 @@ var craftGrid = function() {
 };
 
 function handleClick(d, i) {
-    //d.clickCount++;
-    //console.clear();
-    //console.log(gridArray);
-
     radius = cellWidth * pi;
 
     if (APToggled == 1) {
-        //d.type = (d.type == "AP") ? "blank" : (d.type == "both") ? "both" : "AP";
         if (d.type == "blank") {
-            id++;
-            d.id = id;
+            d.AP_id = AP_id;
+            AP_id++;
             d3.select(this).style("fill", "#23AC23");
             d.type = "AP";
-            //console.log("id: " + id + " dis.id: " + d.id);
             APs.push(d);
         }
         else if (d.type == "AP") {
-            d3.select(this).style("fill", "#ffffff");
-            d.type = "blank";
+            d.clickCount++;
         }
-        else if (d.type == "both") {
-            //Already an AP
+        else if (d.type == "DronePos") {
+            d.type = "both";
+            d3.select(this).style("fill", "#f4ce42");
+            APs.push(d);
         }
     }
     if (DroneToggled == 1) {
         if (d.type == "blank") {
+            d.Drone_id = Drone_id;
+            Drone_id++;
             d3.select(this).style("fill", "#aa3c36");
             d.type = "DronePos";
+            DroneLocations.push(d);
         }
         else if (d.type == "DronePos") {
-            d3.select(this).style("fill", "#ffffff");
-            d.type = "blank";
+            //d3.select(this).style("fill", "#ffffff");
+            //d.type = "blank";
+
+            //Drone spends more time here?
+            //consider darkening
+            
         }
 
         else if (d.type == "AP") {
+            d.Drone_id = Drone_id;
+            Drone_id++;
             d3.select(this).style("fill", "#f4ce42");
             d.type = "both";
+            DroneLocations.push(d);
         }
     }
+    generateSignalIndicators();
 }
 
 function flyDrone() {//given array of all APs, create circles around them indicating signal strength
-    generateSignalIndicators(APs)
+    animateDrone();
+    generateSignalIndicators();
     console.log(APs);
+    console.log(DroneLocations);
 }
 
-function generateSignalIndicators(APs) {
-    console.log("circle?");
-    var gradientSpace = d3.select("#gradients")
-                          .append("svg")
-                          .attr("width", 752)
-                          .attr("heigth", 752)
-                          .selectAll("g")
-                          .data(APs)
-                          .enter()
-                          .append("g")
-                          .selectAll("circle")
-                          .data(function(d) {
-                              return d.id;
-                          })
-                          .enter()
-                          .append("circle")
-                          .attr("cx", function(d) {
-                              return d.cX;
-                          })
-                          .attr("cy", function(d) {
-                              return d.cY;
-                          })
-                          .attr("r", 20)
-                          .style("stroke", "red")
-                          .style("fill", "green");
-}
-
-function generateSignalGradient(d, radius) {
-    var cX = d.x + d.width / 2;
-    var cY = d.y + d.height / 2;
-    APs.push(d);
-    console.log("creating circle at: " + cX + ", " + cY);
-    loadCircles(APs);
-    var gradientSpace = d3.select("#gradients")
-        .append("svg")
-        .attr("width", "752px")
-        .attr("height", "752px");
-
-    var dataArr = [10, 20, 30, 40];
-    //create circle
-    /*gradientSpace.append("g").selectAll("circle")
-        .data(eval("dataArr"))
-        .append("circle")
-        .attr("cx", cX)
-        .attr("cy", cY)
-        .attr("r", radius);
-    */
-    var circleSelection = gradientSpace.append("circle")
-        .attr("cx", cX)
-        .attr("cy", cY)
-        .attr("r", radius)
-        .style("fill-opacity", 0.2)
-        .style("stroke", "red")
-        .style("fill", "green");
+function animateDrone() {
+    var droneImg = document.getElementById("droneImg");
+    droneImg.style.transitionDuration = 3 + 's';
+    droneImg.style.display = "block";
+    var droneWidth = droneImg.clientWidth;
+    var droneHeight = droneImg.clientHeight;
+    DroneCoords = [];
+    for (var i = 0; i < DroneLocations.length; i++) {
+        var coord = [DroneLocations[i].x, DroneLocations[i].y];
+        DroneCoords.push(coord)
+    }
     
+    var duration = setInterval(frame, 500);
+    var index = 0;
+    function frame() {
+        if (index == DroneCoords.length)
+            clearInterval(duration);
+        else {
+        var newX = DroneCoords[index][1];
+        var newY = DroneCoords[index][0];
+        droneImg.style.top = newX + (droneWidth / 2) + 'px';
+        droneImg.style.left = newY + (droneHeight / 2) + 'px';
+        console.log(newX + ', ' + newY);
+        //droneImg.style.transform = "translate(" + newX + "px," + newY + "px)"; 
+
+        index++;
+
+        }
+    };
+};
+
+function generateSignalIndicators() {
+    var radiusFactor = 4 * cellWidth;
+    if (svgUsed == 1) {
+        d3.select("svg").remove();
+        svgUsed = 0;
+    }
+
+    var svgContainer = d3.select("#gradients");
+
+    if (svgUsed == 0) { //only create svgContainer once
+        var svgContainer = d3.select("#gradients")
+                             .append("svg")
+                             .attr("width", 752)
+                             .attr("height", 752);
+        svgUsed = 1;
+    }
+
+    var circles = svgContainer.selectAll("circle")
+                              .data(APs)
+                              .enter()
+                              .append("circle")
+                              .on("contextmenu", function(e,i) {
+                                d3.event.preventDefault();
+                                if (e.type == "AP") {
+                                    var removeIndex = APs.map(function(AP) { return AP.AP_id; }).indexOf(e.AP_id);
+                                    ~removeIndex && APs.splice(removeIndex, 1);
+                                    update();
+                                    e.AP_id = 0;
+                                    AP_id--;
+                                }
+                            })
+                            .attr("cx", function(d){ return d.x + cellWidth / 2; })
+                            .attr("cy", function(d){ return d.y + cellHeight / 2; })
+                            .attr("r", function(d) { return ((d.clickCount % 3) + 1) * radiusFactor;})
+                            .attr("id", function(d){ return d.AP_id; })
+                            .style("fill", "green")
+                            .style("fill-opacity", 0.2)
+                            .style("stroke", "red");
+    svgContainer.exit().remove();
 }
-
-function loadCircles(APs) {
-
-}
-
 
 function handleMouseOver(d, i) {
     if (d.type == "blank" && APToggled) {
@@ -242,8 +264,6 @@ function plotAP() {
     document.getElementById("toggleAP").disabled = true;
     document.getElementById("toggleDrone").disabled = false;
     APToggled = (APToggled == 0) ? 1 : 0;
-    console.log("APToggled: " + APToggled);
-    console.log("DroneToggled: " + DroneToggled);
 
     if (APToggled == 1) {
         //var APButton = $()
@@ -255,9 +275,8 @@ function plotDrone() {
     document.getElementById("toggleDrone").disabled = true;
     document.getElementById("toggleAP").disabled = false;
     DroneToggled = (DroneToggled == 0) ? 1 : 0;
-    console.log("DroneToggled: " + DroneToggled);
-    console.log("APToggled: " + APToggled);
-
+    //console.log("DroneToggled: " + DroneToggled);
+    //console.log("APToggled: " + APToggled);
 
     if (DroneToggled == 1) {
         //var APButton = $()
@@ -269,5 +288,4 @@ window.onload = function() {
     divHeight = document.getElementById("grid").offsetHeight;    
     document.getElementById("toggleAP").disabled = true;
     document.getElementById("toggleDrone").disabled = true;
-
 };
