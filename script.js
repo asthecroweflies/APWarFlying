@@ -24,6 +24,8 @@ function gridData(xDim, yDim) {
     cellHeight = Math.floor(divHeight / yDim);
     var clickCount = 0;
     var type = "blank";
+    var xCoord = 1;
+    var yCoord = 1;
 
     for (var row = 0; row < xDim; row++) {
         data.push( new Array() );
@@ -36,7 +38,9 @@ function gridData(xDim, yDim) {
                 height: cellHeight,
                 clickCount: clickCount,
                 type: type,
-                id: id
+                id: id,
+                xCoord: xCoord,
+                yCoord: yCoord
             })
             xpos += cellWidth;
         }
@@ -89,24 +93,24 @@ var craftGrid = function() {
         .on('contextmenu', function (d, i) {
             d3.event.preventDefault();
             if (d.type == "AP") {
+                var removeIndex = APs.map(function(AP) { return AP.id; }).indexOf(d.id);
+                ~removeIndex && APs.splice(removeIndex, 1);
+                d.id = 0;
                 id--;
             }
             d.type = "blank";
             d3.select(this).style("fill", "#ffffff");
         })
         .on('click', handleClick);
-        //.on('click', function(d) {
-            
-       // });
     document.getElementById("toggleDrone").disabled = false;
     document.getElementById("toggleAP").disabled = false;
 
 };
 
 function handleClick(d, i) {
-    d.clickCount++;
-    console.clear();
-    console.log(gridArray);
+    //d.clickCount++;
+    //console.clear();
+    //console.log(gridArray);
 
     radius = cellWidth * pi;
 
@@ -117,15 +121,16 @@ function handleClick(d, i) {
             d.id = id;
             d3.select(this).style("fill", "#23AC23");
             d.type = "AP";
+            //console.log("id: " + id + " dis.id: " + d.id);
+            APs.push(d);
         }
         else if (d.type == "AP") {
             d3.select(this).style("fill", "#ffffff");
             d.type = "blank";
         }
         else if (d.type == "both") {
-            
+            //Already an AP
         }
-        generateSignalGradient(d, radius);
     }
     if (DroneToggled == 1) {
         if (d.type == "blank") {
@@ -142,6 +147,38 @@ function handleClick(d, i) {
             d.type = "both";
         }
     }
+}
+
+function flyDrone() {//given array of all APs, create circles around them indicating signal strength
+    generateSignalIndicators(APs)
+    console.log(APs);
+}
+
+function generateSignalIndicators(APs) {
+    console.log("circle?");
+    var gradientSpace = d3.select("#gradients")
+                          .append("svg")
+                          .attr("width", 752)
+                          .attr("heigth", 752)
+                          .selectAll("g")
+                          .data(APs)
+                          .enter()
+                          .append("g")
+                          .selectAll("circle")
+                          .data(function(d) {
+                              return d.id;
+                          })
+                          .enter()
+                          .append("circle")
+                          .attr("cx", function(d) {
+                              return d.cX;
+                          })
+                          .attr("cy", function(d) {
+                              return d.cY;
+                          })
+                          .attr("r", 20)
+                          .style("stroke", "red")
+                          .style("fill", "green");
 }
 
 function generateSignalGradient(d, radius) {
