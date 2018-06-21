@@ -61,5 +61,14 @@ p {
   }
   
 input[type=button] {
+  height: 48px;
   width: 100%;
+}
+
+#droneImg {
+  width: 100px;
+  height: 100px;
+  background: yellow;
+  border: 3px solid red;
+
 }

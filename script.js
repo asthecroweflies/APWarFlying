@@ -1,9 +1,8 @@
 //TODO: Add lines between DronePos
+//IDEA: for grid scale: have div's along the edge protrude line depecting distance
 
 var divWidth, divHeight, cellWidth, cellHeight;
-var APToggled = 0;
-var DroneToggled = 0;
-var generated = 0;
+var APToggled = 0, DroneToggled = 0, gridToggled = 0;
 var gridArray;
 var APs = [];
 var DroneLocations = [];
@@ -11,6 +10,9 @@ var pi = 3.141592653589793238462643383279502884197;
 var svgUsed = 0;
 var AP_id = 0;
 var Drone_id = 0;
+var colors = ["red", "orange", "yellow", "green", "blue", "purple"];
+var droneImage = new Image(75, 35);
+droneImage.src = '/res/drone_nobg.png';
 
 $(document).ready(function() {
 
@@ -51,21 +53,26 @@ function gridData(xDim, yDim) {
 }
 
 var craftGrid = function() {
-    if (generated == 1) return;
-    if (generated == 0) {
+
+    if (gridToggled == 1) return;
+    else if (gridToggled == 0) {
         document.getElementById("generateButton").disabled = true;
-        generated = 1;
+        //clearGrid();
+        gridToggled = 1;
     } 
 
     var xDim = $("#xDim").val();
     var yDim = $("#yDim").val();
-    var divFactor = 5;
 
+    // Input validation
+    var divFactor = 5;
     if ( ((xDim <= 0) || ((xDim % divFactor) != 0) ) ||
           (yDim <= 0) || ((yDim % divFactor) != 0) ) {
             alert("Dimensions must be (0, 75] & evenly divisible by " + divFactor + ".");
             return;
          }
+
+    // Create grid using
     gridArray = gridData(xDim, yDim);
     var grid = d3.select("#grid")
         .append("svg")
@@ -93,7 +100,7 @@ var craftGrid = function() {
         .on('contextmenu', function (d, i) {
             d3.event.preventDefault();
             if (d.type == "AP") {
-                var removeIndex = APs.map(function(AP) { return AP.id; }).indexOf(d.id);
+                var removeIndex = APs.map(function(AP) { return AP.AP_id; }).indexOf(d.AP_id);
                 ~removeIndex && APs.splice(removeIndex, 1);
                 d.AP_id = 0;
                 d.Drone_id = 0;
@@ -111,8 +118,11 @@ var craftGrid = function() {
 
 };
 
+function clearGrid() { 
+
+}
+
 function handleClick(d, i) {
-    radius = cellWidth * pi;
 
     if (APToggled == 1) {
         if (d.type == "blank") {
@@ -167,8 +177,8 @@ function flyDrone() {//given array of all APs, create circles around them indica
 }
 
 function animateDrone() {
-    var droneImg = document.getElementById("droneImg");
-    droneImg.style.transitionDuration = 3 + 's';
+    /*var droneImg = document.getElementById("droneImg");
+    droneImg.style.transitionDuration = 2 + 's';
     droneImg.style.display = "block";
     var droneWidth = droneImg.clientWidth;
     var droneHeight = droneImg.clientHeight;
@@ -179,6 +189,7 @@ function animateDrone() {
     }
     
     var duration = setInterval(frame, 500);
+
     var index = 0;
     function frame() {
         if (index == DroneCoords.length)
@@ -186,19 +197,52 @@ function animateDrone() {
         else {
         var newX = DroneCoords[index][1];
         var newY = DroneCoords[index][0];
-        droneImg.style.top = newX + (droneWidth / 2) + 'px';
-        droneImg.style.left = newY + (droneHeight / 2) + 'px';
+        droneImg.style.x = newX + (droneWidth / 2) + 'px';
+        droneImg.style.y = newY + (droneHeight / 2) + 'px';
         console.log(newX + ', ' + newY);
         //droneImg.style.transform = "translate(" + newX + "px," + newY + "px)"; 
 
         index++;
 
         }
-    };
+    };*/
+    DroneCoords = [];
+    for (var i = 0; i < DroneLocations.length; i++) {
+        var coord = [DroneLocations[i].x, DroneLocations[i].y];
+        DroneCoords.push(coord);
+
+    }
+    //var droneImg = document.getElementById("droneImg");
+    //$("droneImg").style.display = "block";
+    //droneImg.style.display = "block";
+
+    var droneImg = document.getElementById("droneImg");
+    droneImg.style.transitionDuration = 2 + 's';
+    droneImg.style.display = "block";
+    var droneWidth = droneImg.clientWidth;
+    var droneHeight = droneImg.clientHeight;
+
+    for (var d = 0; d < DroneCoords.length; d++) {
+        
+        newX = DroneCoords[d][0];
+        newY = DroneCoords[d][1];
+        $("#droneImg").transition({x: (newX - droneWidth / 2) + 'px', y: (newY - droneHeight / 2) + 'px' });
+        //$('.box').transition({ x: '40px', y: '40px' });
+        //.transition({x: newX })
+        //.transition({y: newY });
+        //console.log("moving to: " + newX + ", " + newY);
+    }
+
 };
 
 function generateSignalIndicators() {
-    var radiusFactor = 4 * cellWidth;
+
+    var radiusInBlocks = 4;
+    var multFactor = 4;     // for changing radius on click
+    var min = 0;            // lowerbound for color array range calculation
+
+    var radius = (radiusInBlocks - 1) * cellWidth + (cellWidth / 2);
+    console.log("cellWidth: " + cellWidth + " radius: " + radius);
     if (svgUsed == 1) {
         d3.select("svg").remove();
         svgUsed = 0;
@@ -206,7 +250,7 @@ function generateSignalIndicators() {
 
     var svgContainer = d3.select("#gradients");
 
-    if (svgUsed == 0) { //only create svgContainer once
+    if (svgUsed == 0) {     // only need svgContainer creation once
         var svgContainer = d3.select("#gradients")
                              .append("svg")
                              .attr("width", 752)
@@ -218,6 +262,7 @@ function generateSignalIndicators() {
                               .data(APs)
                               .enter()
                               .append("circle")
+                              // remove on right click 
                               .on("contextmenu", function(e,i) {
                                 d3.event.preventDefault();
                                 if (e.type == "AP") {
@@ -226,16 +271,17 @@ function generateSignalIndicators() {
                                     update();
                                     e.AP_id = 0;
                                     AP_id--;
+                                    svgContainer.exit().remove();
                                 }
                             })
                             .attr("cx", function(d){ return d.x + cellWidth / 2; })
                             .attr("cy", function(d){ return d.y + cellHeight / 2; })
-                            .attr("r", function(d) { return ((d.clickCount % 3) + 1) * radiusFactor;})
+                            .attr("r", function(d) { return ((d.clickCount + 1) % multFactor) * radius;})
                             .attr("id", function(d){ return d.AP_id; })
-                            .style("fill", "green")
+                            .style("fill", colors[1])
+                            //.style("fill", function(d) { return colors[Math.floor(Math.random() * (colors.length - min + 1) + min)]; })
                             .style("fill-opacity", 0.2)
                             .style("stroke", "red");
-    svgContainer.exit().remove();
 }
 
 function handleMouseOver(d, i) {
