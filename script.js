@@ -10,7 +10,7 @@ var pi = 3.141592653589793238462643383279502884197;
 var svgUsed = 0;
 var AP_id = 0;
 var Drone_id = 0;
-var colors = ["red", "orange", "yellow", "green", "blue", "purple"];
+//var colors = ["red", "orange", "yellow", "green", "blue", "purple"];
 var droneImage = new Image(75, 35);
 droneImage.src = '/res/drone_nobg.png';
 
@@ -18,20 +18,20 @@ $(document).ready(function() {
 
 });
 
-function gridData(xDim, yDim) {
+function gridData(dimensions) {
 
     var data = new Array();
     var xpos = 1;
     var ypos = 1;
-    cellWidth = Math.floor(divWidth / xDim);
-    cellHeight = Math.floor(divHeight / yDim);
+    cellWidth = Math.floor(divWidth / dimensions);
+    cellHeight = Math.floor(divHeight / dimensions);
     var clickCount = 0;
     var type = "blank";
 
-    for (var row = 0; row < xDim; row++) {
+    for (var row = 0; row < dimensions; row++) {
         data.push( new Array() );
         
-        for (var col = 0; col < yDim; col++) {
+        for (var col = 0; col < dimensions; col++) {
             data[row].push({
                 x: xpos,
                 y: ypos,
@@ -63,17 +63,17 @@ var craftGrid = function() {
 
     var xDim = $("#xDim").val();
     var yDim = $("#yDim").val();
+    var dimensions = $("#dimension").val();
 
     // Input validation
     var divFactor = 5;
-    if ( ((xDim <= 0) || ((xDim % divFactor) != 0) ) ||
-          (yDim <= 0) || ((yDim % divFactor) != 0) ) {
-            alert("Dimensions must be (0, 75] & evenly divisible by " + divFactor + ".");
-            return;
-         }
+    if (((dimensions % divFactor) !== 0) && (dimensions < 125)  && (dimensions > 5)){
+        alert("Dimensions must be [5, 75] & evenly divisible by " + divFactor + ".");
+        return;
+    }
 
     // Create grid using
-    gridArray = gridData(xDim, yDim);
+    gridArray = gridData(dimensions);
     var grid = d3.select("#grid")
         .append("svg")
         .attr("width", "752px")
@@ -248,8 +248,6 @@ function generateSignalIndicators() {
         svgUsed = 0;
     }
 
-    var svgContainer = d3.select("#gradients");
-
     if (svgUsed == 0) {     // only need svgContainer creation once
         var svgContainer = d3.select("#gradients")
                              .append("svg")
@@ -257,7 +255,24 @@ function generateSignalIndicators() {
                              .attr("height", 752);
         svgUsed = 1;
     }
-
+    var colorRange = ['red', '#fc6a39', '#ffd589', 'blue'];
+    var color = d3.scaleLinear().range(colorRange).domain([-1, 0, 1]);
+    //var svgContainer = d3.select("#gradients");
+    var radialGradient = svgContainer.append("defs")
+                            .append("radialGradient")
+                            .attr("id", "radial-gradient");
+                            
+    radialGradient.append("stop")
+                            .attr("offset", "0%")
+                            .attr("stop-color", color(-1));
+          
+    radialGradient.append("stop")
+                            .attr("offset", "50%")
+                            .attr("stop-color", color(0));
+          
+    radialGradient.append("stop")
+                            .attr("offset", "100%")
+                            .attr("stop-color", color(1));
     var circles = svgContainer.selectAll("circle")
                               .data(APs)
                               .enter()
@@ -278,10 +293,50 @@ function generateSignalIndicators() {
                             .attr("cy", function(d){ return d.y + cellHeight / 2; })
                             .attr("r", function(d) { return ((d.clickCount + 1) % multFactor) * radius;})
                             .attr("id", function(d){ return d.AP_id; })
-                            .style("fill", colors[1])
+                            .style("fill-opacity", 0.4)
+                            .attr("stroke-dasharray", "5 5")
+                            .attr("stroke-width", "3px")
+                            .attr("stroke", "#fc813a")
+                            .style("fill", "url(#radial-gradient)");
+
                             //.style("fill", function(d) { return colors[Math.floor(Math.random() * (colors.length - min + 1) + min)]; })
-                            .style("fill-opacity", 0.2)
-                            .style("stroke", "red");
+                            
+/*
+    var colorRange = ['red', 'orange', 'yellow', 'blue'];
+    var color = d3.scaleLinear().range(colorRange).domain([-1, 0, 1]);
+
+    var svgContainer2 = d3.select('#gradients')
+                            .append('svg')
+                            .attr('width', 752)
+                            .attr('height', 752)
+                            .append("g");
+    var radialGradient = svgContainer2.append("defs")
+                            .append("radialGradient")
+                            .attr("id", "radial-gradient");
+    
+    radialGradient.append("stop")
+                  .attr("offset", "0%")
+                  .attr("stop-color", color(-1));
+
+    radialGradient.append("stop")
+                  .attr("offset", "50%")
+                  .attr("stop-color", color(0));
+
+    radialGradient.append("stop")
+                  .attr("offset", "100%")
+                  .attr("stop-color", color(1));
+
+    svgContainer2.selectAll("circle")
+                 .data(APs)
+                 .enter()
+                 .append("circle")
+                 .attr("cx", function(d){ return d.x + cellWidth / 2; })
+                 .attr("cy", function(d){ return d.y + cellHeight / 2; })
+                 .attr("r", function(d) { return ((d.clickCount + 1) % multFactor) * radius * 2;})
+                 .attr("id", function(d){ return d.AP_id; })
+                 .attr("fill-opacity", 0.4)
+                 .style("fill", "url(#radial-gradient)");
+*/
 }
 
 function handleMouseOver(d, i) {

@@ -66,9 +66,11 @@ input[type=button] {
 }
 
 #droneImg {
-  width: 100px;
-  height: 100px;
-  background: yellow;
-  border: 3px solid red;
+
+    width: 100px;
+    height: 100px;
+    background-color:rgba(133, 247, 158, 0.5);
+    border: 3px solid red;
+    border-radius: 50%;
 
 }
