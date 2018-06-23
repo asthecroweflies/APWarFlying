@@ -26,7 +26,7 @@ p {
     margin: auto;
     display: inline-block;
     z-index: 0;
-    float: left;
+    /*float: left;*/
 
     position: absolute;
     top: 50%;
@@ -70,7 +70,7 @@ input[type=button] {
     width: 100px;
     height: 100px;
     background-color:rgba(133, 247, 158, 0.5);
-    border: 3px solid red;
+    border: 3px solid rgb(231, 72, 72);
     border-radius: 50%;
 
 }
