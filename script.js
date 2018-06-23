@@ -51,12 +51,20 @@ function gridData(dimensions) {
     }
     return data;
 }
+$('#onHoldGenerateMask').on('mousedown mouseup', function mouseState(e) {
+    if (e.type == "mousedown") {
+        //code triggers on hold
+        console.log("redeux");
+    }
+});
 
 var craftGrid = function() {
 
     if (gridToggled == 1) return;
     else if (gridToggled == 0) {
         document.getElementById("generateButton").disabled = true;
+        $("#onHoldGenerateMask").show();
+        
         //clearGrid();
         gridToggled = 1;
     } 

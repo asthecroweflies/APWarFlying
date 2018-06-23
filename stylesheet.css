@@ -44,10 +44,10 @@ p {
     float: right;
     margin-right: -100%;
     top: -15%;
-    background-color: #ffe8c4;
+    background-color: #ffc6c4;
   }
 
-  .options {
+.options {
     width: 200px;
     height: 100px;
     margin-left: -220px;
@@ -73,4 +73,9 @@ input[type=button] {
     border: 3px dashed rgb(6, 136, 114);
     border-radius: 50%;
 
+}
+
+#onHoldGenerateMask {
+  background-color: rgba(186, 62, 53, 0.2);
+  
 }

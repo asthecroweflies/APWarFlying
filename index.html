@@ -29,7 +29,11 @@
                 -->
                 <input type="text" id="dimension" value="25" size="5" style="text-align: center; width: 100%;">
                 <div class="optionButtons">
-                        <input type="button" id="generateButton" value="Generate!" onclick="craftGrid()">
+                    <div class="generateClass" style="top: 15px; position: relative;">
+                            <input type="button" id="generateButton" value="Generate!" onclick="craftGrid()">
+                            <div style="width: 100%; height: 48px; position: absolute; top: 0px; left: 0px; display: none; z-index: 9;" id="onHoldGenerateMask"></div>
+                    </div>
+
                         <br><br>
                         <input type="button" id="toggleAP" value="Place AP" onclick="plotAP()" style="width: 100%">
                         <br>
