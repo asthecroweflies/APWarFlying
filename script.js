@@ -172,8 +172,8 @@ function handleClick(d, i) {
 function flyDrone() {//given array of all APs, create circles around them indicating signal strength
     animateDrone();
     generateSignalIndicators();
-    console.log(APs);
-    console.log(DroneLocations);
+    //console.log(APs);
+    //console.log(DroneLocations);
 }
 
 function animateDrone() {
@@ -212,25 +212,52 @@ function animateDrone() {
         DroneCoords.push(coord);
 
     }
+    if (DroneCoords.length < 2) {
+        alert("At least 2 points needed to simulate flight.");
+        return;
+    }
     //var droneImg = document.getElementById("droneImg");
     //$("droneImg").style.display = "block";
     //droneImg.style.display = "block";
 
     var droneImg = document.getElementById("droneImg");
+    //droneImg.style.top = DroneCoords[0][0] + 'px';
+    //droneImg.style.left = DroneCoords[0][1] + 'px';
     droneImg.style.transitionDuration = 2 + 's';
     droneImg.style.display = "block";
     var droneWidth = droneImg.clientWidth;
     var droneHeight = droneImg.clientHeight;
 
+    setInterval(function () {
+        // those are the position and offset of the element during the animation
+        var apX = $("#droneImg").position().left;
+        var apY = $("#droneImg").position().top;
+        var aoX = $("#droneImg").offset().left;
+        var aoY = $("#droneImg").offset().top;
+        //print status bar info
+        //$("#status_div").html("BEFORE ATTACHING ANIMATION position: " + pX + "," + pY + "  offset: " + oX + "," + oY + " <br/> AFTER ATTACHING ANIMATION position: " + npX + "," + npY + "  offset: " + noX + "," + noY + "<br/> DURING ANIMATION position: " + apX + "," + apY + "  offset: " + aoX + "," + aoY);
+        console.log(apX + ", " + apY + " aoX: " + aoX + " aoY: " + aoY);
+    }, 100);
+
     for (var d = 0; d < DroneCoords.length; d++) {
+        
         
         newX = DroneCoords[d][0];
         newY = DroneCoords[d][1];
-        $("#droneImg").transition({x: (newX - droneWidth / 2) + 'px', y: (newY - droneHeight / 2) + 'px' });
+        $("#droneImg").transition({
+            x: (newX - droneWidth / 2) + 'px',
+            y: (newY - droneHeight / 2) + 'px',
+            duration: 500
+         });
+        /*$("#droneImg").velocity({
+            x: newX,
+            y: newY
+        }, 100);*/
+
         //$('.box').transition({ x: '40px', y: '40px' });
         //.transition({x: newX })
         //.transition({y: newY });
-        //console.log("moving to: " + newX + ", " + newY);
+        console.log("moving to: " + newX + ", " + newY);
     }
 
 };
@@ -242,7 +269,6 @@ function generateSignalIndicators() {
     var min = 0;            // lowerbound for color array range calculation
 
     var radius = (radiusInBlocks - 1) * cellWidth + (cellWidth / 2);
-    console.log("cellWidth: " + cellWidth + " radius: " + radius);
     if (svgUsed == 1) {
         d3.select("svg").remove();
         svgUsed = 0;
@@ -273,6 +299,7 @@ function generateSignalIndicators() {
     radialGradient.append("stop")
                             .attr("offset", "100%")
                             .attr("stop-color", color(1));
+
     var circles = svgContainer.selectAll("circle")
                               .data(APs)
                               .enter()
@@ -298,45 +325,6 @@ function generateSignalIndicators() {
                             .attr("stroke-width", "3px")
                             .attr("stroke", "#fc813a")
                             .style("fill", "url(#radial-gradient)");
-
-                            //.style("fill", function(d) { return colors[Math.floor(Math.random() * (colors.length - min + 1) + min)]; })
-                            
-/*
-    var colorRange = ['red', 'orange', 'yellow', 'blue'];
-    var color = d3.scaleLinear().range(colorRange).domain([-1, 0, 1]);
-
-    var svgContainer2 = d3.select('#gradients')
-                            .append('svg')
-                            .attr('width', 752)
-                            .attr('height', 752)
-                            .append("g");
-    var radialGradient = svgContainer2.append("defs")
-                            .append("radialGradient")
-                            .attr("id", "radial-gradient");
-    
-    radialGradient.append("stop")
-                  .attr("offset", "0%")
-                  .attr("stop-color", color(-1));
-
-    radialGradient.append("stop")
-                  .attr("offset", "50%")
-                  .attr("stop-color", color(0));
-
-    radialGradient.append("stop")
-                  .attr("offset", "100%")
-                  .attr("stop-color", color(1));
-
-    svgContainer2.selectAll("circle")
-                 .data(APs)
-                 .enter()
-                 .append("circle")
-                 .attr("cx", function(d){ return d.x + cellWidth / 2; })
-                 .attr("cy", function(d){ return d.y + cellHeight / 2; })
-                 .attr("r", function(d) { return ((d.clickCount + 1) % multFactor) * radius * 2;})
-                 .attr("id", function(d){ return d.AP_id; })
-                 .attr("fill-opacity", 0.4)
-                 .style("fill", "url(#radial-gradient)");
-*/
 }
 
 function handleMouseOver(d, i) {

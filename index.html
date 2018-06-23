@@ -1,10 +1,11 @@
 </html>
 <head>
-    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
     <!--<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>-->
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="d3.js"></script>
-    <script type="text/javascript" src="jquery-transit.js"></script>
+    <script src="scripts/d3.js"></script>
+    <script type="text/javascript" src="scripts/jquery-transit.js"></script>
+    <script type="text/javascript" src="scripts/velocity.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <meta charset="utf-8">
     <title>AP War Flying Simulator</title>
@@ -12,14 +13,14 @@
 
 <body bgcolor="#ffda9b">
     <div class="container">
-        <img src="/res/plane_nobg.png" height="35" width="75" id="droneImg" style="position: relative; z-index: 10; display: block;">
+        <img src="/res/plane_nobg.png" height="35" width="75" id="droneImg" style="position: absolute; z-index: 10; display: none;">
 
         <div class="gridContainer" id="grid" style="z-index: 2">
             <div class="gradientContainer" id="gradients" style="width: 752px; height: 752px; z-index: 1; position: absolute; pointer-events: none"></div>
         </div>
         <div class="options">
             <form>
-                <p>Dimensions (m):</p>
+                <p>Dimensions</p>
                 <!--
                 <p> <b>x</b>  &nbsp &nbsp &nbsp  &nbsp  &nbsp  &nbsp &nbsp  &nbsp  &nbsp <b>y</br> </p>
                 <input type="text" id="xDim" value="25" size="5" style="text-align: center; width: 49%; float: left">
