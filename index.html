@@ -5,45 +5,46 @@
     <link rel="stylesheet" href="stylesheet.css">
     <script src="scripts/d3.js"></script>
     <script type="text/javascript" src="scripts/jquery-transit.js"></script>
-    <script type="text/javascript" src="scripts/velocity.js"></script>
+    <script src="scripts/chart.js/dist/Chart.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <meta charset="utf-8">
     <title>AP War Flying Simulator</title>
 </head>
 
 <body bgcolor="#ffda9b">
-    <div class="container">
-        <img src="/res/plane_nobg.png" height="35" width="75" id="droneImg" style="position: absolute; z-index: 10; display: none;">
+
+    <div id="main">
+
+        <div class="options">
+            <p>Dimensions</p>
+            <input type="text" id="dimension" value="25" size="5" style="text-align: center; width: 100%;">
+
+            <div class="generateWrapper" style="position: relative; margin-top: 10px;">
+                <input type="button" id="generateButton" value="Generate!" onclick="craftGrid()">
+                <div id="genMask"></div>
+            </div>
+            <br><br>
+            <input type="button" id="toggleAP" value="Place AP" onclick="plotAP()" style="width: 100%">
+            <br>
+            <input type="button" id="toggleDrone" value="Place drone location" onclick="plotDrone()">
+            <br><br>
+            <input type="button" id="simulateFlight" value="Simulate War Flying" onclick="flyDrone()">
+            <p>Flight Duration (s)</p>
+            <input type="text" id="flightDuration" value="5" style="text-align: center; width: 100%">
+            <p>Time at Waypoint</p>
+            <input type="text" id="waypointDuration" value="0" style="text-align: center; width: 100%;">
+        </div>
 
         <div class="gridContainer" id="grid" style="z-index: 2">
-            <div class="gradientContainer" id="gradients" style="width: 752px; height: 752px; z-index: 1; position: absolute; pointer-events: none"></div>
+                <div class="gradientContainer" id="gradients" style="width: 752px; height: 752px; z-index: 1; position: absolute; pointer-events: none"></div>
+                <div id="droneImg" style="display: none; position: absolute;"></div>
         </div>
-        <div class="options">
-            <form>
-                <p>Dimensions</p>
-                <!--
-                <p> <b>x</b>  &nbsp &nbsp &nbsp  &nbsp  &nbsp  &nbsp &nbsp  &nbsp  &nbsp <b>y</br> </p>
-                <input type="text" id="xDim" value="25" size="5" style="text-align: center; width: 49%; float: left">
-                <input type="text" id="yDim" value="25" size="5" style="text-align: center; width: 49%; float: right;">
-                <br><br>
-                -->
-                <input type="text" id="dimension" value="25" size="5" style="text-align: center; width: 100%;">
-                <div class="optionButtons">
-                    <div class="generateClass" style="top: 15px; position: relative;">
-                            <input type="button" id="generateButton" value="Generate!" onclick="craftGrid()">
-                            <div style="width: 100%; height: 48px; position: absolute; top: 0px; left: 0px; display: none; z-index: 9;" id="onHoldGenerateMask"></div>
-                    </div>
 
-                        <br><br>
-                        <input type="button" id="toggleAP" value="Place AP" onclick="plotAP()" style="width: 100%">
-                        <br>
-                        <input type="button" id="toggleDrone" value="Place drone location" onclick="plotDrone()">
-                        <br><br>
-                        <input type="button" id="simulateFlight" value="Simulate War Flying" onclick="flyDrone()">
-                </div>
-            </form>
+        <div class="graph" style="display: block;">
+            <canvas id="strengthChart" width="100%" height="100%"></canvas>
         </div>
-        <div class="graph" style="display: none;"></div>
+
     </div>
+
 </body>
 </html>
