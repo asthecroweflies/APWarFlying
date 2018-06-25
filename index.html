@@ -1,44 +1,59 @@
 </html>
 <head>
-    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
     <!--<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>-->
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="d3.js"></script>
-    <script type="text/javascript" src="jquery-transit.js"></script>
+    <script src="scripts/d3.js"></script>
+    <script type="text/javascript" src="scripts/jquery-transit.js"></script>
+    <script src="scripts/chart.js/dist/Chart.js"></script>
+    <script src="scripts/plotly-min.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <meta charset="utf-8">
     <title>AP War Flying Simulator</title>
 </head>
 
 <body bgcolor="#ffda9b">
-    <div class="container">
-        <img src="/res/plane_nobg.png" height="35" width="75" id="droneImg" style="position: relative; z-index: 10; display: block;">
+    <div id="plt"></div>
+    <div class="scene">
+        <div id="main">
 
-        <div class="gridContainer" id="grid" style="z-index: 2">
-            <div class="gradientContainer" id="gradients" style="width: 752px; height: 752px; z-index: 1; position: absolute; pointer-events: none"></div>
-        </div>
-        <div class="options">
-            <form>
-                <p>Dimensions (m):</p>
-                <!--
-                <p> <b>x</b>  &nbsp &nbsp &nbsp  &nbsp  &nbsp  &nbsp &nbsp  &nbsp  &nbsp <b>y</br> </p>
-                <input type="text" id="xDim" value="25" size="5" style="text-align: center; width: 49%; float: left">
-                <input type="text" id="yDim" value="25" size="5" style="text-align: center; width: 49%; float: right;">
-                <br><br>
-                -->
+            <div class="options">
+                <p>Dimensions</p>
                 <input type="text" id="dimension" value="25" size="5" style="text-align: center; width: 100%;">
-                <div class="optionButtons">
-                        <input type="button" id="generateButton" value="Generate!" onclick="craftGrid()">
-                        <br><br>
-                        <input type="button" id="toggleAP" value="Place AP" onclick="plotAP()" style="width: 100%">
-                        <br>
-                        <input type="button" id="toggleDrone" value="Place drone location" onclick="plotDrone()">
-                        <br><br>
-                        <input type="button" id="simulateFlight" value="Simulate War Flying" onclick="flyDrone()">
+    
+                <div class="generateWrapper" style="position: relative; margin-top: 10px;">
+                    <input type="button" id="generateButton" value="Generate!" onclick="craftGrid()">
+                    <div id="genMask"></div>
                 </div>
-            </form>
+                <br><br>
+                <input type="button" id="toggleAP" value="Place AP" onclick="plotAP()" style="width: 100%">
+                <br>
+                <input type="button" id="toggleDrone" value="Place drone waypoint" onclick="plotDrone()" style="width:75%">
+                <input type="button" id="plotOnAP" value="Use AP" onclick="plotOnAP()" style="width: 25%; float: right;">
+                <br><br>
+                <input type="button" id="simulateFlight" value="Simulate War Flying" onclick="flyDrone()">
+                <p>Flight Duration (s):
+                    <input type="text" id="flightDuration" value="5" style="float: right; text-align: center; width: 40px;">
+                </p>
+                
+                <p>
+                    Probing Interval (ms): 
+                    <input type="text" id="probeInterval" value="250" style="float: right; text-align: center; width: 40px;">
+                </p>
+                
+            </div>
+    
+            <div class="gridContainer" id="grid">
+                    <div class="gradientContainer" id="gradients" style="width: 752px; height: 752px; z-index: 1; position: absolute; pointer-events: none;"></div>
+                    <div id="probeLocations" style="width: 100%; height: 100%; position: absolute; z-index: 3; pointer-events: none; background-color: rgba(110, 180, 250, 0.1);"></div>
+                    <div id="droneImg" style="display: none; position: absolute;"></div>
+            </div>
+    
         </div>
-        <div class="graph" style="display: none;"></div>
+        <div class="graph">
+            <div id="strengthChart" width="752px" height="752px" style="z-index: 99;"></div>
+        </div>
     </div>
+
 </body>
 </html>
