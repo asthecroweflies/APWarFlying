@@ -5,6 +5,8 @@ var divWidth, divHeight, cellWidth, cellHeight;
 var APToggled = 0, DroneToggled = 0, gridToggled = 0;
 var gridArray;
 var APs = [];
+var totalAPDistances = [];
+
 var DroneSquares = [];
 var pi = 3.1415926535897932384626433832795028841971693993751058209749445923078164;
 var svgUsed = false;
@@ -79,7 +81,7 @@ function generateGridData(dimensionality) {
 var craftGrid = function() {
 
     if (gridToggled === true) return;// should only make svg element once
-    else if (gridToggled === false) {
+    else if (gridToggled == false) {
         document.getElementById("generateButton").disabled = true;
         $("#genMask").show();
         gridToggled = true;
@@ -197,9 +199,17 @@ function handleClick(d, i) {
  
 function flyDrone() {
     var droneImg = document.getElementById("droneImg");
-    //droneImg.style.top = DroneSquares[0].y;
     //droneImg.style.left = DroneSquares[0].x;
-
+    //droneImg.style.top = DroneSquares[0].y;
+    console.log(DroneSquares[0].x + " , " + DroneSquares[0].y);
+    $("#droneImg").transition({
+        x: DroneSquares[0].x + 'px',
+        y: DroneSquares[0].y + 'px',
+        //x: newX + 'px',
+        //y: newY + 'px',
+        duration: 5,
+        delay: 0
+     });
     animateDrone();
     generateSignalIndicators();
     //console.log(APs);
@@ -216,9 +226,10 @@ function animateDrone() {
         DroneCoords.push(coord);
     }
 
+    console.log("after init movement");
     var flightTime = $("#flightDuration").val();
-    flightTime = Math.floor((flightTime * 1000) / DroneCoords.length);
-
+    flightTime = Math.floor((flightTime * 1000) / DroneCoords.length);// FlightTime in ms
+    console.log("drone should fly for " + flightTime + "ms");
     var waypointHangTime = $("#waypointDuration").val();
 
     if (DroneCoords.length < 2) {
@@ -236,20 +247,24 @@ function animateDrone() {
 
     var repeatCoords = 0;
     var cachedX = 0;
-    var probingInterval = 300;
+    var probingInterval = 500;
     var iterations = 0;
     var distance = 0;
     var apCenter = 0;
+    var currentAPDistances = [];
+    var apX, apY, truX, truY;
     var trackDrone = setInterval(function () {
         // those are the position and offset of the element during the animation
-        var apX = $("#droneImg").position().left;
-        var apY = $("#droneImg").position().top;
+        apX = $("#droneImg").position().left;
+        apY = $("#droneImg").position().top;
         var aoX = $("#droneImg").offset().left;
         var aoY = $("#droneImg").offset().top;
-        var truX = apX + droneImg.offsetWidth / 2;
-        var truY = apY + droneImg.offsetHeight / 2;
+        truX = apX + droneImg.offsetWidth / 2;
+        truY = apY + droneImg.offsetHeight / 2;
         //console.log(apX + ", " + apY + " aoX: " + aoX + " aoY: " + aoY);
         console.log("Tru x: " + truX.toFixed(2) + " Tru y: " + truY.toFixed(2));
+        currentAPDistances = [];
+        //currentAPDistances.push(iterations);// Correspond polling event to distances
 
         for (var ap = 0; ap < APs.length; ap++) {
             distance = 0;
@@ -257,31 +272,38 @@ function animateDrone() {
             // d = sqrt[(receiverX - AP's x)^2 + (recieverY - AP's y)^2]
             distance = Math.pow((Math.pow(truX - apCenter[0], 2) + Math.pow(truY - apCenter[1], 2)), 0.5);
 
+            currentAPDistances.push(distance);
             console.log("Distance to AP" + ap + ": " + distance.toFixed(3) + ".");
             
         }
-        console.log("-------------------------")
-        if (iterations * probingInterval > (flightTime * 1000)) {//end of flight, stop tracking
+        totalAPDistances.push(currentAPDistances);
+        console.log(iterations + ")-------------------------")
+        if (iterations * probingInterval > flightTime * DroneCoords.length) {//end of flight, stop tracking
             clearInterval(trackDrone);
             // TODO: Link data with chart.js
-            plotData();
+            plotDataPlotly(totalAPDistances);
+            //console.log(totalAPDistances);
         }
         iterations++;
     }, probingInterval);
 
+    // Move droneImg
     for (var d = 0; d < DroneCoords.length; d++) {
         newX = DroneCoords[d][0];
         newY = DroneCoords[d][1];
+        console.log("newX:" + newX + " newY: " + newY);
+        console.log("truX:" + truX + " truY: " + truY);
+
         $("#droneImg").transition({
-            x: (newX - (droneWidth / 2)) + (cellWidth / 2) + 'px',
-            y: (newY - (droneHeight / 2)) + (cellHeight / 2) + 'px',
+            x: newX - droneWidth/2 + (cellWidth / 2) + 'px',
+            y: newY - droneHeight/2 + (cellHeight / 2) + 'px',
             //x: newX + 'px',
             //y: newY + 'px',
             duration: flightTime,
-            delay: waypointHangTime// happens at each AP? 
+            delay: 0
          });
     }
-    plotData();
+    //plotDataPlotly(totalAPDistances);
 };
 
 function generateSignalIndicators() {
@@ -393,40 +415,69 @@ function plotDrone() {
     }
 }
 
-function plotData() {
+function transpose(matrix) { return matrix[0].map((col, c) => matrix.map((row, r) => matrix[r][c])); }
+function fillArray(n) {
+    a = [];
+    for (var i = 0; i < n; i++)
+        a[i] = i;
+    return a;
+}
+function plotDataPlotly(totalAPDistances) {
+    
+    transposedData = transpose(totalAPDistances);
+    console.log(transposedData);
+    var data = [];
+
+
+    for (var apIndex = 0; apIndex < transposedData.length; apIndex++) {
+        var oneToN = fillArray(transposedData[apIndex].length);
+        console.log(oneToN);
+        var individualAPStrength = { 
+            x: oneToN,
+            y: transposedData[apIndex],
+            node: 'lines'
+        };
+        data.push(individualAPStrength);
+    }
+    console.log(data);
+    layout = {};
+    Plotly.newPlot('strengthChart', data);
+    //var strengthChart = document.getElementById("strengthChart");
+    //Plotly.plot(strengthChart, data);
+    
+}
+
+
+
+function plotDataChartJS(totalAPDistances) {
     var ctx = document.getElementById("strengthChart");
 
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+
+    console.log(totalAPDistances);
+
+    var scatterChart = new Chart(ctx, {
+        type: 'scatter',
+        dataSource: transformArrayofArrays(APData, "a"),
+        /*data: {
             datasets: [{
-                label: '# of Votes',
-                data: [1, 4, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
+                label: 'AP Signal Strength',
+                data: APData[0]
             }]
-        },
+        },*/
         options: {
             scales: {
+                xAxes: [{
+                    ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: totalAPDistances.length
+                    },
+                    type: 'linear',
+                    position: 'bottom'
+                }],
                 yAxes: [{
                     ticks: {
-                        beginAtZero:true
+                        suggestedMin: 0,
+                        suggestedMax: 750
                     }
                 }]
             }

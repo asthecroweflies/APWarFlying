@@ -1,13 +1,22 @@
 body {
   position: absolute;
-  left: 25%;
-  margin: auto;
+
+  clear: left;
+}
+
+.scene {
+  width: 1920px;
+  height: 800px;
+  position: relative;
+  float: left;
+  padding-top: 20px;
+  padding-right: 10px;
 }
 #main {
     position: absolute;
-    width: 752px;
-    height: 752px;
-    margin-top: 40px;
+    width: 1000px;
+    height: 800px;
+    left: 1%;
     /*margin-top: 50%;
     margin-left: 75%;
     -webkit-transform: translate(-50%, -50%);
@@ -46,18 +55,18 @@ p {
 
   .graph {
     width: 752px;
-    height: 500px;
+    height: 752px;
     border: 2px solid #db8d08;
-    position: relative;
-    float: left;
-    margin-top: 20px;
-    background-color: #ffe8c4;
+    /*background-color: #ffe8c4;*/
+    float: right;
+    display: block;
+    position: absolute;
+    right: 5%;
   }
 
 .options {
     width: 200px;
     height: 100px;
-    margin-left: -220px;
     position: absolute;
 }
 
