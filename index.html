@@ -28,19 +28,24 @@
                 <br><br>
                 <input type="button" id="toggleAP" value="Place AP" onclick="plotAP()" style="width: 100%">
                 <br>
-                <input type="button" id="toggleDrone" value="Place drone location" onclick="plotDrone()">
+                <input type="button" id="toggleDrone" value="Place drone waypoint" onclick="plotDrone()" style="width:75%">
+                <input type="button" id="plotOnAP" value="Use AP" onclick="plotOnAP()" style="width: 25%; float: right;">
                 <br><br>
                 <input type="button" id="simulateFlight" value="Simulate War Flying" onclick="flyDrone()">
-                <p>Flight Duration (s)</p>
-                <input type="text" id="flightDuration" value="5" style="text-align: center; width: 100%">
-                <!--
-                <p>Time at Waypoint</p>
-                <input type="text" id="waypointDuration" value="0" style="text-align: center; width: 100%;">
-                -->
+                <p>Flight Duration (s):
+                    <input type="text" id="flightDuration" value="5" style="float: right; text-align: center; width: 40px;">
+                </p>
+                
+                <p>
+                    Probing Interval (ms): 
+                    <input type="text" id="probeInterval" value="250" style="float: right; text-align: center; width: 40px;">
+                </p>
+                
             </div>
     
             <div class="gridContainer" id="grid">
-                    <div class="gradientContainer" id="gradients" style="width: 752px; height: 752px; z-index: 1; position: absolute; pointer-events: none"></div>
+                    <div class="gradientContainer" id="gradients" style="width: 752px; height: 752px; z-index: 1; position: absolute; pointer-events: none;"></div>
+                    <div id="probeLocations" style="width: 100%; height: 100%; position: absolute; z-index: 3; pointer-events: none; background-color: rgba(110, 180, 250, 0.1);"></div>
                     <div id="droneImg" style="display: none; position: absolute;"></div>
             </div>
     

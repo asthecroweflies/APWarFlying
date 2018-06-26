@@ -29,6 +29,7 @@ window.onload = function() {
     divHeight = document.getElementById("grid").offsetHeight;    
     document.getElementById("toggleAP").disabled = true;
     document.getElementById("toggleDrone").disabled = true;
+    document.getElementById("plotOnAP").disabled = true;
 };
 
 function clearGrid() { 
@@ -196,6 +197,23 @@ function handleClick(d, i) {
     generateSignalIndicators();
 }
 
+function findPathLoss(d) {
+
+    // Log Distance Path Loss Model:
+    // d: distance
+    // d0: pathloss at a reference distance (1 m)
+    // n: path loss exponent (literature recommends ~2.3GHz for free space.)
+    // X: signal noise, Follows normal gaussian distribution, X ~ N(0, o^2)
+    //
+    // P(d) = P(d0) + 10*n*log10(d) + X
+    
+    refLoss = 10;
+    pathLossExponent = 2.3;
+    signalNoise = Math.floor(10 * Math.random()); //TODO: Replace temp. noise with more realistic
+
+    return (refLoss + (10 * pathLossExponent * Math.log10(d)) + signalNoise);
+};
+
  
 function flyDrone() {
     var droneImg = document.getElementById("droneImg");
@@ -207,7 +225,7 @@ function flyDrone() {
         y: DroneSquares[0].y + 'px',
         //x: newX + 'px',
         //y: newY + 'px',
-        duration: 5,
+        duration: 10,
         delay: 0
      });
     animateDrone();
@@ -219,67 +237,66 @@ function flyDrone() {
 // Drone movement 
 function animateDrone() {
 
-    DroneCoords = [];
+    DroneCoords = [];                                   // Contain x & y coordinates for all waypoints
     
     for (var i = 0; i < DroneSquares.length; i++) {
         var coord = [DroneSquares[i].x, DroneSquares[i].y];
         DroneCoords.push(coord);
     }
 
-    console.log("after init movement");
     var flightTime = $("#flightDuration").val();
-    flightTime = Math.floor((flightTime * 1000) / DroneCoords.length);// FlightTime in ms
-    console.log("drone should fly for " + flightTime + "ms");
-    var waypointHangTime = $("#waypointDuration").val();
-
+    flightTime = Math.floor((flightTime * 1000) / DroneCoords.length);// total flight duration in ms
+   
+   // var waypointHangTime = $("#waypointDuration").val();
     if (DroneCoords.length < 2) {
         alert("At least 2 points needed to simulate flight.");
         return;
     }
 
     var droneImg = document.getElementById("droneImg");
-    //droneImg.style.top = DroneCoords[0][0] + 'px';
-    //droneImg.style.left = DroneCoords[0][1] + 'px';
-    //droneImg.style.transitionDuration = 2 + 's';
     droneImg.style.display = "block";
-    var droneWidth = droneImg.offsetWidth;
-    var droneHeight = droneImg.offsetHeight;
+    var droneWidth = droneImg.offsetWidth;              // Dimension of drone's div element
+    var droneHeight = droneImg.offsetHeight;            //
+    var probingInterval = $("#probeInterval").val();    // frequency of AP scanning
+    var iterations = 0;                                 // number of scans
+    var distance = 0;                                   // distance of current drone position to center of AP
+    var apCenter = 0;                                   // center of AP
+    var currentAPDistances = [];                        // Array to hold distances to APs during scan
+    var droneX, droneY, adjustedDroneX, adjustedDroneY;                           // Used to determine drone's center location with reference to grid
+    
+    var scanForAPs = setInterval(function () {
 
-    var repeatCoords = 0;
-    var cachedX = 0;
-    var probingInterval = 500;
-    var iterations = 0;
-    var distance = 0;
-    var apCenter = 0;
-    var currentAPDistances = [];
-    var apX, apY, truX, truY;
-    var trackDrone = setInterval(function () {
-        // those are the position and offset of the element during the animation
-        apX = $("#droneImg").position().left;
-        apY = $("#droneImg").position().top;
+        var grid = d3.select("#probeLocations")         //TODO: Mark where probing happens
+        .append("svg")
+        .attr("width", "752px")
+        .attr("height", "752px");
+
+        // Position and offset of the element during the animation
+        droneX = $("#droneImg").position().left;
+        droneY = $("#droneImg").position().top;
+
         var aoX = $("#droneImg").offset().left;
         var aoY = $("#droneImg").offset().top;
-        truX = apX + droneImg.offsetWidth / 2;
-        truY = apY + droneImg.offsetHeight / 2;
+        adjustedDroneX = droneX + droneImg.offsetWidth / 2;
+        adjustedDroneY = droneY + droneImg.offsetHeight / 2;
         //console.log(apX + ", " + apY + " aoX: " + aoX + " aoY: " + aoY);
-        console.log("Tru x: " + truX.toFixed(2) + " Tru y: " + truY.toFixed(2));
+        console.log("Drone x: " + adjustedDroneX.toFixed(2) + " Drone y: " + adjustedDroneY.toFixed(2));
         currentAPDistances = [];
-        //currentAPDistances.push(iterations);// Correspond polling event to distances
-
+        
         for (var ap = 0; ap < APs.length; ap++) {
             distance = 0;
             apCenter = [APs[ap].x + (cellWidth / 2), APs[ap].y + (cellHeight / 2)];
             // d = sqrt[(receiverX - AP's x)^2 + (recieverY - AP's y)^2]
-            distance = Math.pow((Math.pow(truX - apCenter[0], 2) + Math.pow(truY - apCenter[1], 2)), 0.5);
-
-            currentAPDistances.push(distance);
-            console.log("Distance to AP" + ap + ": " + distance.toFixed(3) + ".");
+            distance = Math.pow((Math.pow(adjustedDroneX - apCenter[0], 2) + Math.pow(adjustedDroneY - apCenter[1], 2)), 0.5);
+            var pathLoss = findPathLoss(distance);
+            currentAPDistances.push(pathLoss);
+            console.log("Path Loss from AP" + ap + ": " + pathLoss.toFixed(5) + ".");
             
         }
         totalAPDistances.push(currentAPDistances);
-        console.log(iterations + ")-------------------------")
+        console.log("Scan " + iterations + ")-------------------------")
         if (iterations * probingInterval > flightTime * DroneCoords.length) {//end of flight, stop tracking
-            clearInterval(trackDrone);
+            clearInterval(scanForAPs);
             // TODO: Link data with chart.js
             plotDataPlotly(totalAPDistances);
             //console.log(totalAPDistances);
@@ -289,27 +306,24 @@ function animateDrone() {
 
     // Move droneImg
     for (var d = 0; d < DroneCoords.length; d++) {
+        console.log("Drone location: (" + adjustedDroneX + "," + adjustedDroneY + ")");
         newX = DroneCoords[d][0];
         newY = DroneCoords[d][1];
-        console.log("newX:" + newX + " newY: " + newY);
-        console.log("truX:" + truX + " truY: " + truY);
-
+        // Animate drone to next waypoint location 
         $("#droneImg").transition({
-            x: newX - droneWidth/2 + (cellWidth / 2) + 'px',
-            y: newY - droneHeight/2 + (cellHeight / 2) + 'px',
-            //x: newX + 'px',
-            //y: newY + 'px',
+            x: newX - (droneWidth / 2) + (cellWidth / 2) + 'px',
+            y: newY - (droneHeight / 2) + (cellHeight / 2) + 'px',
             duration: flightTime,
             delay: 0
          });
     }
-    //plotDataPlotly(totalAPDistances);
 };
 
 function generateSignalIndicators() {
 
     var radiusInBlocks = 4; // size of signal strength radius in terms of grid squares
-    var multFactor = 4;     // for changing radius on click
+                            // Should use path attenuation model
+    var multFactor = 4;     // for changing radius on click (or something else in the future)
     var min = 0;            // lowerbound for color array range calculation
     var radius = (radiusInBlocks - 1) * cellWidth + (cellWidth / 2);// radius is (n-1) + 1/2 where n: num. of blocks
 
@@ -422,16 +436,15 @@ function fillArray(n) {
         a[i] = i;
     return a;
 }
+
 function plotDataPlotly(totalAPDistances) {
     
     transposedData = transpose(totalAPDistances);
     console.log(transposedData);
     var data = [];
 
-
     for (var apIndex = 0; apIndex < transposedData.length; apIndex++) {
         var oneToN = fillArray(transposedData[apIndex].length);
-        console.log(oneToN);
         var individualAPStrength = { 
             x: oneToN,
             y: transposedData[apIndex],
@@ -439,48 +452,6 @@ function plotDataPlotly(totalAPDistances) {
         };
         data.push(individualAPStrength);
     }
-    console.log(data);
     layout = {};
     Plotly.newPlot('strengthChart', data);
-    //var strengthChart = document.getElementById("strengthChart");
-    //Plotly.plot(strengthChart, data);
-    
-}
-
-
-
-function plotDataChartJS(totalAPDistances) {
-    var ctx = document.getElementById("strengthChart");
-
-
-    console.log(totalAPDistances);
-
-    var scatterChart = new Chart(ctx, {
-        type: 'scatter',
-        dataSource: transformArrayofArrays(APData, "a"),
-        /*data: {
-            datasets: [{
-                label: 'AP Signal Strength',
-                data: APData[0]
-            }]
-        },*/
-        options: {
-            scales: {
-                xAxes: [{
-                    ticks: {
-                        suggestedMin: 0,
-                        suggestedMax: totalAPDistances.length
-                    },
-                    type: 'linear',
-                    position: 'bottom'
-                }],
-                yAxes: [{
-                    ticks: {
-                        suggestedMin: 0,
-                        suggestedMax: 750
-                    }
-                }]
-            }
-        }
-    });
 }

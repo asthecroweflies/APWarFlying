@@ -56,7 +56,6 @@ p {
   .graph {
     width: 752px;
     height: 752px;
-    border: 2px solid #db8d08;
     /*background-color: #ffe8c4;*/
     float: right;
     display: block;
@@ -65,7 +64,7 @@ p {
   }
 
 .options {
-    width: 200px;
+    width: 220px;
     height: 100px;
     position: absolute;
 }
