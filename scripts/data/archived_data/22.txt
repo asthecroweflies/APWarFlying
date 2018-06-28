@@ -1,0 +1,2009 @@
+[x] Wed Jun 13 20:56:13 CDT 2018:
+"ARRIS-7173"  44/100  
+"ARRIS-A262"  46/100  
+"BeyHive"  70/100  
+"d21b30"  62/100  
+"HP-Print-40-ENVY 4500 series"  56/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"It Hurts When IP"  44/100  
+"KitaGirl"  44/100  
+"Linux"  64/100  
+"NETGEAR66"  88/100  
+"The Whomping Wi-Fi"  44/100  
+"This Wifi"  42/100  
+~
+[x] Wed Jun 13 20:56:34 CDT 2018:
+"19f23a"  23/100  
+""  23/100  
+"ARRIS-1252"  23/100  
+"ARRIS-372A"  47/100  
+"BeyHive"  72/100  
+"d21b30"  60/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"NETGEAR66"  85/100  
+"Power Rangers"  47/100  
+"Renee"  88/100  
+"The Unreserves"  46/100  
+"The Unreserves-guest"  45/100  
+"This Wifi"  43/100  
+~
+[x] Wed Jun 13 20:56:56 CDT 2018:
+"ARRIS-372A"  47/100  
+"ARRIS-A262"  43/100  
+"d21b30"  64/100  
+"HP-Print-E9-ENVY 4500 series"  42/100  
+"hpsetup"  47/100  
+"It Hurts When IP"  43/100  
+"NETGEAR66"  85/100  
+"Power Rangers"  47/100  
+"Renee"  85/100  
+~
+[x] Wed Jun 13 20:57:16 CDT 2018:
+"ARRIS-372A"  47/100  
+"ARRIS-A262"  43/100  
+"belkin.0a0"  23/100  
+"d21b30"  64/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"HP-Print-E9-ENVY 4500 series"  42/100  
+"hpsetup"  47/100  
+"It Hurts When IP"  43/100  
+"Linux"  64/100  
+"NETGEAR66"  86/100  
+"Power Rangers"  47/100  
+"Renee"  85/100  
+"The Unreserves"  44/100  
+"The Unreserves-guest"  44/100  
+"The Willis's"  42/100  
+~
+[x] Wed Jun 13 20:57:38 CDT 2018:
+"Apartment 933"  23/100  
+"ARRIS-1252"  23/100  
+"ARRIS-3612"  23/100  
+"ARRIS-372A"  46/100  
+"ARRIS-7173"  46/100  
+"ARRIS-A262"  46/100  
+"BeyHive"  70/100  
+"d21b30"  60/100  
+"HP-Print-40-ENVY 4500 series"  44/100  
+"HP-Print-98-Officejet 4630"  23/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"hpsetup"  47/100  
+"It Hurts When IP"  45/100  
+"KitaGirl"  29/100  
+"NETGEAR66"  89/100  
+"Power Rangers"  47/100  
+"Sound Bar"  23/100  
+"The Unreserves"  43/100  
+"The Unreserves-guest"  44/100  
+"This Wifi"  42/100  
+"WOKE INTERNET"  44/100  
+~
+[x] Wed Jun 13 20:57:59 CDT 2018:
+"Apartment 933"  23/100  
+"ARRIS-1252"  23/100  
+"ARRIS-3612"  23/100  
+"ARRIS-372A"  46/100  
+"ARRIS-7173"  46/100  
+"ARRIS-A262"  46/100  
+"BeyHive"  70/100  
+"d21b30"  60/100  
+"HP-Print-40-ENVY 4500 series"  44/100  
+"HP-Print-98-Officejet 4630"  23/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"hpsetup"  47/100  
+"It Hurts When IP"  45/100  
+"KitaGirl"  29/100  
+"NETGEAR66"  91/100  
+"Power Rangers"  47/100  
+"Sound Bar"  23/100  
+"The Unreserves"  43/100  
+"The Unreserves-guest"  44/100  
+"This Wifi"  42/100  
+"WOKE INTERNET"  44/100  
+~
+[x] Wed Jun 13 20:58:20 CDT 2018:
+"Apartment 933"  23/100  
+"ARRIS-1252"  23/100  
+"ARRIS-3612"  23/100  
+"ARRIS-372A"  46/100  
+"ARRIS-7173"  46/100  
+"ARRIS-A262"  46/100  
+"BeyHive"  70/100  
+"d21b30"  60/100  
+"HP-Print-40-ENVY 4500 series"  44/100  
+"HP-Print-98-Officejet 4630"  23/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"hpsetup"  47/100  
+"It Hurts When IP"  45/100  
+"KitaGirl"  29/100  
+"NETGEAR66"  93/100  
+"Power Rangers"  47/100  
+"Sound Bar"  23/100  
+"The Unreserves"  43/100  
+"The Unreserves-guest"  44/100  
+"This Wifi"  42/100  
+"WOKE INTERNET"  44/100  
+~
+[x] Wed Jun 13 20:58:40 CDT 2018:
+"Apartment 933"  23/100  
+"ARRIS-1252"  23/100  
+"ARRIS-3612"  23/100  
+"ARRIS-372A"  46/100  
+"ARRIS-7173"  46/100  
+"ARRIS-A262"  46/100  
+"BeyHive"  70/100  
+"d21b30"  60/100  
+"HP-Print-40-ENVY 4500 series"  44/100  
+"HP-Print-98-Officejet 4630"  23/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"hpsetup"  47/100  
+"It Hurts When IP"  45/100  
+"KitaGirl"  29/100  
+"NETGEAR66"  94/100  
+"Power Rangers"  47/100  
+"Sound Bar"  23/100  
+"The Unreserves"  43/100  
+"The Unreserves-guest"  44/100  
+"This Wifi"  42/100  
+"WOKE INTERNET"  44/100  
+~
+[x] Wed Jun 13 20:59:00 CDT 2018:
+""  44/100  
+"ARRIS-372A"  44/100  
+"ARRIS-7D32"  48/100  
+"ARRIS-A262"  43/100  
+"BeyHive"  64/100  
+"HP-Print-40-ENVY 4500 series"  46/100  
+"HP-Print-E9-ENVY 4500 series"  26/100  
+"It Hurts When IP"  58/100  
+"NETGEAR66"  90/100  
+"NETGEAR97"  23/100  
+"Power Rangers"  46/100  
+"Renee"  84/100  
+"The Willis's"  42/100  
+"Villagiers"  23/100  
+"WOKE INTERNET"  47/100  
+~
+[x] Wed Jun 13 20:59:22 CDT 2018:
+""  44/100  
+"ARRIS-372A"  44/100  
+"ARRIS-7D32"  48/100  
+"ARRIS-A262"  43/100  
+"BeyHive"  64/100  
+"HP-Print-40-ENVY 4500 series"  46/100  
+"HP-Print-E9-ENVY 4500 series"  26/100  
+"It Hurts When IP"  58/100  
+"NETGEAR66"  94/100  
+"NETGEAR97"  23/100  
+"Power Rangers"  46/100  
+"Renee"  84/100  
+"The Willis's"  42/100  
+"Villagiers"  23/100  
+"WOKE INTERNET"  47/100  
+~
+[x] Wed Jun 13 20:59:42 CDT 2018:
+"ARRIS-372A"  47/100  
+"BeyHive"  62/100  
+"hpsetup"  46/100  
+"It Hurts When IP"  46/100  
+"KitaGirl"  43/100  
+"NETGEAR66"  89/100  
+"Power Rangers"  46/100  
+"Renee"  88/100  
+"The Unreserves"  43/100  
+"The Unreserves-guest"  43/100  
+"WOKE INTERNET"  47/100  
+~
+[x] Wed Jun 13 21:00:04 CDT 2018:
+""  23/100  
+"ARRIS-7D32"  42/100  
+"ARRIS-B472"  23/100  
+"BeyHive"  70/100  
+"KitaGirl"  23/100  
+"Linux"  60/100  
+"NETGEAR66"  88/100  
+"Power Rangers"  47/100  
+"Renee"  76/100  
+"The Arkham Network"  23/100  
+"Villagiers"  43/100  
+"WOKE INTERNET"  47/100  
+~
+[x] Wed Jun 13 21:00:26 CDT 2018:
+"ARRIS-372A"  46/100  
+"ARRIS-A262"  44/100  
+"BeyHive"  70/100  
+"d21b30"  56/100  
+"HP-Print-40-ENVY 4500 series"  44/100  
+"HP-Print-E9-ENVY 4500 series"  42/100  
+"It Hurts When IP"  56/100  
+"NETGEAR66"  90/100  
+"peasants wifi"  23/100  
+"Power Rangers"  46/100  
+"The Willis's"  45/100  
+"WOKE INTERNET"  43/100  
+"Zoey&Karissa"  42/100  
+~
+[x] Wed Jun 13 21:00:48 CDT 2018:
+"ARRIS-372A"  47/100  
+"ARRIS-B472"  42/100  
+"BeyHive"  84/100  
+"d21b30"  56/100  
+"HP-Print-40-ENVY 4500 series"  29/100  
+"Linux"  68/100  
+"NETGEAR66"  92/100  
+"Power Rangers"  47/100  
+"Renee"  77/100  
+~
+[x] Wed Jun 13 21:01:09 CDT 2018:
+""  23/100  
+"Apartment 933"  23/100  
+"ARRIS-372A"  47/100  
+"ARRIS-A262"  44/100  
+"BeyHive"  84/100  
+"d21b30"  58/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"hpsetup"  47/100  
+"Linux"  64/100  
+"NETGEAR66"  85/100  
+"Power Rangers"  47/100  
+"Renee"  84/100  
+~
+[x] Wed Jun 13 21:01:31 CDT 2018:
+"Apartment 933"  26/100  
+"ARRIS-7173"  44/100  
+"ARRIS-960A"  23/100  
+"ARRIS-9DB2"  23/100  
+"ARRIS-A262"  44/100  
+"BeyHive"  70/100  
+"d21b30"  58/100  
+"HP-Print-40-ENVY 4500 series"  44/100  
+"HP-Print-E9-ENVY 4500 series"  42/100  
+"hpsetup"  46/100  
+"It Hurts When IP"  48/100  
+"JWJT CRIB"  23/100  
+"Linux"  63/100  
+"NETGEAR66"  92/100  
+"Power Rangers"  47/100  
+"Renee"  84/100  
+"The Unreserves-guest"  42/100  
+"Villagiers"  44/100  
+"WOKE INTERNET"  42/100  
+~
+[x] Wed Jun 13 21:01:53 CDT 2018:
+"ARRIS-372A"  47/100  
+"ARRIS-A262"  43/100  
+"BeyHive"  72/100  
+"d21b30"  58/100  
+"hpsetup"  42/100  
+"NETGEAR66"  86/100  
+"Power Rangers"  46/100  
+"Renee"  76/100  
+"Villagiers"  26/100  
+~
+[x] Wed Jun 13 21:02:15 CDT 2018:
+"ARRIS-372A"  47/100  
+"ARRIS-9DB2"  23/100  
+"ARRIS-A262"  42/100  
+"ARRIS-B472"  42/100  
+"BeyHive"  88/100  
+"d21b30"  56/100  
+"HP-Print-40-ENVY 4500 series"  46/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"NETGEAR66"  85/100  
+"Renee"  36/100  
+"The Unreserves"  46/100  
+~
+[x] Wed Jun 13 21:02:36 CDT 2018:
+"ARRIS-7173"  46/100  
+"BeyHive"  68/100  
+"It Hurts When IP"  47/100  
+"Linux"  68/100  
+"NETGEAR66"  82/100  
+~
+[x] Wed Jun 13 21:02:58 CDT 2018:
+"ARRIS-7173"  46/100  
+"BeyHive"  68/100  
+"It Hurts When IP"  47/100  
+"Linux"  68/100  
+"NETGEAR66"  89/100  
+~
+[x] Wed Jun 13 21:03:18 CDT 2018:
+"ARRIS-7173"  44/100  
+"ARRIS-A262"  46/100  
+"BeyHive"  84/100  
+"Bokowifi"  25/100  
+"d21b30"  58/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"It Hurts When IP"  56/100  
+"Linux"  70/100  
+"NETGEAR66"  94/100  
+"The Willis's"  42/100  
+"Villagiers"  43/100  
+"WOKE INTERNET"  48/100  
+~
+[x] Wed Jun 13 21:03:40 CDT 2018:
+""  42/100  
+"ARRIS-7D32"  47/100  
+"ARRIS-A262"  42/100  
+"BeyHive"  70/100  
+"d21b30"  64/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"hpsetup"  44/100  
+"It Hurts When IP"  48/100  
+"Linux"  64/100  
+"MySpectrumWiFiba-2G"  23/100  
+"NETGEAR66"  89/100  
+"Power Rangers"  47/100  
+"Renee"  84/100  
+"The Whomping Wi-Fi"  43/100  
+"TP-LINK_5F34"  42/100  
+~
+[x] Wed Jun 13 21:04:02 CDT 2018:
+"ARRIS-372A"  47/100  
+"ARRIS-9DB2"  23/100  
+"ARRIS-A262"  43/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"NETGEAR66"  88/100  
+~
+[x] Wed Jun 13 21:04:23 CDT 2018:
+"ARRIS-7173"  47/100  
+"BeyHive"  64/100  
+"HP-Print-40-ENVY 4500 series"  44/100  
+"HP-Print-E9-ENVY 4500 series"  42/100  
+"It Hurts When IP"  57/100  
+"NETGEAR66"  85/100  
+~
+[x] Wed Jun 13 21:04:45 CDT 2018:
+"Apartment 933"  23/100  
+"ARRIS-372A"  48/100  
+"ARRIS-7173"  44/100  
+"ARRIS-A262"  42/100  
+"BeyHive"  64/100  
+"d21b30"  56/100  
+"HP-Print-E9-ENVY 4500 series"  44/100  
+"NETGEAR01"  23/100  
+"NETGEAR66"  88/100  
+"Power Rangers"  47/100  
+"Renee"  84/100  
+"The Unreserves"  44/100  
+~
+[x] Wed Jun 13 21:05:07 CDT 2018:
+"ARRIS-A262"  46/100  
+"ARRIS-B472"  26/100  
+"BeyHive"  64/100  
+"d21b30"  58/100  
+"hpsetup"  42/100  
+"It Hurts When IP"  48/100  
+"Linux"  60/100  
+"NETGEAR66"  85/100  
+"Power Rangers"  47/100  
+"Renee"  85/100  
+~
+[x] Wed Jun 13 21:05:29 CDT 2018:
+"ARRIS-09F3"  23/100  
+"ARRIS-372A"  46/100  
+"ARRIS-7173"  46/100  
+"ARRIS-960A"  26/100  
+"BeyHive"  66/100  
+"HP-Print-40-ENVY 4500 series"  44/100  
+"HP-Print-E9-ENVY 4500 series"  44/100  
+"It Hurts When IP"  48/100  
+"NETGEAR01"  23/100  
+"NETGEAR66"  87/100  
+"Power Rangers"  48/100  
+"Renee"  95/100  
+"The Unreserves"  44/100  
+"The Unreserves-guest"  42/100  
+"The Willis's"  26/100  
+~
+[x] Wed Jun 13 21:05:50 CDT 2018:
+"ARRIS-372A"  47/100  
+"ARRIS-7173"  47/100  
+"d21b30"  60/100  
+"hpsetup"  43/100  
+"It Hurts When IP"  60/100  
+"Linux"  64/100  
+"NETGEAR66"  86/100  
+"Renee"  92/100  
+"The Unreserves"  44/100  
+"The Unreserves-guest"  44/100  
+~
+[x] Wed Jun 13 21:06:12 CDT 2018:
+"ARRIS-372A"  47/100  
+"ARRIS-7173"  47/100  
+"ARRIS-7D32"  56/100  
+"ARRIS-960A"  23/100  
+"ARRIS-B472"  23/100  
+"BeyHive"  72/100  
+"HP-Print-E9-ENVY 4500 series"  26/100  
+"hpsetup"  43/100  
+"NETGEAR66"  85/100  
+"Power Rangers"  48/100  
+"Renee"  95/100  
+"The Unreserves"  44/100  
+"The Willis's"  42/100  
+~
+[x] Wed Jun 13 21:06:34 CDT 2018:
+"ARRIS-1252"  23/100  
+"ARRIS-A262"  46/100  
+"BeyHive"  70/100  
+"d21b30"  62/100  
+"hpsetup"  43/100  
+"Linux"  64/100  
+"NETGEAR66"  85/100  
+"Power Rangers"  46/100  
+"Renee"  85/100  
+"The Unreserves"  44/100  
+"The Unreserves-guest"  44/100  
+~
+[x] Wed Jun 13 21:06:56 CDT 2018:
+"ARRIS-1252"  23/100  
+"ARRIS-372A"  48/100  
+"ARRIS-7D32"  43/100  
+"ARRIS-9DB2"  23/100  
+"ARRIS-A262"  46/100  
+"BeyHive"  74/100  
+"Bokowifi"  23/100  
+"d21b30"  50/100  
+"It Hurts When IP"  56/100  
+"Linux"  68/100  
+"NETGEAR66"  85/100  
+"Renee"  85/100  
+"The Unreserves"  44/100  
+"The Unreserves-guest"  44/100  
+"Winternetiscoming"  23/100  
+~
+[x] Wed Jun 13 21:07:18 CDT 2018:
+"Apartment 933"  23/100  
+"ARRIS-7173"  48/100  
+"BeyHive"  72/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"It Hurts When IP"  56/100  
+"NETGEAR66"  88/100  
+"The Willis's"  29/100  
+~
+[x] Wed Jun 13 21:07:39 CDT 2018:
+"Apartment 933"  23/100  
+"ARRIS-09F3"  23/100  
+"ARRIS-1252"  26/100  
+"ARRIS-372A"  47/100  
+"ARRIS-7173"  47/100  
+"ARRIS-960A"  23/100  
+"ARRIS-A262"  46/100  
+"BeyHive"  74/100  
+"Bokowifi"  23/100  
+"d21b30"  61/100  
+"HP-Print-40-ENVY 4500 series"  46/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"hpsetup"  46/100  
+"It Hurts When IP"  54/100  
+"Linux"  64/100  
+"NETGEAR66"  83/100  
+"Power Rangers"  46/100  
+"Renee"  86/100  
+"stoney"  42/100  
+"The Unreserves"  44/100  
+"The Unreserves-guest"  44/100  
+"The Willis's"  28/100  
+"TP-LINK_5F34"  44/100  
+~
+[x] Wed Jun 13 21:08:01 CDT 2018:
+"Apartment 933"  23/100  
+"ARRIS-960A"  23/100  
+"ARRIS-9DB2"  23/100  
+"ARRIS-A262"  42/100  
+"ARRIS-B472"  29/100  
+"BeyHive"  68/100  
+"d21b30"  56/100  
+"hpsetup"  46/100  
+"Linux"  62/100  
+"NETGEAR66"  87/100  
+"Power Rangers"  44/100  
+"Renee"  85/100  
+"The Unreserves"  46/100  
+"The Unreserves-guest"  44/100  
+~
+[x] Wed Jun 13 21:08:23 CDT 2018:
+""  44/100  
+"ARRIS-7173"  46/100  
+"ARRIS-A262"  42/100  
+"belkin.c58"  23/100  
+"BeyHive"  64/100  
+"d21b30"  58/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"HP-Print-E9-ENVY 4500 series"  42/100  
+"It Hurts When IP"  58/100  
+"NETGEAR66"  84/100  
+"The Willis's"  42/100  
+~
+[x] Wed Jun 13 21:08:45 CDT 2018:
+"Apartment 933"  42/100  
+"ARRIS-372A"  47/100  
+"ARRIS-7173"  48/100  
+"ARRIS-B472"  42/100  
+"belkin.c58"  23/100  
+"BeyHive"  68/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"hpsetup"  47/100  
+"It Hurts When IP"  47/100  
+"NETGEAR66"  85/100  
+"Power Rangers"  47/100  
+"Renee"  85/100  
+"The Unreserves-guest"  44/100  
+~
+[x] Wed Jun 13 21:09:06 CDT 2018:
+"ARRIS-372A"  48/100  
+"ARRIS-A262"  46/100  
+"BeyHive"  70/100  
+"d21b30"  60/100  
+"hpsetup"  42/100  
+"Linux"  64/100  
+"NETGEAR66"  84/100  
+"Renee"  84/100  
+~
+[x] Wed Jun 13 21:09:28 CDT 2018:
+"ARRIS-1252"  23/100  
+"ARRIS-372A"  48/100  
+"ARRIS-86C2"  23/100  
+"ARRIS-960A"  23/100  
+"ARRIS-A262"  46/100  
+"ARRIS-B472"  23/100  
+"BeyHive"  70/100  
+"d21b30"  60/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"hpsetup"  43/100  
+"It Hurts When IP"  56/100  
+"Linux"  64/100  
+"NETGEAR66"  85/100  
+"Power Rangers"  46/100  
+"Renee"  85/100  
+"The Unreserves"  44/100  
+"The Unreserves-guest"  44/100  
+"Zoey&Karissa"  43/100  
+~
+[x] Wed Jun 13 21:09:50 CDT 2018:
+"Apartment 933"  23/100  
+"ARRIS-1252"  23/100  
+"ARRIS-372A"  48/100  
+"ARRIS-A262"  43/100  
+"d21b30"  56/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"HP-Print-E9-ENVY 4500 series"  44/100  
+"hpsetup"  46/100  
+"It Hurts When IP"  49/100  
+"Linux"  62/100  
+"NETGEAR66"  84/100  
+"Power Rangers"  47/100  
+"Renee"  88/100  
+"The Unreserves"  44/100  
+"The Unreserves-guest"  44/100  
+"The Willis's"  29/100  
+"Zoey&Karissa"  42/100  
+~
+[x] Wed Jun 13 21:10:12 CDT 2018:
+"ARRIS-1252"  23/100  
+"ARRIS-7173"  47/100  
+"ARRIS-9DB2"  23/100  
+"belkin.c58"  23/100  
+"BeyHive"  64/100  
+"HP-Print-40-ENVY 4500 series"  47/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"It Hurts When IP"  48/100  
+"NETGEAR66"  84/100  
+"The Willis's"  29/100  
+~
+[x] Wed Jun 13 21:10:34 CDT 2018:
+"ARRIS-372A"  56/100  
+"ARRIS-7173"  47/100  
+"ARRIS-A262"  42/100  
+"ARRIS-B472"  42/100  
+"BeyHive"  70/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"hpsetup"  47/100  
+"NETGEAR66"  85/100  
+"Power Rangers"  47/100  
+"Renee"  85/100  
+"The Unreserves"  43/100  
+"The Unreserves-guest"  46/100  
+"The Willis's"  42/100  
+~
+[x] Wed Jun 13 21:10:55 CDT 2018:
+""  23/100  
+"ARRIS-372A"  48/100  
+"ARRIS-7D32"  44/100  
+"ARRIS-A262"  44/100  
+"belkin.c58"  23/100  
+"BeyHive"  64/100  
+"d21b30"  57/100  
+"hpsetup"  43/100  
+"Linux"  68/100  
+"NETGEAR66"  84/100  
+"Power Rangers"  47/100  
+"Renee"  85/100  
+"The Unreserves"  44/100  
+"The Unreserves-guest"  29/100  
+"This Wifi"  23/100  
+"Zoey&Karissa"  42/100  
+~
+[x] Wed Jun 13 21:11:17 CDT 2018:
+"ARRIS-372A"  56/100  
+"ARRIS-7173"  47/100  
+"ARRIS-7D32"  56/100  
+"ARRIS-A262"  43/100  
+"ARRIS-B472"  42/100  
+"d21b30"  60/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"hpsetup"  43/100  
+"It Hurts When IP"  56/100  
+"Linux"  64/100  
+"NETGEAR66"  84/100  
+"Renee"  85/100  
+"The Unreserves"  44/100  
+"The Willis's"  26/100  
+~
+[x] Wed Jun 13 21:11:39 CDT 2018:
+"Apartment 933"  23/100  
+"ARRIS-1252"  23/100  
+"ARRIS-372A"  54/100  
+"ARRIS-7173"  48/100  
+"ARRIS-7D32"  56/100  
+"ARRIS-960A"  23/100  
+"ARRIS-A262"  43/100  
+"ARRIS-B472"  42/100  
+"belkin.c58"  23/100  
+"BeyHive"  70/100  
+"d21b30"  60/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"hpsetup"  43/100  
+"It Hurts When IP"  44/100  
+"Linux"  64/100  
+"NETGEAR66"  90/100  
+"Power Rangers"  44/100  
+"Renee"  85/100  
+"The Unreserves"  44/100  
+"The Unreserves-guest"  43/100  
+"The Willis's"  42/100  
+"WOKE INTERNET"  44/100  
+~
+[x] Wed Jun 13 21:12:01 CDT 2018:
+"ARRIS-7173"  47/100  
+"ARRIS-B472"  44/100  
+"BeyHive"  70/100  
+"HP-Print-40-ENVY 4500 series"  46/100  
+"NETGEAR66"  85/100  
+~
+[x] Wed Jun 13 21:12:23 CDT 2018:
+"ARRIS-372A"  56/100  
+"ARRIS-7173"  46/100  
+"d21b30"  60/100  
+"hpsetup"  44/100  
+"It Hurts When IP"  47/100  
+"NETGEAR66"  86/100  
+"Power Rangers"  46/100  
+"Renee"  92/100  
+"The Unreserves-guest"  44/100  
+"Zoey&Karissa"  26/100  
+~
+[x] Wed Jun 13 21:12:44 CDT 2018:
+"ARRIS-7173"  46/100  
+"BeyHive"  64/100  
+"d21b30"  60/100  
+"HP-Print-40-ENVY 4500 series"  46/100  
+"It Hurts When IP"  60/100  
+"Linux"  64/100  
+"NETGEAR66"  84/100  
+~
+[x] Wed Jun 13 21:13:06 CDT 2018:
+"ARRIS-7173"  47/100  
+"ARRIS-7D32"  56/100  
+"BeyHive"  70/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"hpsetup"  42/100  
+"It Hurts When IP"  44/100  
+"NETGEAR66"  83/100  
+~
+[x] Wed Jun 13 21:13:28 CDT 2018:
+"ARRIS-372A"  47/100  
+"ARRIS-7173"  46/100  
+"ARRIS-7D32"  56/100  
+"ARRIS-960A"  23/100  
+"ARRIS-9DB2"  23/100  
+"ARRIS-A262"  46/100  
+"BeyHive"  70/100  
+"d21b30"  56/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"hpsetup"  43/100  
+"It Hurts When IP"  44/100  
+"Linux"  47/100  
+"NETGEAR66"  85/100  
+"Power Rangers"  47/100  
+"Renee"  86/100  
+"The Unreserves-guest"  44/100  
+"The Willis's"  42/100  
+"Zoey&Karissa"  26/100  
+~
+[x] Wed Jun 13 21:13:50 CDT 2018:
+"Apartment 933"  42/100  
+"ARRIS-372A"  48/100  
+"ARRIS-7D32"  48/100  
+"ARRIS-A262"  43/100  
+"ARRIS-B472"  23/100  
+"BeyHive"  74/100  
+"d21b30"  57/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"hpsetup"  46/100  
+"It Hurts When IP"  60/100  
+"JJ"  23/100  
+"Linux"  70/100  
+"NETGEAR66"  83/100  
+"Power Rangers"  48/100  
+"Renee"  92/100  
+"The Unreserves-guest"  23/100  
+"The Willis's"  26/100  
+~
+[x] Wed Jun 13 21:14:11 CDT 2018:
+""  23/100  
+"ARRIS-1252"  23/100  
+"ARRIS-372A"  47/100  
+"ARRIS-7173"  47/100  
+"ARRIS-7D32"  56/100  
+"ARRIS-A262"  46/100  
+"ARRIS-B472"  25/100  
+"d21b30"  50/100  
+"HP-Print-40-ENVY 4500 series"  46/100  
+"HP-Print-73-Officejet 6800"  26/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"hpsetup"  46/100  
+"It Hurts When IP"  56/100  
+"NETGEAR66"  84/100  
+"Okay_Wifi"  23/100  
+"Power Rangers"  47/100  
+"PrincessPalace"  23/100  
+"Renee"  84/100  
+"The Unreserves-guest"  44/100  
+~
+[x] Wed Jun 13 21:14:33 CDT 2018:
+"ARRIS-A262"  43/100  
+"BeyHive"  84/100  
+"HP-Print-40-ENVY 4500 series"  46/100  
+"HP-Print-73-Officejet 6800"  26/100  
+"HP-Print-E9-ENVY 4500 series"  26/100  
+"It Hurts When IP"  50/100  
+"Linux"  68/100  
+"NETGEAR66"  85/100  
+"The Willis's"  42/100  
+~
+[x] Wed Jun 13 21:14:55 CDT 2018:
+"Apartment 933"  23/100  
+"ARRIS-372A"  47/100  
+"ARRIS-7173"  48/100  
+"ARRIS-9DB2"  23/100  
+"ARRIS-B472"  26/100  
+"BeyHive"  72/100  
+"cb9756"  23/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"hpsetup"  47/100  
+"NETGEAR01"  23/100  
+"NETGEAR66"  85/100  
+"Power Rangers"  47/100  
+"Renee"  85/100  
+"The Willis's"  43/100  
+"This Wifi"  26/100  
+~
+[x] Wed Jun 13 21:15:17 CDT 2018:
+""  23/100  
+""  26/100  
+"ARRIS-372A"  46/100  
+"ARRIS-7173"  48/100  
+"ARRIS-7D32"  46/100  
+"ARRIS-9DB2"  23/100  
+"ARRIS-A262"  46/100  
+"ARRIS-B472"  38/100  
+"belkin.c58"  23/100  
+"BeyHive"  64/100  
+"d21b30"  60/100  
+"d25b95"  23/100  
+"HP-Print-40-ENVY 4500 series"  46/100  
+"HP-Print-73-Officejet 6800"  42/100  
+"HP-Print-E9-ENVY 4500 series"  42/100  
+"hpsetup"  47/100  
+"It Hurts When IP"  49/100  
+"Linux"  70/100  
+"NETGEAR66"  83/100  
+"Power Rangers"  46/100  
+"Renee"  94/100  
+"The Willis's"  26/100  
+"This Wifi"  26/100  
+"WOKE INTERNET"  44/100  
+"Zoey&Karissa"  26/100  
+~
+[x] Wed Jun 13 21:15:40 CDT 2018:
+""  43/100  
+"ARRIS-9DB2"  23/100  
+"ARRIS-A262"  43/100  
+"ARRIS-B472"  23/100  
+"BeyHive"  72/100  
+"cb9756"  23/100  
+"Chromecast5590"  23/100  
+"HP-Print-C2-ENVY 4500 series"  23/100  
+"HP-Print-E9-ENVY 4500 series"  29/100  
+"Linux"  62/100  
+"NETGEAR66"  84/100  
+"Power Rangers"  48/100  
+"Renee"  84/100  
+"Zoey&Karissa"  26/100  
+~
+[x] Wed Jun 13 21:16:02 CDT 2018:
+"ARRIS-372A"  47/100  
+"ARRIS-7D32"  56/100  
+"ARRIS-A262"  43/100  
+"ARRIS-B472"  23/100  
+"BeyHive"  64/100  
+"d21b30"  57/100  
+"hpsetup"  47/100  
+"It Hurts When IP"  49/100  
+"NETGEAR66"  84/100  
+"Renee"  85/100  
+"The Unreserves"  43/100  
+"The Unreserves-guest"  42/100  
+~
+[x] Wed Jun 13 21:16:24 CDT 2018:
+""  23/100  
+"ARRIS-7173"  46/100  
+"ARRIS-A262"  43/100  
+"d21b30"  50/100  
+"HP-Print-40-ENVY 4500 series"  44/100  
+"hpsetup"  44/100  
+"It Hurts When IP"  42/100  
+"Linux"  70/100  
+"NETGEAR66"  85/100  
+"Power Rangers"  47/100  
+"Renee"  85/100  
+"The Unreserves-guest"  46/100  
+"The Willis's"  43/100  
+~
+[x] Wed Jun 13 21:16:46 CDT 2018:
+"ARRIS-7173"  46/100  
+"d21b30"  56/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"HP-Print-C2-ENVY 4500 series"  23/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"It Hurts When IP"  47/100  
+"Linux"  64/100  
+"NETGEAR66"  84/100  
+"NETGEAR97"  23/100  
+"The Whomping Wi-Fi"  42/100  
+"The Willis's"  42/100  
+~
+[x] Wed Jun 13 21:17:08 CDT 2018:
+""  23/100  
+"ARRIS-7173"  47/100  
+"ARRIS-7D32"  56/100  
+"ARRIS-9DB2"  23/100  
+"ARRIS-B472"  42/100  
+"cb9756"  23/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"HP-Print-C2-ENVY 4500 series"  23/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"hpsetup"  46/100  
+"It Hurts When IP"  46/100  
+"Linux"  58/100  
+"NETGEAR66"  83/100  
+"NETGEAR97"  23/100  
+"The Willis's"  29/100  
+"Zoey&Karissa"  42/100  
+~
+[x] Wed Jun 13 21:17:29 CDT 2018:
+""  43/100  
+"ARRIS-7173"  47/100  
+"ARRIS-7D32"  56/100  
+"ARRIS-960A"  23/100  
+"ARRIS-A262"  46/100  
+"ARRIS-B472"  38/100  
+"BeyHive"  70/100  
+"Bokowifi"  23/100  
+"cb9756"  23/100  
+"d21b30"  59/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"HP-Print-E9-ENVY 4500 series"  39/100  
+"hpsetup"  47/100  
+"Linux"  62/100  
+"NETGEAR66"  90/100  
+"Power Rangers"  46/100  
+"Renee"  84/100  
+"The Unreserves"  44/100  
+"The Willis's"  31/100  
+"This Wifi"  23/100  
+"TP-LINK_5F34"  42/100  
+~
+[x] Wed Jun 13 21:17:51 CDT 2018:
+""  44/100  
+"ARRIS-7D32"  56/100  
+"ARRIS-A262"  43/100  
+"ARRIS-B472"  23/100  
+"BeyHive"  68/100  
+"d21b30"  56/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"hpsetup"  44/100  
+"It Hurts When IP"  47/100  
+"Linux"  64/100  
+"NETGEAR66"  94/100  
+"Renee"  84/100  
+"The Unreserves"  44/100  
+"TP-Link_D796"  23/100  
+~
+[x] Wed Jun 13 21:18:13 CDT 2018:
+"ARRIS-A262"  44/100  
+"d21b30"  58/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"hpsetup"  43/100  
+"It Hurts When IP"  44/100  
+"NETGEAR66"  85/100  
+"Renee"  91/100  
+~
+[x] Wed Jun 13 21:18:35 CDT 2018:
+""  44/100  
+"ARRIS-7173"  47/100  
+"ARRIS-960A"  23/100  
+"ARRIS-A262"  46/100  
+"BeyHive"  70/100  
+"d21b30"  72/100  
+"HP-Print-40-ENVY 4500 series"  46/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"It Hurts When IP"  46/100  
+"Linux"  60/100  
+"NETGEAR66"  85/100  
+"The Willis's"  43/100  
+~
+[x] Wed Jun 13 21:18:57 CDT 2018:
+""  43/100  
+"ARRIS-7173"  47/100  
+"ARRIS-7D32"  56/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"HP-Print-E9-ENVY 4500 series"  26/100  
+"hpsetup"  46/100  
+"It Hurts When IP"  43/100  
+"NETGEAR66"  83/100  
+"Renee"  84/100  
+"The Willis's"  42/100  
+"WOKE INTERNET"  26/100  
+~
+[x] Wed Jun 13 21:19:18 CDT 2018:
+""  23/100  
+""  23/100  
+""  44/100  
+"ARRIS-7173"  48/100  
+"ARRIS-7D32"  48/100  
+"BeyHive"  70/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"HP-Print-E9-ENVY 4500 series"  42/100  
+"hpsetup"  43/100  
+"It Hurts When IP"  48/100  
+"NETGEAR66"  84/100  
+"peasants wifi"  23/100  
+"Power Rangers"  44/100  
+"The Unreserves-guest"  46/100  
+"The Willis's"  42/100  
+"WOKE INTERNET"  43/100  
+"Zoey&Karissa"  26/100  
+~
+[x] Wed Jun 13 21:19:40 CDT 2018:
+"ARRIS-372A"  56/100  
+"ARRIS-A262"  44/100  
+"ARRIS-B472"  26/100  
+"belkin.c58"  23/100  
+"BeyHive"  64/100  
+"d21b30"  56/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"hpsetup"  43/100  
+"NETGEAR66"  80/100  
+"Renee"  92/100  
+"The Unreserves"  46/100  
+"The Unreserves-guest"  47/100  
+~
+[x] Wed Jun 13 21:20:02 CDT 2018:
+"ARRIS-7173"  46/100  
+"BeyHive"  68/100  
+"cb9756"  23/100  
+"d21b30"  56/100  
+"HP-Print-73-Officejet 6800"  29/100  
+"It Hurts When IP"  48/100  
+"NETGEAR66"  82/100  
+"The Willis's"  44/100  
+"This Wifi"  23/100  
+"WOKE INTERNET"  43/100  
+~
+[x] Wed Jun 13 21:20:23 CDT 2018:
+"ARRIS-7173"  47/100  
+"ARRIS-7D32"  56/100  
+"ARRIS-A262"  44/100  
+"ARRIS-B472"  23/100  
+"cb9756"  23/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"HP-Print-C2-ENVY 4500 series"  23/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"hpsetup"  43/100  
+"NETGEAR66"  83/100  
+"Power Rangers"  46/100  
+"Renee"  92/100  
+"The Unreserves"  46/100  
+~
+[x] Wed Jun 13 21:20:45 CDT 2018:
+""  23/100  
+""  26/100  
+""  44/100  
+"ARRIS-49E2"  44/100  
+"ARRIS-A262"  43/100  
+"ARRIS-B472"  42/100  
+"d21b30"  58/100  
+"HP-Print-73-Officejet 6800"  26/100  
+"hpsetup"  43/100  
+"It Hurts When IP"  49/100  
+"Linux"  56/100  
+"NETGEAR66"  80/100  
+"Renee"  96/100  
+"Zoey&Karissa"  26/100  
+~
+[x] Wed Jun 13 21:21:07 CDT 2018:
+"ARRIS-372A"  46/100  
+"ARRIS-7173"  46/100  
+"ARRIS-7D32"  48/100  
+"ARRIS-A262"  46/100  
+"d21b30"  56/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"hpsetup"  46/100  
+"It Hurts When IP"  48/100  
+"Linux"  48/100  
+"NETGEAR66"  80/100  
+"Renee"  92/100  
+"RT-AC1200_B0_2G"  23/100  
+"The Unreserves"  44/100  
+"The Willis's"  42/100  
+~
+[x] Wed Jun 13 21:21:29 CDT 2018:
+"ARRIS-7173"  44/100  
+"ARRIS-960A"  23/100  
+"ARRIS-9DB2"  23/100  
+"ARRIS-A262"  43/100  
+"BeyHive"  70/100  
+"cb9756"  23/100  
+"d21b30"  58/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"HP-Print-C2-ENVY 4500 series"  23/100  
+"HP-Print-E9-ENVY 4500 series"  42/100  
+"hpsetup"  46/100  
+"It Hurts When IP"  47/100  
+"Linux"  64/100  
+"NETGEAR66"  81/100  
+"NETGEAR97"  23/100  
+"Power Rangers"  46/100  
+"The Unreserves"  44/100  
+"The Unreserves-guest"  47/100  
+"This Wifi"  26/100  
+~
+[x] Wed Jun 13 21:21:51 CDT 2018:
+"ARRIS-7173"  44/100  
+"belkin.c58"  23/100  
+"BeyHive"  70/100  
+"GetOffMyWifi"  23/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"NETGEAR66"  80/100  
+"peasants wifi"  23/100  
+"Renee"  84/100  
+~
+[x] Wed Jun 13 21:22:12 CDT 2018:
+"ARRIS-09F3"  23/100  
+"ARRIS-A262"  43/100  
+"ARRIS-B472"  26/100  
+"d21b30"  56/100  
+"hpsetup"  47/100  
+"It Hurts When IP"  43/100  
+"NETGEAR66"  80/100  
+"Power Rangers"  48/100  
+"Renee"  84/100  
+"Sound Bar"  23/100  
+"The Unreserves-guest"  46/100  
+"This Wifi"  23/100  
+"TP-LINK_5F34"  42/100  
+~
+[x] Wed Jun 13 21:22:34 CDT 2018:
+""  43/100  
+"ARRIS-7173"  47/100  
+"ARRIS-A262"  46/100  
+"BeyHive"  70/100  
+"d21b30"  60/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"HP-Print-E9-ENVY 4500 series"  42/100  
+"It Hurts When IP"  48/100  
+"Linux"  58/100  
+"NETGEAR66"  80/100  
+"The Willis's"  43/100  
+~
+[x] Wed Jun 13 21:22:56 CDT 2018:
+"ARRIS-372A"  56/100  
+"ARRIS-7173"  47/100  
+"ARRIS-A262"  43/100  
+"ARRIS-B472"  23/100  
+"BeyHive"  68/100  
+"d21b30"  58/100  
+"HP-Print-73-Officejet 6800"  26/100  
+"hpsetup"  47/100  
+"It Hurts When IP"  48/100  
+"Linux"  48/100  
+"NETGEAR66"  78/100  
+"Power Rangers"  46/100  
+"Pretty Fly For A Wi-FI!"  26/100  
+"The Unreserves"  47/100  
+"The Unreserves-guest"  47/100  
+"The Willis's"  29/100  
+"This Wifi"  23/100  
+~
+[x] Wed Jun 13 21:23:18 CDT 2018:
+"ARRIS-372A"  47/100  
+"ARRIS-7173"  46/100  
+"ARRIS-A262"  43/100  
+"d21b30"  47/100  
+"HP-Print-E9-ENVY 4500 series"  26/100  
+"It Hurts When IP"  47/100  
+"NETGEAR66"  79/100  
+"Renee"  92/100  
+"The Unreserves"  46/100  
+"Villagiers"  43/100  
+"Zoey&Karissa"  23/100  
+~
+[x] Wed Jun 13 21:23:39 CDT 2018:
+"19f23a"  23/100  
+"ARRIS-7173"  44/100  
+"ARRIS-A262"  43/100  
+"ARRIS-B472"  26/100  
+"BeyHive"  62/100  
+"d21b30"  47/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"hpsetup"  43/100  
+"It Hurts When IP"  47/100  
+"Linux"  47/100  
+"MySpectrumWiFiba-2G"  23/100  
+"NETGEAR01"  23/100  
+"NETGEAR66"  80/100  
+"Power Rangers"  43/100  
+"Renee"  92/100  
+"The Unreserves"  45/100  
+"The Unreserves-guest"  46/100  
+"The Willis's"  42/100  
+~
+[x] Wed Jun 13 21:24:01 CDT 2018:
+""  23/100  
+"ARRIS-7173"  47/100  
+"ARRIS-7D32"  46/100  
+"ARRIS-B472"  26/100  
+"BeyHive"  70/100  
+"cb9756"  23/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"HP-Print-C2-ENVY 4500 series"  23/100  
+"HP-Print-E9-ENVY 4500 series"  44/100  
+"hpsetup"  46/100  
+"It Hurts When IP"  46/100  
+"NETGEAR66"  80/100  
+"The Willis's"  42/100  
+"This Wifi"  26/100  
+~
+[x] Wed Jun 13 21:24:23 CDT 2018:
+""  23/100  
+"ARRIS-7D32"  56/100  
+"ARRIS-A262"  44/100  
+"ARRIS-B472"  23/100  
+"BeyHive"  70/100  
+"d21b30"  60/100  
+"HP-Print-E9-ENVY 4500 series"  42/100  
+"Linux"  58/100  
+"NETGEAR66"  82/100  
+"Renee"  84/100  
+"The Unreserves"  47/100  
+"The Unreserves-guest"  47/100  
+~
+[x] Wed Jun 13 21:24:45 CDT 2018:
+"ARRIS-49E2"  44/100  
+"ARRIS-7D32"  56/100  
+"ARRIS-A262"  47/100  
+"ARRIS-B472"  23/100  
+"BeyHive"  70/100  
+"cb9756"  23/100  
+"d21b30"  58/100  
+"HP-Print-40-ENVY 4500 series"  29/100  
+"hpsetup"  47/100  
+"Linux"  56/100  
+"NETGEAR66"  80/100  
+"Power Rangers"  44/100  
+"Sound Bar"  23/100  
+"The Unreserves"  44/100  
+"This Wifi"  23/100  
+"Villagiers"  43/100  
+~
+[x] Wed Jun 13 21:25:07 CDT 2018:
+""  46/100  
+"BeyHive"  70/100  
+"d21b30"  48/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"HP-Print-E9-ENVY 4500 series"  42/100  
+"It Hurts When IP"  46/100  
+"NETGEAR66"  79/100  
+"The Willis's"  42/100  
+~
+[x] Wed Jun 13 21:25:28 CDT 2018:
+"ARRIS-372A"  47/100  
+"ARRIS-7173"  46/100  
+"ARRIS-7D32"  48/100  
+"ARRIS-A262"  43/100  
+"BeyHive"  70/100  
+"d21b30"  48/100  
+"HP-Print-40-ENVY 4500 series"  38/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"HP-Print-E9-ENVY 4500 series"  42/100  
+"hpsetup"  46/100  
+"It Hurts When IP"  46/100  
+"Linux"  56/100  
+"NETGEAR66"  79/100  
+"NETGEAR97"  23/100  
+"Power Rangers"  44/100  
+"Renee"  62/100  
+"The Unreserves-guest"  46/100  
+"The Willis's"  42/100  
+"This Wifi"  23/100  
+"Villagiers"  23/100  
+"Zoey&Karissa"  26/100  
+~
+[x] Wed Jun 13 21:25:50 CDT 2018:
+"ARRIS-372A"  47/100  
+"ARRIS-7D32"  46/100  
+"ARRIS-A262"  43/100  
+"ARRIS-B472"  23/100  
+"BeyHive"  70/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"hpsetup"  43/100  
+"NETGEAR66"  79/100  
+"The Unreserves"  44/100  
+"The Unreserves-guest"  44/100  
+"This Wifi"  26/100  
+"WOKE INTERNET"  44/100  
+~
+[x] Wed Jun 13 21:26:12 CDT 2018:
+"ARRIS-7173"  47/100  
+"ARRIS-960A"  23/100  
+"ARRIS-A262"  44/100  
+"BeyHive"  70/100  
+"d21b30"  58/100  
+"HP-Print-40-ENVY 4500 series"  46/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"It Hurts When IP"  46/100  
+"NETGEAR66"  80/100  
+"The Willis's"  29/100  
+"This Wifi"  23/100  
+"WOKE INTERNET"  44/100  
+~
+[x] Wed Jun 13 21:26:34 CDT 2018:
+"ARRIS-372A"  46/100  
+"ARRIS-7173"  47/100  
+"ARRIS-A262"  44/100  
+"BeyHive"  62/100  
+"d21b30"  64/100  
+"hpsetup"  47/100  
+"It Hurts When IP"  48/100  
+"NETGEAR66"  80/100  
+"Renee"  62/100  
+"The Unreserves"  44/100  
+"The Unreserves-guest"  46/100  
+"This Wifi"  23/100  
+~
+[x] Wed Jun 13 21:26:55 CDT 2018:
+"ARRIS-372A"  48/100  
+"ARRIS-86C2"  23/100  
+"ARRIS-A262"  42/100  
+"BeyHive"  74/100  
+"HP-Print-40-ENVY 4500 series"  44/100  
+"HP-Print-E9-ENVY 4500 series"  26/100  
+"Linux"  58/100  
+"NETGEAR66"  79/100  
+"The Unreserves"  47/100  
+"The Unreserves-guest"  46/100  
+"This Wifi"  23/100  
+"Zoey&Karissa"  26/100  
+~
+[x] Wed Jun 13 21:27:17 CDT 2018:
+""  44/100  
+"ARRIS-09F3"  23/100  
+"ARRIS-7173"  47/100  
+"ARRIS-94DA"  43/100  
+"ARRIS-A262"  43/100  
+"BeyHive"  74/100  
+"d21b30"  58/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"HP-Print-E9-ENVY 4500 series"  42/100  
+"hpsetup"  46/100  
+"It Hurts When IP"  46/100  
+"Linux"  48/100  
+"NETGEAR66"  79/100  
+"Renee"  92/100  
+"The Willis's"  44/100  
+"This Wifi"  23/100  
+"WOKE INTERNET"  43/100  
+~
+[x] Wed Jun 13 21:27:39 CDT 2018:
+"19f23a"  23/100  
+""  23/100  
+""  46/100  
+"ARRIS-372A"  47/100  
+"ARRIS-49E2"  44/100  
+"ARRIS-7173"  47/100  
+"ARRIS-94DA"  42/100  
+"ARRIS-A262"  43/100  
+"BeyHive"  74/100  
+"d21b30"  59/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"HP-Print-73-Officejet 6800"  26/100  
+"hpsetup"  43/100  
+"It Hurts When IP"  46/100  
+"NETGEAR66"  78/100  
+"Renee"  92/100  
+"The Unreserves"  46/100  
+"The Unreserves-guest"  46/100  
+"This Wifi"  23/100  
+~
+[x] Wed Jun 13 21:28:01 CDT 2018:
+"ARRIS-372A"  47/100  
+"ARRIS-7173"  47/100  
+"ARRIS-86C2"  23/100  
+"ARRIS-A262"  44/100  
+"d21b30"  58/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"hpsetup"  47/100  
+"It Hurts When IP"  47/100  
+"NETGEAR66"  80/100  
+"Power Rangers"  46/100  
+"Renee"  85/100  
+"The Unreserves-guest"  44/100  
+~
+[x] Wed Jun 13 21:28:23 CDT 2018:
+"ARRIS-372A"  46/100  
+"ARRIS-49E2"  44/100  
+"ARRIS-7173"  43/100  
+"ARRIS-A262"  44/100  
+"d21b30"  60/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"hpsetup"  47/100  
+"NETGEAR66"  82/100  
+"Power Rangers"  44/100  
+"The Unreserves"  47/100  
+"The Unreserves-guest"  46/100  
+"The Willis's"  42/100  
+~
+[x] Wed Jun 13 21:28:44 CDT 2018:
+"ARRIS-372A"  47/100  
+"ARRIS-960A"  23/100  
+"ARRIS-A262"  47/100  
+"BeyHive"  64/100  
+"d21b30"  58/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"hpsetup"  44/100  
+"It Hurts When IP"  48/100  
+"NETGEAR66"  81/100  
+"Renee"  92/100  
+"The Unreserves"  46/100  
+"The Unreserves-guest"  44/100  
+~
+[x] Wed Jun 13 21:29:06 CDT 2018:
+"ARRIS-7173"  43/100  
+"ARRIS-A262"  46/100  
+"d21b30"  60/100  
+"hpsetup"  47/100  
+"NETGEAR01"  23/100  
+"NETGEAR66"  80/100  
+"Power Rangers"  47/100  
+"Renee"  84/100  
+"Sound Bar"  23/100  
+"The Unreserves"  46/100  
+"The Unreserves-guest"  43/100  
+"The Willis's"  26/100  
+~
+[x] Wed Jun 13 21:29:28 CDT 2018:
+""  26/100  
+"ARRIS-7173"  43/100  
+"ARRIS-960A"  23/100  
+"ARRIS-9DB2"  23/100  
+"ARRIS-A262"  47/100  
+"ARRIS-B472"  42/100  
+"ARRIS-B9C2"  23/100  
+"BeyHive"  70/100  
+"d21b30"  58/100  
+"HP-Print-40-ENVY 4500 series"  46/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"It Hurts When IP"  48/100  
+"Linux"  58/100  
+"NETGEAR66"  80/100  
+"NETGEAR97"  23/100  
+"Renee"  84/100  
+"The Unreserves"  46/100  
+"The Unreserves-guest"  43/100  
+"The Willis's"  29/100  
+"This Wifi"  25/100  
+~
+[x] Wed Jun 13 21:29:50 CDT 2018:
+"ARRIS-372A"  47/100  
+"ARRIS-7173"  48/100  
+"ARRIS-B472"  42/100  
+"belkin.0a0"  23/100  
+"BeyHive"  70/100  
+"HP-Print-40-ENVY 4500 series"  47/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"NETGEAR66"  81/100  
+"Renee"  84/100  
+"The Willis's"  42/100  
+"This Wifi"  42/100  
+~
+[x] Wed Jun 13 21:30:11 CDT 2018:
+""  23/100  
+"ARRIS-372A"  44/100  
+"ARRIS-960A"  23/100  
+"ARRIS-A262"  46/100  
+"ARRIS-B472"  23/100  
+"BeyHive"  64/100  
+"HP-Print-40-ENVY 4500 series"  46/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"hpsetup"  47/100  
+"Linux"  58/100  
+"NETGEAR66"  81/100  
+"Renee"  85/100  
+"This Wifi"  26/100  
+"WOKE INTERNET"  43/100  
+~
+[x] Wed Jun 13 21:30:33 CDT 2018:
+"ARRIS-372A"  47/100  
+"BeyHive"  64/100  
+"d21b30"  58/100  
+"hpsetup"  46/100  
+"It Hurts When IP"  48/100  
+"NETGEAR66"  81/100  
+"Renee"  91/100  
+"The Unreserves"  47/100  
+"The Unreserves-guest"  47/100  
+"This Wifi"  26/100  
+~
+[x] Wed Jun 13 21:30:55 CDT 2018:
+"ARRIS-372A"  47/100  
+"ARRIS-7173"  48/100  
+"ARRIS-A262"  46/100  
+"ARRIS-B472"  25/100  
+"d21b30"  58/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"hpsetup"  47/100  
+"It Hurts When IP"  48/100  
+"NETGEAR66"  82/100  
+"Power Rangers"  44/100  
+"Renee"  85/100  
+"The Willis's"  29/100  
+"This Wifi"  26/100  
+"Zoey&Karissa"  23/100  
+~
+[x] Wed Jun 13 21:31:17 CDT 2018:
+""  23/100  
+"ARRIS-372A"  46/100  
+"ARRIS-7173"  47/100  
+"ARRIS-7D32"  42/100  
+"ARRIS-A262"  44/100  
+"BeyHive"  64/100  
+"cb9756"  23/100  
+"d21b30"  52/100  
+"HP-Print-40-ENVY 4500 series"  26/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"hpsetup"  47/100  
+"NETGEAR01"  23/100  
+"NETGEAR66"  84/100  
+"Power Rangers"  46/100  
+"Pretty Fly For A Wi-FI!"  23/100  
+"Renee"  84/100  
+"The Unreserves-guest"  46/100  
+"This Wifi"  42/100  
+~
+[x] Wed Jun 13 21:31:40 CDT 2018:
+"19f23a"  23/100  
+"ARRIS-372A"  44/100  
+"ARRIS-7173"  47/100  
+"ARRIS-960A"  23/100  
+"ARRIS-A262"  46/100  
+"Bokowifi"  23/100  
+"HP-Print-40-ENVY 4500 series"  47/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"hpsetup"  44/100  
+"It Hurts When IP"  47/100  
+"NETGEAR66"  82/100  
+"Power Rangers"  46/100  
+"Renee"  92/100  
+"The Willis's"  42/100  
+"WOKE INTERNET"  43/100  
+~
+[x] Wed Jun 13 21:32:02 CDT 2018:
+"ARRIS-7173"  47/100  
+"ARRIS-960A"  23/100  
+"ARRIS-B472"  23/100  
+"BeyHive"  70/100  
+"d21b30"  56/100  
+"HP-Print-40-ENVY 4500 series"  46/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"HP-Print-C2-ENVY 4500 series"  23/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"It Hurts When IP"  48/100  
+"NETGEAR66"  82/100  
+"The Willis's"  42/100  
+"This Wifi"  26/100  
+"WOKE INTERNET"  44/100  
+~
+[x] Wed Jun 13 21:32:24 CDT 2018:
+""  23/100  
+"ARRIS-372A"  47/100  
+"ARRIS-49E2"  43/100  
+"ARRIS-960A"  23/100  
+"ARRIS-A262"  46/100  
+"ARRIS-D2AA"  23/100  
+"BeyHive"  70/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"hpsetup"  47/100  
+"NETGEAR66"  82/100  
+"NETGEAR97"  23/100  
+"Renee"  85/100  
+"This Wifi"  29/100  
+~
+[x] Wed Jun 13 21:32:46 CDT 2018:
+"ARRIS-372A"  47/100  
+"ARRIS-7173"  44/100  
+"ARRIS-A262"  43/100  
+"BeyHive"  64/100  
+"d21b30"  60/100  
+"HP-Print-98-Officejet 4630"  23/100  
+"NETGEAR01"  23/100  
+"NETGEAR66"  82/100  
+"Renee"  84/100  
+"The Willis's"  42/100  
+~
+[x] Wed Jun 13 21:33:08 CDT 2018:
+"ARRIS-372A"  46/100  
+"ARRIS-7173"  46/100  
+"ARRIS-A262"  23/100  
+"d21b30"  58/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"Linux"  60/100  
+"NETGEAR66"  81/100  
+"Renee"  84/100  
+"Sound Bar"  23/100  
+"The Unreserves-guest"  46/100  
+"The Willis's"  26/100  
+"WOKE INTERNET"  43/100  
+~
+[x] Wed Jun 13 21:33:29 CDT 2018:
+"19f23a"  23/100  
+"ARRIS-372A"  46/100  
+"ARRIS-7173"  46/100  
+"ARRIS-94DA"  42/100  
+"ARRIS-A262"  27/100  
+"ARRIS-B472"  23/100  
+"BeyHive"  74/100  
+"cb9756"  23/100  
+"d21b30"  58/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"HP-Print-73-Officejet 6800"  25/100  
+"HP-Print-E9-ENVY 4500 series"  42/100  
+"It Hurts When IP"  54/100  
+"NETGEAR66"  83/100  
+"NETGEAR97"  23/100  
+"Power Rangers"  47/100  
+"Renee"  84/100  
+"The Willis's"  31/100  
+"This Wifi"  26/100  
+~
+[x] Wed Jun 13 21:33:51 CDT 2018:
+"ARRIS-49E2"  44/100  
+"ARRIS-7173"  42/100  
+"ARRIS-7D32"  56/100  
+"ARRIS-94DA"  42/100  
+"ARRIS-9DB2"  23/100  
+"ARRIS-B472"  26/100  
+"ARRIS-D2AA"  23/100  
+"BeyHive"  74/100  
+"cb9756"  23/100  
+"d21b30"  58/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"HP-Print-E9-ENVY 4500 series"  42/100  
+"NETGEAR66"  83/100  
+"Power Rangers"  44/100  
+"The Arkham Network"  42/100  
+"The Willis's"  29/100  
+"TP-LINK_5F34"  42/100  
+~
+[x] Wed Jun 13 21:34:13 CDT 2018:
+"ARRIS-372A"  47/100  
+"ARRIS-960A"  23/100  
+"ARRIS-A262"  43/100  
+"belkin.c58"  23/100  
+"BeyHive"  70/100  
+"hpsetup"  47/100  
+"NETGEAR01"  23/100  
+"NETGEAR66"  80/100  
+"Power Rangers"  47/100  
+"Renee"  85/100  
+"The Unreserves-guest"  43/100  
+"This Wifi"  23/100  
+~
+[x] Wed Jun 13 21:34:35 CDT 2018:
+"ARRIS-7173"  47/100  
+"ARRIS-960A"  23/100  
+"ARRIS-A262"  44/100  
+"ARRIS-B472"  26/100  
+"BeyHive"  76/100  
+"Bokowifi"  23/100  
+"d21b30"  50/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"It Hurts When IP"  48/100  
+"NETGEAR66"  81/100  
+"The Arkham Network"  42/100  
+"The Unreserves-guest"  44/100  
+"The Willis's"  42/100  
+"This Wifi"  42/100  
+"WOKE INTERNET"  44/100  
+~
+[x] Wed Jun 13 21:34:56 CDT 2018:
+""  23/100  
+"ARRIS-7173"  47/100  
+"ARRIS-A262"  47/100  
+"ARRIS-B472"  23/100  
+"BeyHive"  76/100  
+"d21b30"  58/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"HP-Print-E9-ENVY 4500 series"  44/100  
+"It Hurts When IP"  47/100  
+"NETGEAR66"  80/100  
+"The Arkham Network"  42/100  
+"WOKE INTERNET"  43/100  
+~
+[x] Wed Jun 13 21:35:18 CDT 2018:
+"ARRIS-372A"  48/100  
+"ARRIS-7173"  44/100  
+"Bokowifi"  23/100  
+"d21b30"  56/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"It Hurts When IP"  44/100  
+"Linux"  60/100  
+"NETGEAR66"  84/100  
+"Power Rangers"  46/100  
+"Renee"  85/100  
+"The Arkham Network"  42/100  
+"The Unreserves-guest"  47/100  
+"The Willis's"  29/100  
+"Villagiers"  26/100  
+~
+[x] Wed Jun 13 21:35:40 CDT 2018:
+"Apartment 933"  23/100  
+"ARRIS-7173"  46/100  
+"BeyHive"  74/100  
+"Bokowifi"  23/100  
+"Chromecast5590"  23/100  
+"d21b30"  56/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"It Hurts When IP"  44/100  
+"NETGEAR66"  81/100  
+"The Whomping Wi-Fi"  44/100  
+"This Wifi"  23/100  
+~
+[x] Wed Jun 13 21:36:02 CDT 2018:
+"ARRIS-7173"  47/100  
+"ARRIS-960A"  23/100  
+"BeyHive"  74/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"NETGEAR01"  23/100  
+"NETGEAR66"  81/100  
+"Renee"  92/100  
+"The Arkham Network"  42/100  
+"The Willis's"  26/100  
+"Villagiers"  26/100  
+"WOKE INTERNET"  42/100  
+"Zoey&Karissa"  23/100  
+~
+[x] Wed Jun 13 21:36:23 CDT 2018:
+"ARRIS-372A"  48/100  
+"ARRIS-7D32"  47/100  
+"ARRIS-A262"  46/100  
+"ARRIS-B472"  23/100  
+"BeyHive"  70/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"HP-Print-E9-ENVY 4500 series"  44/100  
+"hpsetup"  47/100  
+"NETGEAR66"  81/100  
+"Renee"  85/100  
+"This Wifi"  26/100  
+~
+[x] Wed Jun 13 21:36:45 CDT 2018:
+"ARRIS-7173"  46/100  
+"ARRIS-A262"  43/100  
+"ARRIS-B472"  42/100  
+"d21b30"  61/100  
+"hpsetup"  43/100  
+"NETGEAR66"  81/100  
+"Power Rangers"  47/100  
+"Pretty Fly For A Wi-FI!"  26/100  
+"Renee"  85/100  
+"Villagiers"  26/100  
+~
+[x] Wed Jun 13 21:37:07 CDT 2018:
+""  23/100  
+""  23/100  
+"Apartment 933"  23/100  
+"ARRIS-372A"  46/100  
+"ARRIS-7173"  47/100  
+"ARRIS-94DA"  26/100  
+"ARRIS-A262"  43/100  
+"d21b30"  61/100  
+"HP-Print-40-ENVY 4500 series"  44/100  
+"hpsetup"  47/100  
+"It Hurts When IP"  47/100  
+"NETGEAR66"  80/100  
+"Power Rangers"  44/100  
+"Renee"  85/100  
+"The Arkham Network"  23/100  
+"The Whomping Wi-Fi"  42/100  
+~
+[x] Wed Jun 13 21:37:29 CDT 2018:
+"Apartment 933"  23/100  
+"ARRIS-49E2"  43/100  
+"ARRIS-7173"  48/100  
+"BeyHive"  74/100  
+"d21b30"  61/100  
+"HP-Print-40-ENVY 4500 series"  44/100  
+"HP-Print-73-Officejet 6800"  26/100  
+"HP-Print-E9-ENVY 4500 series"  42/100  
+"It Hurts When IP"  48/100  
+"NETGEAR66"  81/100  
+"Power Rangers"  44/100  
+"Renee"  85/100  
+"The Willis's"  42/100  
+~
+[x] Wed Jun 13 21:37:51 CDT 2018:
+"ARRIS-372A"  47/100  
+"ARRIS-7173"  46/100  
+"ARRIS-B472"  26/100  
+"BeyHive"  74/100  
+"Bokowifi"  23/100  
+"d21b30"  60/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"HP-Print-E9-ENVY 4500 series"  42/100  
+"NETGEAR66"  83/100  
+"The Arkham Network"  42/100  
+"The Willis's"  42/100  
+"Zoey&Karissa"  42/100  
+~
+[x] Wed Jun 13 21:38:12 CDT 2018:
+""  43/100  
+"ARRIS-372A"  47/100  
+"ARRIS-A262"  46/100  
+"ARRIS-B472"  23/100  
+"belkin.c58"  23/100  
+"BeyHive"  70/100  
+"cb9756"  23/100  
+"HP-Print-40-ENVY 4500 series"  42/100  
+"HP-Print-E9-ENVY 4500 series"  29/100  
+"hpsetup"  47/100  
+"Linux"  46/100  
+"NETGEAR66"  82/100  
+"NETGEAR97"  23/100  
+"Power Rangers"  44/100  
+"Renee"  84/100  
+"RT-AC1200_B0_2G"  23/100  
+"stoney"  26/100  
+~
+[x] Wed Jun 13 21:38:34 CDT 2018:
+"Apartment 933"  23/100  
+"ARRIS-372A"  47/100  
+"ARRIS-A262"  46/100  
+"Bokowifi"  23/100  
+"d21b30"  56/100  
+"hpsetup"  46/100  
+"It Hurts When IP"  48/100  
+"Linux"  64/100  
+"NETGEAR66"  83/100  
+"Renee"  84/100  
+"The Willis's"  42/100  
+~
+[x] Wed Jun 13 21:38:56 CDT 2018:
+""  23/100  
+"ARRIS-372A"  46/100  
+"ARRIS-7173"  47/100  
+"ARRIS-960A"  23/100  
+"ARRIS-A262"  44/100  
+"belkin.f54"  23/100  
+"BeyHive"  72/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"HP-Print-C2-ENVY 4500 series"  23/100  
+"HP-Print-E9-ENVY 4500 series"  42/100  
+"hpsetup"  46/100  
+"It Hurts When IP"  48/100  
+"NETGEAR66"  81/100  
+"Renee"  85/100  
+"The Arkham Network"  42/100  
+~
+[x] Wed Jun 13 21:39:18 CDT 2018:
+""  23/100  
+"ARRIS-3612"  23/100  
+"ARRIS-372A"  47/100  
+"ARRIS-7D32"  58/100  
+"ARRIS-A262"  46/100  
+"ARRIS-B472"  23/100  
+"BeyHive"  74/100  
+"d21b30"  57/100  
+"HP-Print-40-ENVY 4500 series"  47/100  
+"It Hurts When IP"  47/100  
+"NETGEAR66"  82/100  
+"Power Rangers"  44/100  
+"Renee"  92/100  
+"This Wifi"  23/100  
+"Villagiers"  26/100  
+~
+[x] Wed Jun 13 21:39:39 CDT 2018:
+"Apartment 933"  42/100  
+"ARRIS-372A"  47/100  
+"ARRIS-49E2"  47/100  
+"ARRIS-7173"  46/100  
+"ARRIS-A262"  46/100  
+"ARRIS-B472"  23/100  
+"BeyHive"  74/100  
+"d21b30"  57/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"HP-Print-73-Officejet 6800"  25/100  
+"HP-Print-E9-ENVY 4500 series"  42/100  
+"hpsetup"  47/100  
+"It Hurts When IP"  48/100  
+"Linux"  64/100  
+"NETGEAR66"  81/100  
+"Renee"  91/100  
+"The Arkham Network"  42/100  
+"The Unreserves"  42/100  
+"The Whomping Wi-Fi"  43/100  
+"The Willis's"  43/100  
+"This Wifi"  26/100  
+"TP-LINK_5F34"  42/100  
+~
+[x] Wed Jun 13 21:40:01 CDT 2018:
+"ARRIS-7173"  48/100  
+"BeyHive"  74/100  
+"hpsetup"  46/100  
+"NETGEAR66"  82/100  
+"Power Rangers"  47/100  
+"Renee"  92/100  
+~
+[x] Wed Jun 13 21:40:23 CDT 2018:
+"Apartment 933"  23/100  
+"ARRIS-7173"  48/100  
+"ARRIS-A262"  47/100  
+"d21b30"  64/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"It Hurts When IP"  48/100  
+"NETGEAR66"  82/100  
+"Power Rangers"  47/100  
+"Renee"  84/100  
+~
+[x] Wed Jun 13 21:40:45 CDT 2018:
+"Apartment 933"  26/100  
+"ARRIS-7173"  48/100  
+"BeyHive"  74/100  
+"d21b30"  56/100  
+"HP-Print-40-ENVY 4500 series"  44/100  
+"It Hurts When IP"  48/100  
+"Linux"  62/100  
+"NETGEAR66"  82/100  
+"The Arkham Network"  26/100  
+~
+[x] Wed Jun 13 21:41:07 CDT 2018:
+""  23/100  
+"ARRIS-372A"  47/100  
+"ARRIS-7173"  46/100  
+"ARRIS-7D32"  48/100  
+"ARRIS-B472"  26/100  
+"BeyHive"  74/100  
+"d21b30"  56/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"NETGEAR66"  79/100  
+"Power Rangers"  47/100  
+"Renee"  84/100  
+"The Willis's"  42/100  
+"This Wifi"  42/100  
+~
+[x] Wed Jun 13 21:41:28 CDT 2018:
+"Apartment 933"  42/100  
+"ARRIS-372A"  47/100  
+"ARRIS-7173"  46/100  
+"ARRIS-960A"  23/100  
+"ARRIS-A262"  47/100  
+"BeyHive"  74/100  
+"d21b30"  56/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"hpsetup"  43/100  
+"It Hurts When IP"  56/100  
+"Linux"  64/100  
+"NETGEAR66"  80/100  
+"Power Rangers"  47/100  
+"Renee"  76/100  
+"The Unreserves"  46/100  
+"The Willis's"  42/100  
+"This Wifi"  26/100  
+~
+[x] Wed Jun 13 21:41:50 CDT 2018:
+"ARRIS-7D32"  47/100  
+"BeyHive"  74/100  
+"d21b30"  50/100  
+"hpsetup"  46/100  
+"It Hurts When IP"  48/100  
+"NETGEAR66"  82/100  
+"Power Rangers"  47/100  
+"Renee"  92/100  
+"The Willis's"  42/100  
+~
+[x] Wed Jun 13 21:42:12 CDT 2018:
+""  26/100  
+"Apartment 933"  23/100  
+"ARRIS-7173"  46/100  
+"ARRIS-A262"  44/100  
+"d21b30"  60/100  
+"HP-Print-40-ENVY 4500 series"  47/100  
+"hpsetup"  47/100  
+"It Hurts When IP"  56/100  
+"Linux"  64/100  
+"NETGEAR66"  81/100  
+"Power Rangers"  47/100  
+"Pretty Fly For A Wi-FI!"  26/100  
+"Renee"  84/100  
+"The Unreserves"  46/100  
+"The Willis's"  26/100  
+~
+[x] Wed Jun 13 21:42:34 CDT 2018:
+"ARRIS-7173"  47/100  
+"ARRIS-A262"  46/100  
+"BeyHive"  74/100  
+"d21b30"  51/100  
+"HP-Print-40-ENVY 4500 series"  44/100  
+"Linux"  64/100  
+"NETGEAR66"  84/100  
+"Renee"  85/100  
+~
+[x] Wed Jun 13 21:42:56 CDT 2018:
+""  23/100  
+""  46/100  
+"ARRIS-7D32"  46/100  
+"ARRIS-B472"  42/100  
+"BeyHive"  70/100  
+"d21b30"  60/100  
+"HP-Print-40-ENVY 4500 series"  46/100  
+"HP-Print-E9-ENVY 4500 series"  43/100  
+"It Hurts When IP"  47/100  
+"NETGEAR66"  81/100  
+"The Arkham Network"  23/100  
+"Villagiers"  26/100  
+~

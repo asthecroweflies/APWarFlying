@@ -1,0 +1,266 @@
+[x] Mon Jun 25 19:00:22 CDT 2018:
+-46.00 dBm NETGEAR66
+-49.00 dBm Renee
+-52.00 dBm SensorTag-37
+-59.00 dBm BeyHive
+-63.00 dBm ARRIS-7D32
+-67.00 dBm d21b30
+-68.00 dBm 
+-70.00 dBm DIRECT-04-HP ENVY 4510 series
+-73.00 dBm WOKE INTERNET
+-74.00 dBm Linux
+-77.00 dBm ARRIS-372A
+-77.00 dBm BeyHive-5G
+-77.00 dBm WiFi Hotspot 8831
+-78.00 dBm Power Rangers
+-78.00 dBm The Whomping Wi-Fi
+-79.00 dBm 
+-81.00 dBm Linux-5G
+-86.00 dBm ARRIS-7173-5G
+-87.00 dBm ARRIS-7D32-5G
+-88.00 dBm Lord Voldemodem
+-89.00 dBm ARRIS-A262-5G
+-89.00 dBm KitaGirl
+-89.00 dBm WOKE INTERNET_5GHz
+-89.00 dBm \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+~
+[x] Mon Jun 25 19:00:46 CDT 2018:
+-41.00 dBm SensorTag-37
+-49.00 dBm NETGEAR66
+-53.00 dBm Renee
+-59.00 dBm BeyHive
+-66.00 dBm d21b30
+-68.00 dBm 
+-69.00 dBm ARRIS-7D32
+-69.00 dBm DIRECT-04-HP ENVY 4510 series
+-73.00 dBm WOKE INTERNET
+-74.00 dBm HP-Print-E9-ENVY 4500 series
+-74.00 dBm Linux
+-74.00 dBm \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+-75.00 dBm ARRIS-94DA
+-75.00 dBm BeyHive-5G
+-75.00 dBm The Whomping Wi-Fi
+-77.00 dBm ARRIS-372A
+-77.00 dBm Power Rangers
+-77.00 dBm WiFi Hotspot 8831
+-78.00 dBm The Unreserves
+-79.00 dBm 
+-81.00 dBm Linux-5G
+-84.00 dBm ARRIS-7D32-5G
+-85.00 dBm ARRIS-7173-5G
+-88.00 dBm ARRIS-01B2
+-88.00 dBm Lord Voldemodem
+-88.00 dBm Winternetiscoming5
+-89.00 dBm ARRIS-A262-5G
+-89.00 dBm KitaGirl
+-89.00 dBm \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+-90.00 dBm WOKE INTERNET_5GHz
+-91.00 dBm NETGEAR60-5G
+-91.00 dBm The Willis's-5G
+~
+[x] Mon Jun 25 19:01:11 CDT 2018:
+-41.00 dBm SensorTag-37
+-50.00 dBm NETGEAR66
+-53.00 dBm Renee
+-57.00 dBm 
+-64.00 dBm d21b30
+-66.00 dBm BeyHive
+-67.00 dBm ARRIS-7D32
+-68.00 dBm BeyHive-5G
+-69.00 dBm DIRECT-04-HP ENVY 4510 series
+-73.00 dBm WOKE INTERNET
+-74.00 dBm Power Rangers
+-74.00 dBm \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+-75.00 dBm The Whomping Wi-Fi
+-76.00 dBm ARRIS-94DA
+-76.00 dBm hpsetup
+-76.00 dBm Linux
+-77.00 dBm HP-Print-E9-ENVY 4500 series
+-78.00 dBm 
+-78.00 dBm ARRIS-49E2
+-78.00 dBm The Unreserves-guest
+-79.00 dBm The Unreserves
+-81.00 dBm Linux-5G
+-81.00 dBm Winternetiscoming
+-83.00 dBm NETGEAR18
+-86.00 dBm ARRIS-7173-5G
+-86.00 dBm ARRIS-7D32-5G
+-86.00 dBm Lord Voldemodem
+-87.00 dBm \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+-88.00 dBm ARRIS-01B2
+-88.00 dBm Winternetiscoming5
+-90.00 dBm KitaGirl
+-90.00 dBm WOKE INTERNET_5GHz
+-91.00 dBm ARRIS-A262-5G
+-91.00 dBm NETGEAR60-5G
+-91.00 dBm The Willis's-5G
+-92.00 dBm ARRIS-B962-5G
+~
+[x] Mon Jun 25 19:01:35 CDT 2018:
+-41.00 dBm SensorTag-37
+-47.00 dBm NETGEAR66
+-52.00 dBm Renee
+-57.00 dBm 
+-67.00 dBm d21b30
+-68.00 dBm ARRIS-7D32
+-68.00 dBm DIRECT-04-HP ENVY 4510 series
+-72.00 dBm Linux
+-72.00 dBm Power Rangers
+-73.00 dBm BeyHive
+-73.00 dBm WOKE INTERNET
+-74.00 dBm \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+-75.00 dBm It Hurts When IP
+-75.00 dBm WiFi Hotspot 8831
+-76.00 dBm ARRIS-94DA
+-77.00 dBm BeyHive-5G
+-77.00 dBm HP-Print-E9-ENVY 4500 series
+-77.00 dBm The Whomping Wi-Fi
+-79.00 dBm ARRIS-372A
+-79.00 dBm ARRIS-B472
+-79.00 dBm Winternetiscoming
+-83.00 dBm ARRIS-7D32-5G
+-83.00 dBm Linux-5G
+-83.00 dBm NETGEAR18
+-86.00 dBm ARRIS-7173-5G
+-86.00 dBm Lord Voldemodem
+-87.00 dBm \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+-88.00 dBm Winternetiscoming5
+-89.00 dBm KitaGirl
+-90.00 dBm WOKE INTERNET_5GHz
+-91.00 dBm ARRIS-01B2
+-91.00 dBm ARRIS-A262-5G
+-91.00 dBm NETGEAR60-5G
+~
+[x] Mon Jun 25 19:01:59 CDT 2018:
+-41.00 dBm SensorTag-37
+-48.00 dBm NETGEAR66
+-52.00 dBm Renee
+-60.00 dBm 
+-63.00 dBm ARRIS-7D32
+-66.00 dBm d21b30
+-67.00 dBm BeyHive
+-69.00 dBm BeyHive-5G
+-70.00 dBm Linux
+-71.00 dBm DIRECT-04-HP ENVY 4510 series
+-74.00 dBm WOKE INTERNET
+-74.00 dBm \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+-75.00 dBm Power Rangers
+-75.00 dBm WiFi Hotspot 8831
+-77.00 dBm ARRIS-B962
+-77.00 dBm The Whomping Wi-Fi
+-78.00 dBm It Hurts When IP
+-79.00 dBm ARRIS-372A
+-79.00 dBm ARRIS-B472
+-79.00 dBm Winternetiscoming
+-81.00 dBm 
+-82.00 dBm Linux-5G
+-86.00 dBm ARRIS-7173-5G
+-86.00 dBm \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+-88.00 dBm ARRIS-7D32-5G
+-88.00 dBm Lord Voldemodem
+-88.00 dBm Winternetiscoming5
+-89.00 dBm KitaGirl
+-90.00 dBm WOKE INTERNET_5GHz
+-91.00 dBm ARRIS-01B2
+-91.00 dBm ARRIS-49E2-5G
+-91.00 dBm ARRIS-A262-5G
+-91.00 dBm NETGEAR60-5G
+~
+[x] Mon Jun 25 19:02:24 CDT 2018:
+-42.00 dBm SensorTag-37
+-47.00 dBm NETGEAR66
+-55.00 dBm Renee
+-57.00 dBm BeyHive
+-58.00 dBm 
+-67.00 dBm d21b30
+-68.00 dBm ARRIS-7D32
+-71.00 dBm DIRECT-04-HP ENVY 4510 series
+-72.00 dBm The Whomping Wi-Fi
+-72.00 dBm WiFi Hotspot 8831
+-73.00 dBm WOKE INTERNET
+-74.00 dBm BeyHive-5G
+-74.00 dBm It Hurts When IP
+-74.00 dBm Power Rangers
+-75.00 dBm ARRIS-372A
+-75.00 dBm Linux
+-77.00 dBm ARRIS-B962
+-77.00 dBm Winternetiscoming
+-77.00 dBm \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+-78.00 dBm The Unreserves
+-79.00 dBm ARRIS-94DA
+-79.00 dBm The Unreserves-guest
+-81.00 dBm 
+-83.00 dBm HP-Print-40-ENVY 4500 series
+-83.00 dBm Linux-5G
+-84.00 dBm ARRIS-7D32-5G
+-86.00 dBm \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+-87.00 dBm ARRIS-7173-5G
+-88.00 dBm Lord Voldemodem
+-90.00 dBm KitaGirl
+-90.00 dBm WOKE INTERNET_5GHz
+-90.00 dBm \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+-91.00 dBm ARRIS-49E2-5G
+-91.00 dBm ARRIS-A262-5G
+-92.00 dBm \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+~
+[x] Mon Jun 25 19:02:48 CDT 2018:
+-49.00 dBm NETGEAR66
+-53.00 dBm BeyHive
+-56.00 dBm Renee
+-58.00 dBm 
+-63.00 dBm ARRIS-7D32
+-65.00 dBm SensorTag-37
+-67.00 dBm d21b30
+-68.00 dBm nss2
+-69.00 dBm DIRECT-04-HP ENVY 4510 series
+-70.00 dBm BeyHive-5G
+-72.00 dBm WiFi Hotspot 8831
+-72.00 dBm WOKE INTERNET
+-73.00 dBm hpsetup
+-73.00 dBm KitaGirl
+-74.00 dBm It Hurts When IP
+-74.00 dBm Linux
+-74.00 dBm Power Rangers
+-77.00 dBm Winternetiscoming
+-77.00 dBm \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+-78.00 dBm HP-Print-E9-ENVY 4500 series
+-80.00 dBm ARRIS-372A
+-80.00 dBm The Unreserves
+-83.00 dBm NETGEAR18
+-84.00 dBm Linux-5G
+-87.00 dBm ARRIS-7173-5G
+-87.00 dBm ARRIS-7D32-5G
+-88.00 dBm KitaGirl
+-88.00 dBm Lord Voldemodem
+-88.00 dBm Winternetiscoming5
+-89.00 dBm ARRIS-A262-5G
+-90.00 dBm WOKE INTERNET_5GHz
+-90.00 dBm \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+-91.00 dBm ARRIS-01B2
+-92.00 dBm ARRIS-B962-5G
+~
+[x] Mon Jun 25 19:03:13 CDT 2018:
+[x] Mon Jun 25 19:05:11 CDT 2018:
+-47.00 dBm NETGEAR66
+-59.00 dBm Renee
+-61.00 dBm BeyHive
+-66.00 dBm d21b30
+-67.00 dBm SensorTag-37
+-68.00 dBm ARRIS-7D32
+-68.00 dBm BeyHive-5G
+-69.00 dBm DIRECT-04-HP ENVY 4510 series
+-71.00 dBm hpsetup
+-71.00 dBm WOKE INTERNET
+-72.00 dBm The Whomping Wi-Fi
+-73.00 dBm The Unreserves
+-76.00 dBm Linux
+-77.00 dBm Linux-5G
+-80.00 dBm The Unreserves-guest
+-80.00 dBm Winternetiscoming
+-82.00 dBm ARRIS-D2AA
+-83.00 dBm ARRIS-7173-5G
+-83.00 dBm HP-Print-E9-ENVY 4500 series
+-84.00 dBm ARRIS-7D32-5G
+-88.00 dBm KitaGirl
+-92.00 dBm ARRIS-01B2
+~

@@ -1,0 +1,32 @@
+[x] Thu Jun 14 20:49:53 CDT 2018:
+-30.00 dBm TexasStateUniversity
+-31.00 dBm TexasStateWPA
+-32.00 dBm TSUSVisitor
+-34.00 dBm TexasStateWPA
+-35.00 dBm TexasStateUniversity
+-35.00 dBm TSUSVisitor
+-42.00 dBm YeyDerones
+-51.00 dBm ir2-hotspot
+-53.00 dBm ir5-hotspot
+-61.00 dBm TexasStateUniversity
+-61.00 dBm TexasStateWPA
+-63.00 dBm TSUSVisitor
+-67.00 dBm TexasStateWPA
+-68.00 dBm TexasStateUniversity
+-68.00 dBm TSUSVisitor
+-71.00 dBm TexasStateUniversity
+-71.00 dBm TexasStateWPA
+-72.00 dBm TSUSVisitor
+-77.00 dBm TexasStateUniversity
+-77.00 dBm TexasStateWPA
+-77.00 dBm TSUSVisitor
+-78.00 dBm TexasStateWPA
+-79.00 dBm TexasStateUniversity
+-79.00 dBm TSUSVisitor
+-85.00 dBm TexasStateUniversity
+-85.00 dBm TexasStateWPA
+-86.00 dBm TSUSVisitor
+-90.00 dBm TexasStateUniversity
+-90.00 dBm TexasStateWPA
+-90.00 dBm TSUSVisitor
+~

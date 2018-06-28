@@ -1,0 +1,24 @@
+[x] Mon Jun 25 18:59:39 CDT 2018:
+-47.00 dBm NETGEAR66
+-53.00 dBm SensorTag-37
+-54.00 dBm Renee
+-59.00 dBm BeyHive
+-67.00 dBm ARRIS-7D32
+-69.00 dBm DIRECT-04-HP ENVY 4510 series
+-71.00 dBm d21b30
+-73.00 dBm WOKE INTERNET
+-73.00 dBm \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+-75.00 dBm Power Rangers
+-76.00 dBm hpsetup
+-76.00 dBm The Whomping Wi-Fi
+-77.00 dBm WiFi Hotspot 8831
+-78.00 dBm BeyHive-5G
+-81.00 dBm Linux-5G
+-81.00 dBm NETGEAR18
+-83.00 dBm ARRIS-7D32-5G
+-87.00 dBm ARRIS-7173-5G
+-88.00 dBm KitaGirl
+-88.00 dBm \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+-90.00 dBm WOKE INTERNET_5GHz
+-91.00 dBm ARRIS-01B2
+~

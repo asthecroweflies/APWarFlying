@@ -1,0 +1,5 @@
+fid = fopen('/home/linny/cps/scripts/data/aps.csv')
+header = textscan(fid, "%s,%s,%s,%s,%s")
+data = textscan(fid, "%s,%f,%s,%s,%d")
+fclose(fid)
+

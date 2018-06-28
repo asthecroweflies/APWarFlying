@@ -1,0 +1,20 @@
+[x] Thu Jun 14 20:30:24 CDT 2018:
+"ir2-hotspot"  92/100  
+"ir6-hotspot"  100/100  
+"TexasStateUniversity"  100/100  
+"TexasStateUniversity"  68/100  
+"TexasStateUniversity"  70/100  
+"TexasStateUniversity"  76/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  47/100  
+"TexasStateWPA"  64/100  
+"TexasStateWPA"  70/100  
+"TexasStateWPA"  84/100  
+"TSUSVisitor"  100/100  
+"TSUSVisitor"  62/100  
+"TSUSVisitor"  68/100  
+"TSUSVisitor"  76/100  
+"YeyDerones"  100/100  
+~
+[x] Thu Jun 14 20:42:12 CDT 2018:
+[x] Thu Jun 14 20:42:25 CDT 2018:

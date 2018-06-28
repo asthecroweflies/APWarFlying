@@ -1,0 +1,75 @@
+[x] Tue Jun 12 12:48:18 CDT 2018:
+-48.00 dBm NETGEAR66
+-54.00 dBm Renee
+-58.00 dBm BeyHive
+-67.00 dBm d21b30
+-69.00 dBm Linux
+-71.00 dBm ARRIS-372A
+-72.00 dBm Power Rangers
+-74.00 dBm BeyHive-5G
+-76.00 dBm ARRIS-7D32
+-76.00 dBm It Hurts When IP
+-77.00 dBm hpsetup
+-78.00 dBm Linux-5G
+-80.00 dBm Zoey&Karissa
+-87.00 dBm ARRIS-7D32-5G
+-91.00 dBm ARRIS-7173-5G
+-91.00 dBm It Hurts When IP
+-91.00 dBm Lord Voldemodem
+	Extended capabilities: Extended Channel Switching, TFS, WNM-Sleep Mode, TIM Broadcast, BSS Transition, SSID List, 6 
+~
+[x] Tue Jun 12 12:48:52 CDT 2018:
+-47.00 dBm NETGEAR66
+-53.00 dBm Renee
+-55.00 dBm BeyHive
+-65.00 dBm d21b30
+-68.00 dBm ARRIS-372A
+-68.00 dBm Linux
+-72.00 dBm 
+-72.00 dBm BeyHive-5G
+-73.00 dBm ARRIS-7173
+-74.00 dBm It Hurts When IP
+-74.00 dBm Power Rangers
+-74.00 dBm \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+-75.00 dBm Zoey&Karissa
+-76.00 dBm HP-Print-E9-ENVY 4500 series
+-76.00 dBm Linux-5G
+-80.00 dBm Winternetiscoming
+-90.00 dBm ARRIS-7173-5G
+-90.00 dBm Lord Voldemodem
+-91.00 dBm It Hurts When IP
+-92.00 dBm VT233-5G
+	Extended capabilities: Extended Channel Switching, TFS, WNM-Sleep Mode, TIM Broadcast, BSS Transition, SSID List, 6 -89.00 dBm
+Lord Voldemodem 	Extended capabilities: Extended Channel Switching, TFS, WNM-Sleep Mode, TIM Broadcast, BSS Transition, SSID List, 6
+~
+[x] Tue Jun 12 12:49:16 CDT 2018:
+-53.00 dBm NETGEAR66
+-54.00 dBm Renee
+-57.00 dBm BeyHive
+-61.00 dBm Linux
+-63.00 dBm d21b30
+-66.00 dBm ARRIS-372A
+-66.00 dBm Power Rangers
+-67.00 dBm BeyHive-5G
+-72.00 dBm 
+-72.00 dBm Linux-5G
+-74.00 dBm \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+-75.00 dBm It Hurts When IP
+-75.00 dBm Zoey&Karissa
+-76.00 dBm HP-Print-E9-ENVY 4500 series
+-79.00 dBm ARRIS-7173
+-80.00 dBm ARRIS-AB92
+-80.00 dBm Winternetiscoming
+-81.00 dBm hpsetup
+-85.00 dBm Psych
+-86.00 dBm Power Rangers-5G
+-88.00 dBm ARRIS-7D32-5G
+-88.00 dBm It Hurts When IP
+-89.00 dBm 
+-90.00 dBm ARRIS-372A-5G
+-90.00 dBm Lord Voldemodem
+-91.00 dBm ARRIS-7173-5G
+-92.00 dBm VT233-5G
+	Extended capabilities: Extended Channel Switching, TFS, WNM-Sleep Mode, TIM Broadcast, BSS Transition, SSID List, 6 -89.00 dBm
+Lord Voldemodem 	Extended capabilities: Extended Channel Switching, TFS, WNM-Sleep Mode, TIM Broadcast, BSS Transition, SSID List, 6
+~

@@ -1,0 +1,41 @@
+[x] Wed Jun 13 11:59:40 CDT 2018:
+                    ESSID:"TexasStateUniversity"                     Quality=0/100  Signal level=100/100  
+                    ESSID:"TexasStateUniversity"                     Quality=0/100  Signal level=62/100  
+                    ESSID:"TexasStateUniversity"                     Quality=0/100  Signal level=70/100  
+                    ESSID:"TexasStateUniversity"                     Quality=0/100  Signal level=88/100  
+                    ESSID:"TexasStateWPA"                     Quality=0/100  Signal level=100/100  
+                    ESSID:"TexasStateWPA"                     Quality=0/100  Signal level=45/100  
+                    ESSID:"TexasStateWPA"                     Quality=0/100  Signal level=63/100  
+                    ESSID:"TexasStateWPA"                     Quality=0/100  Signal level=70/100  
+                    ESSID:"TexasStateWPA"                     Quality=0/100  Signal level=84/100  
+                    ESSID:"TSUSVisitor"                     Quality=0/100  Signal level=100/100  
+                    ESSID:"TSUSVisitor"                     Quality=0/100  Signal level=63/100  
+                    ESSID:"TSUSVisitor"                     Quality=0/100  Signal level=70/100  
+                    ESSID:"YeyDerones"                     Quality=100/100  Signal level=99/100  
+~
+[x] Wed Jun 13 12:13:11 CDT 2018:
+-26.00 dBm TexasStateWPA
+-27.00 dBm TexasStateUniversity
+-27.00 dBm TSUSVisitor
+-31.00 dBm irobot7-ThinkPad-X131e
+-35.00 dBm TexasStateWPA
+-36.00 dBm TexasStateUniversity
+-36.00 dBm TSUSVisitor
+-39.00 dBm YeyDerones
+-58.00 dBm TexasStateUniversity
+-62.00 dBm TexasStateWPA
+-63.00 dBm TSUSVisitor
+-69.00 dBm TexasStateUniversity
+-69.00 dBm TexasStateWPA
+-70.00 dBm TSUSVisitor
+-71.00 dBm TexasStateWPA
+-72.00 dBm TexasStateUniversity
+-72.00 dBm TSUSVisitor
+-74.00 dBm TexasStateWPA
+-75.00 dBm TSUSVisitor
+-76.00 dBm TexasStateUniversity
+-78.00 dBm TexasStateUniversity
+-78.00 dBm TexasStateWPA
+-78.00 dBm TSUSVisitor
+-92.00 dBm TexasStateWPA
+~

@@ -1,0 +1,124 @@
+[x] Wed Jun 13 12:13:28 CDT 2018:
+-26.00 dBm TexasStateUniversity
+-26.00 dBm TexasStateWPA
+-27.00 dBm TSUSVisitor
+-31.00 dBm irobot7-ThinkPad-X131e
+-34.00 dBm TexasStateUniversity
+-34.00 dBm TexasStateWPA
+-34.00 dBm TSUSVisitor
+-43.00 dBm YeyDerones
+-58.00 dBm TexasStateWPA
+-59.00 dBm TexasStateUniversity
+-60.00 dBm TSUSVisitor
+-69.00 dBm TexasStateWPA
+-70.00 dBm TexasStateUniversity
+-70.00 dBm TSUSVisitor
+-72.00 dBm TexasStateUniversity
+-72.00 dBm TexasStateWPA
+-72.00 dBm TSUSVisitor
+-74.00 dBm TexasStateWPA
+-75.00 dBm TexasStateUniversity
+-75.00 dBm TSUSVisitor
+-77.00 dBm TexasStateUniversity
+-77.00 dBm TexasStateWPA
+-77.00 dBm TSUSVisitor
+-85.00 dBm TexasStateUniversity
+-85.00 dBm TexasStateWPA
+-85.00 dBm TSUSVisitor
+-90.00 dBm TexasStateWPA
+-91.00 dBm TexasStateWPA
+~
+[x] Wed Jun 13 12:18:03 CDT 2018:
+-27.00 dBm TexasStateUniversity
+-27.00 dBm TexasStateWPA
+-29.00 dBm TSUSVisitor
+-34.00 dBm TexasStateWPA
+-35.00 dBm TexasStateUniversity
+-35.00 dBm TSUSVisitor
+-43.00 dBm YeyDerones
+-44.00 dBm ir7-hotspot
+-56.00 dBm TexasStateUniversity
+-59.00 dBm TexasStateWPA
+-60.00 dBm TSUSVisitor
+-68.00 dBm TexasStateWPA
+-69.00 dBm TexasStateUniversity
+-69.00 dBm TSUSVisitor
+-71.00 dBm TexasStateWPA
+-72.00 dBm TexasStateUniversity
+-72.00 dBm TexasStateWPA
+-72.00 dBm TSUSVisitor
+-74.00 dBm TexasStateUniversity
+-74.00 dBm TSUSVisitor
+-77.00 dBm TexasStateWPA
+-78.00 dBm TexasStateUniversity
+-78.00 dBm TSUSVisitor
+-86.00 dBm TexasStateUniversity
+-86.00 dBm TexasStateWPA
+-87.00 dBm TSUSVisitor
+-90.00 dBm TexasStateWPA
+-91.00 dBm TexasStateWPA
+~
+[x] Wed Jun 13 12:20:33 CDT 2018:
+-27.00 dBm msg-Latitude-E6420
+-27.00 dBm TexasStateUniversity
+-27.00 dBm TexasStateWPA
+-27.00 dBm TSUSVisitor
+-35.00 dBm TexasStateWPA
+-36.00 dBm TexasStateUniversity
+-36.00 dBm TSUSVisitor
+-39.00 dBm ir7-hotspot
+	Extended capabilities: SSID List, 6 -45.00 dBm
+TexasStateUniversity -60.00 dBm
+TexasStateUniversity -61.00 dBm
+TexasStateUniversity -67.00 dBm
+TexasStateUniversity -72.00 dBm
+TexasStateUniversity -77.00 dBm
+TexasStateUniversity -85.00 dBm
+TexasStateWPA 
+TexasStateWPA -68.00 dBm
+TexasStateWPA -72.00 dBm
+TexasStateWPA -73.00 dBm
+TexasStateWPA -78.00 dBm
+TexasStateWPA -85.00 dBm
+TexasStateWPA -91.00 dBm
+TexasStateWPA -92.00 dBm
+TexasStateWPA -93.00 dBm
+TSUSVisitor -61.00 dBm
+TSUSVisitor -68.00 dBm
+TSUSVisitor -72.00 dBm
+TSUSVisitor -73.00 dBm
+TSUSVisitor -78.00 dBm
+TSUSVisitor -86.00 dBm
+YeyDerones -72.00 dBm
+~
+[x] Wed Jun 13 12:21:09 CDT 2018:
+-26.00 dBm TexasStateUniversity
+-26.00 dBm TexasStateWPA
+-26.00 dBm TSUSVisitor
+-31.00 dBm msg-Latitude-E6420
+-34.00 dBm TexasStateWPA
+-35.00 dBm TexasStateUniversity
+-35.00 dBm TSUSVisitor
+-44.00 dBm ir7-hotspot
+	Extended capabilities: SSID List, 6 -72.00 dBm
+TexasStateUniversity -58.00 dBm
+TexasStateUniversity -67.00 dBm
+TexasStateUniversity -72.00 dBm
+TexasStateUniversity -73.00 dBm
+TexasStateUniversity -77.00 dBm
+TexasStateUniversity -84.00 dBm
+TexasStateWPA 
+TexasStateWPA -68.00 dBm
+TexasStateWPA -72.00 dBm
+TexasStateWPA -73.00 dBm
+TexasStateWPA -78.00 dBm
+TexasStateWPA -85.00 dBm
+TexasStateWPA -90.00 dBm
+TSUSVisitor -43.00 dBm
+TSUSVisitor -59.00 dBm
+TSUSVisitor -68.00 dBm
+TSUSVisitor -71.00 dBm
+TSUSVisitor -78.00 dBm
+TSUSVisitor -85.00 dBm
+YeyDerones -59.00 dBm
+~

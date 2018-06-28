@@ -1,0 +1,388 @@
+[x] Wed Jun 13 15:22:41 CDT 2018:
+"ir7-hotspot"  100/100  
+"msg-Latitude-E6420"  100/100  
+"TexasStateUniversity"  100/100  
+"TexasStateUniversity"  48/100  
+"TexasStateUniversity"  58/100  
+"TexasStateUniversity"  68/100  
+"TexasStateUniversity"  87/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  42/100  
+"TexasStateWPA"  48/100  
+"TexasStateWPA"  57/100  
+"TexasStateWPA"  68/100  
+"TexasStateWPA"  90/100  
+"TSUSVisitor"  100/100  
+"TSUSVisitor"  48/100  
+"TSUSVisitor"  58/100  
+"TSUSVisitor"  67/100  
+"TSUSVisitor"  85/100  
+"YeyDerones"  100/100  
+~
+[x] Wed Jun 13 15:24:46 CDT 2018:
+"ir7-hotspot"  100/100  
+"msg-Latitude-E6420"  100/100  
+"TexasStateUniversity"  100/100  
+"TexasStateUniversity"  68/100  
+"TexasStateUniversity"  88/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  44/100  
+"TexasStateWPA"  47/100  
+"TexasStateWPA"  68/100  
+"TexasStateWPA"  88/100  
+"TSUSVisitor"  100/100  
+"TSUSVisitor"  68/100  
+"TSUSVisitor"  88/100  
+"YeyDerones"  100/100  
+~
+[x] Wed Jun 13 15:25:09 CDT 2018:
+"ir7-hotspot"  67/100  
+"msg-Latitude-E6420"  76/100  
+"TexasStateUniversity"  100/100  
+"TexasStateUniversity"  100/100  
+"TexasStateUniversity"  62/100  
+"TexasStateUniversity"  68/100  
+"TexasStateUniversity"  70/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  46/100  
+"TexasStateWPA"  48/100  
+"TexasStateWPA"  48/100  
+"TexasStateWPA"  64/100  
+"TexasStateWPA"  70/100  
+"TexasStateWPA"  71/100  
+"TSUSVisitor"  100/100  
+"TSUSVisitor"  100/100  
+"TSUSVisitor"  47/100  
+"TSUSVisitor"  62/100  
+"TSUSVisitor"  68/100  
+"TSUSVisitor"  70/100  
+"YeyDerones"  80/100  
+~
+[x] Wed Jun 13 15:25:23 CDT 2018:
+"ir7-hotspot"  66/100  
+"msg-Latitude-E6420"  76/100  
+"TexasStateUniversity"  100/100  
+"TexasStateUniversity"  56/100  
+"TexasStateUniversity"  62/100  
+"TexasStateUniversity"  68/100  
+"TexasStateUniversity"  68/100  
+"TexasStateUniversity"  99/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  46/100  
+"TexasStateWPA"  48/100  
+"TexasStateWPA"  48/100  
+"TexasStateWPA"  48/100  
+"TexasStateWPA"  64/100  
+"TexasStateWPA"  68/100  
+"TexasStateWPA"  70/100  
+"TSUSVisitor"  100/100  
+"TSUSVisitor"  100/100  
+"TSUSVisitor"  47/100  
+"TSUSVisitor"  56/100  
+"TSUSVisitor"  62/100  
+"TSUSVisitor"  68/100  
+"TSUSVisitor"  68/100  
+"YeyDerones"  74/100  
+~
+[x] Wed Jun 13 15:25:33 CDT 2018:
+"DIRECT-8e-HP M203 LaserJet"  47/100  
+"ir7-hotspot"  66/100  
+"msg-Latitude-E6420"  76/100  
+"TexasStateUniversity"  100/100  
+"TexasStateUniversity"  56/100  
+"TexasStateUniversity"  58/100  
+"TexasStateUniversity"  62/100  
+"TexasStateUniversity"  68/100  
+"TexasStateUniversity"  72/100  
+"TexasStateUniversity"  91/100  
+"TexasStateUniversity"  98/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  53/100  
+"TexasStateWPA"  58/100  
+"TexasStateWPA"  60/100  
+"TexasStateWPA"  62/100  
+"TexasStateWPA"  68/100  
+"TexasStateWPA"  72/100  
+"TexasStateWPA"  98/100  
+"TSUSVisitor"  100/100  
+"TSUSVisitor"  56/100  
+"TSUSVisitor"  58/100  
+"TSUSVisitor"  58/100  
+"TSUSVisitor"  62/100  
+"TSUSVisitor"  68/100  
+"TSUSVisitor"  72/100  
+"TSUSVisitor"  98/100  
+"YeyDerones"  62/100  
+~
+[x] Wed Jun 13 15:25:53 CDT 2018:
+"DIRECT-8e-HP M203 LaserJet"  47/100  
+"TexasStateUniversity"  58/100  
+"TexasStateUniversity"  60/100  
+"TexasStateUniversity"  62/100  
+"TexasStateUniversity"  70/100  
+"TexasStateUniversity"  76/100  
+"TexasStateUniversity"  91/100  
+"TexasStateUniversity"  98/100  
+"TexasStateUniversity"  98/100  
+"TexasStateWPA"  48/100  
+"TexasStateWPA"  57/100  
+"TexasStateWPA"  57/100  
+"TexasStateWPA"  58/100  
+"TexasStateWPA"  60/100  
+"TexasStateWPA"  71/100  
+"TexasStateWPA"  98/100  
+"TexasStateWPA"  99/100  
+"TSUSVisitor"  48/100  
+"TSUSVisitor"  56/100  
+"TSUSVisitor"  58/100  
+"TSUSVisitor"  60/100  
+"TSUSVisitor"  62/100  
+"TSUSVisitor"  70/100  
+"TSUSVisitor"  98/100  
+"TSUSVisitor"  99/100  
+"YeyDerones"  26/100  
+~
+[x] Wed Jun 13 15:26:13 CDT 2018:
+"DIRECT-8e-HP M203 LaserJet"  46/100  
+"ir7-hotspot"  25/100  
+"msg-Latitude-E6420"  29/100  
+"TexasStateUniversity"  59/100  
+"TexasStateUniversity"  60/100  
+"TexasStateUniversity"  62/100  
+"TexasStateUniversity"  70/100  
+"TexasStateUniversity"  70/100  
+"TexasStateUniversity"  76/100  
+"TexasStateUniversity"  77/100  
+"TexasStateUniversity"  97/100  
+"TexasStateUniversity"  99/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  48/100  
+"TexasStateWPA"  57/100  
+"TexasStateWPA"  58/100  
+"TexasStateWPA"  58/100  
+"TexasStateWPA"  60/100  
+"TexasStateWPA"  62/100  
+"TexasStateWPA"  70/100  
+"TexasStateWPA"  71/100  
+"TexasStateWPA"  77/100  
+"TexasStateWPA"  98/100  
+"TSUSVisitor"  48/100  
+"TSUSVisitor"  57/100  
+"TSUSVisitor"  58/100  
+"TSUSVisitor"  59/100  
+"TSUSVisitor"  62/100  
+"TSUSVisitor"  68/100  
+"TSUSVisitor"  69/100  
+"TSUSVisitor"  75/100  
+"TSUSVisitor"  90/100  
+"TSUSVisitor"  97/100  
+"TSUSVisitor"  98/100  
+"YeyDerones"  36/100  
+~
+[x] Wed Jun 13 15:26:19 CDT 2018:
+"DIRECT-8e-HP M203 LaserJet"  45/100  
+"ir7-hotspot"  25/100  
+"msg-Latitude-E6420"  29/100  
+"TexasStateUniversity"  59/100  
+"TexasStateUniversity"  60/100  
+"TexasStateUniversity"  62/100  
+"TexasStateUniversity"  70/100  
+"TexasStateUniversity"  76/100  
+"TexasStateUniversity"  77/100  
+"TexasStateUniversity"  78/100  
+"TexasStateUniversity"  97/100  
+"TexasStateUniversity"  99/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  58/100  
+"TexasStateWPA"  58/100  
+"TexasStateWPA"  60/100  
+"TexasStateWPA"  60/100  
+"TexasStateWPA"  62/100  
+"TexasStateWPA"  70/100  
+"TexasStateWPA"  76/100  
+"TexasStateWPA"  80/100  
+"TexasStateWPA"  98/100  
+"TSUSVisitor"  56/100  
+"TSUSVisitor"  58/100  
+"TSUSVisitor"  59/100  
+"TSUSVisitor"  62/100  
+"TSUSVisitor"  68/100  
+"TSUSVisitor"  75/100  
+"TSUSVisitor"  76/100  
+"TSUSVisitor"  90/100  
+"TSUSVisitor"  97/100  
+"TSUSVisitor"  98/100  
+"YeyDerones"  46/100  
+~
+[x] Wed Jun 13 15:26:29 CDT 2018:
+"DIRECT-8e-HP M203 LaserJet"  45/100  
+"ir7-hotspot"  29/100  
+"msg-Latitude-E6420"  38/100  
+"TexasStateUniversity"  59/100  
+"TexasStateUniversity"  60/100  
+"TexasStateUniversity"  62/100  
+"TexasStateUniversity"  70/100  
+"TexasStateUniversity"  74/100  
+"TexasStateUniversity"  77/100  
+"TexasStateUniversity"  77/100  
+"TexasStateUniversity"  97/100  
+"TexasStateUniversity"  99/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  58/100  
+"TexasStateWPA"  58/100  
+"TexasStateWPA"  60/100  
+"TexasStateWPA"  60/100  
+"TexasStateWPA"  62/100  
+"TexasStateWPA"  65/100  
+"TexasStateWPA"  75/100  
+"TexasStateWPA"  79/100  
+"TexasStateWPA"  98/100  
+"TSUSVisitor"  56/100  
+"TSUSVisitor"  58/100  
+"TSUSVisitor"  59/100  
+"TSUSVisitor"  62/100  
+"TSUSVisitor"  65/100  
+"TSUSVisitor"  74/100  
+"TSUSVisitor"  76/100  
+"TSUSVisitor"  90/100  
+"TSUSVisitor"  97/100  
+"TSUSVisitor"  98/100  
+"YeyDerones"  73/100  
+~
+[x] Wed Jun 13 15:26:46 CDT 2018:
+"ir7-hotspot"  41/100  
+"msg-Latitude-E6420"  38/100  
+"TexasStateUniversity"  100/100  
+"TexasStateUniversity"  71/100  
+"TexasStateUniversity"  77/100  
+"TexasStateUniversity"  84/100  
+"TexasStateUniversity"  99/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  65/100  
+"TexasStateWPA"  72/100  
+"TexasStateWPA"  74/100  
+"TexasStateWPA"  88/100  
+"TSUSVisitor"  100/100  
+"TSUSVisitor"  65/100  
+"TSUSVisitor"  71/100  
+"TSUSVisitor"  76/100  
+"TSUSVisitor"  84/100  
+"TSUSVisitor"  97/100  
+"YeyDerones"  94/100  
+~
+[x] Wed Jun 13 15:26:59 CDT 2018:
+"ir7-hotspot"  41/100  
+"msg-Latitude-E6420"  100/100  
+"TexasStateUniversity"  100/100  
+"TexasStateUniversity"  71/100  
+"TexasStateUniversity"  84/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  72/100  
+"TexasStateWPA"  74/100  
+"TexasStateWPA"  85/100  
+"TSUSVisitor"  100/100  
+"TSUSVisitor"  71/100  
+"TSUSVisitor"  84/100  
+"YeyDerones"  99/100  
+~
+[x] Wed Jun 13 20:53:22 CDT 2018:
+""  23/100  
+"Apt 923"  23/100  
+"ARRIS-372A"  47/100  
+"ARRIS-7D32"  47/100  
+"ARRIS-A262"  46/100  
+"ARRIS-B9C2"  23/100  
+"BeyHive"  70/100  
+"Chromecast5590"  23/100  
+"d21b30"  57/100  
+"HP-Print-E9-ENVY 4500 series"  26/100  
+"hpsetup"  47/100  
+"It Hurts When IP"  56/100  
+"Linux"  70/100  
+"NETGEAR66"  85/100  
+"Renee"  88/100  
+"The Arkham Network"  23/100  
+"The Unreserves"  44/100  
+"The Unreserves-guest"  44/100  
+"This Wifi"  43/100  
+~
+[x] Wed Jun 13 20:53:35 CDT 2018:
+""  23/100  
+""  23/100  
+"ARRIS-09F3"  23/100  
+"ARRIS-7D32"  47/100  
+"ARRIS-B9C2"  23/100  
+"BeyHive"  70/100  
+"Chromecast5590"  23/100  
+"d21b30"  57/100  
+"HP-Print-E9-ENVY 4500 series"  29/100  
+"hpsetup"  43/100  
+"It Hurts When IP"  56/100  
+"KitaGirl"  43/100  
+"NETGEAR66"  88/100  
+"Power Rangers"  47/100  
+"Renee"  88/100  
+"The Arkham Network"  23/100  
+"The Unreserves"  43/100  
+"The Unreserves-guest"  44/100  
+"This Wifi"  42/100  
+"WOKE INTERNET"  44/100  
+~
+[x] Wed Jun 13 20:53:57 CDT 2018:
+"Apt 923"  23/100  
+"ARRIS-1252"  23/100  
+"ARRIS-372A"  48/100  
+"ARRIS-B472"  43/100  
+"ARRIS-D2AA"  23/100  
+"d21b30"  50/100  
+"hpsetup"  46/100  
+"k.rod"  23/100  
+"NETGEAR66"  85/100  
+"NETGEAR97"  23/100  
+"Power Rangers"  47/100  
+"Renee"  77/100  
+"The Unreserves"  43/100  
+"WOKE INTERNET"  45/100  
+~
+[x] Wed Jun 13 20:54:19 CDT 2018:
+"Apt 923"  23/100  
+"ARRIS-372A"  47/100  
+"ARRIS-7D32"  44/100  
+"ARRIS-960A"  23/100  
+"ARRIS-A262"  46/100  
+"BeyHive"  70/100  
+"Bokowifi"  23/100  
+"d21b30"  45/100  
+"Dell_device"  23/100  
+"HP-Print-40-ENVY 4500 series"  43/100  
+"HP-Print-73-Officejet 6800"  23/100  
+"HP-Print-E9-ENVY 4500 series"  44/100  
+"hpsetup"  46/100  
+"It Hurts When IP"  43/100  
+"KitaGirl"  42/100  
+"Linux"  60/100  
+"NETGEAR66"  89/100  
+"Power Rangers"  46/100  
+"Renee"  77/100  
+"The Arkham Network"  23/100  
+"This Wifi"  44/100  
+"WOKE INTERNET"  46/100  
+~
+[x] Wed Jun 13 20:54:41 CDT 2018:
+"Apartment 933"  23/100  
+"ARRIS-372A"  47/100  
+"belkin.0a0"  23/100  
+"BeyHive"  70/100  
+"Chromecast5590"  23/100  
+"hpsetup"  46/100  
+"KitaGirl"  43/100  
+"NETGEAR66"  89/100  
+"Renee"  84/100  
+"The Unreserves-guest"  44/100  
+"The Willis's"  42/100  
+"This Wifi"  43/100  
+"WOKE INTERNET"  46/100  
+~

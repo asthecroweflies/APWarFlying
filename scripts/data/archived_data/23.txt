@@ -1,0 +1,105 @@
+[x] Thu Jun 14 11:32:09 CDT 2018:
+"TexasStateUniversity"  100/100  
+"TexasStateWPA"  100/100  
+"TSUSVisitor"  100/100  
+~
+[x] Thu Jun 14 11:32:32 CDT 2018:
+"TexasStateUniversity"  100/100  
+"TexasStateUniversity"  62/100  
+"TexasStateUniversity"  68/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  47/100  
+"TexasStateWPA"  62/100  
+"TexasStateWPA"  67/100  
+"TSUSVisitor"  100/100  
+"TSUSVisitor"  60/100  
+"TSUSVisitor"  64/100  
+~
+[x] Thu Jun 14 11:32:54 CDT 2018:
+"SMHCEMS-LTE553"  23/100  
+"TC8715D12"  23/100  
+"TexasStateUniversity"  100/100  
+"TexasStateUniversity"  64/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  64/100  
+"TSUSVisitor"  100/100  
+"TSUSVisitor"  64/100  
+~
+[x] Thu Jun 14 11:33:15 CDT 2018:
+"Crafthouse Guest"  23/100  
+"TexasStateUniversity"  100/100  
+"TexasStateUniversity"  60/100  
+"TexasStateUniversity"  70/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  43/100  
+"TexasStateWPA"  60/100  
+"TexasStateWPA"  70/100  
+"The Local (802.1x)"  43/100  
+"TSUSVisitor"  70/100  
+~
+[x] Thu Jun 14 11:33:37 CDT 2018:
+"TexasStateUniversity"  100/100  
+"TexasStateUniversity"  60/100  
+"TexasStateUniversity"  68/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  60/100  
+"TexasStateWPA"  68/100  
+"TSUSVisitor"  100/100  
+"TSUSVisitor"  60/100  
+"TSUSVisitor"  69/100  
+~
+[x] Thu Jun 14 11:33:58 CDT 2018:
+"TC8715D12"  23/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  60/100  
+"TSUSVisitor"  100/100  
+~
+[x] Thu Jun 14 11:34:20 CDT 2018:
+""  23/100  
+"BC1"  23/100  
+"TexasStateUniversity"  62/100  
+"TexasStateUniversity"  70/100  
+"TexasStateUniversity"  96/100  
+"TexasStateWPA"  62/100  
+"TexasStateWPA"  70/100  
+"TexasStateWPA"  96/100  
+"TSUSVisitor"  62/100  
+"TSUSVisitor"  70/100  
+"TSUSVisitor"  96/100  
+~
+[x] Thu Jun 14 11:34:41 CDT 2018:
+"TexasStateUniversity"  62/100  
+"TexasStateWPA"  60/100  
+"TSUSVisitor"  62/100  
+"TWCWiFi-Passpoint"  44/100  
+"WiFi Hotspot 4308"  23/100  
+~
+[x] Thu Jun 14 11:35:03 CDT 2018:
+"TC8715D12"  23/100  
+"TexasStateUniversity"  100/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  47/100  
+"TSUSVisitor"  100/100  
+"WiFi Hotspot 4308"  23/100  
+~
+[x] Thu Jun 14 11:35:25 CDT 2018:
+"TC8715D12"  23/100  
+"TexasStateUniversity"  100/100  
+"TexasStateUniversity"  48/100  
+"TexasStateUniversity"  62/100  
+"TexasStateUniversity"  68/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  47/100  
+"TexasStateWPA"  48/100  
+"TexasStateWPA"  62/100  
+"TexasStateWPA"  68/100  
+"TSUSVisitor"  100/100  
+"TSUSVisitor"  62/100  
+"TSUSVisitor"  68/100  
+~
+[x] Thu Jun 14 11:35:45 CDT 2018:
+"TC8715D12"  23/100  
+"TexasStateUniversity"  100/100  
+"TexasStateWPA"  100/100  
+"TSUSVisitor"  100/100  
+~

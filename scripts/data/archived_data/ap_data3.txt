@@ -1,0 +1,72 @@
+[x] Tue Jun 12 13:39:46 CDT 2018:
+-48.00 dBm NETGEAR66
+-49.00 dBm Renee
+-62.00 dBm d21b30
+-64.00 dBm BeyHive
+-68.00 dBm nss2
+-71.00 dBm Linux
+-73.00 dBm 
+-73.00 dBm BeyHive-5G
+-74.00 dBm It Hurts When IP
+-75.00 dBm ARRIS-372A
+-76.00 dBm ARRIS-7D32
+-76.00 dBm Power Rangers
+-77.00 dBm HP-Print-E9-ENVY 4500 series
+-78.00 dBm Linux-5G
+-79.00 dBm ARRIS-7173
+-82.00 dBm ARRIS-7D32-5G
+-82.00 dBm TP-LINK_5F34
+-83.00 dBm hpsetup
+-89.00 dBm ARRIS-7173-5G
+-92.00 dBm It Hurts When IP
+-92.00 dBm WOKE INTERNET_5GHz
+-93.00 dBm VT233-5G
+~
+[x] Tue Jun 12 14:48:17 CDT 2018:
+ 
+-54.00 dBm NETGEAR66
+-57.00 dBm Renee
+-62.00 dBm BeyHive
+-67.00 dBm nss2
+-71.00 dBm d21b30
+-73.00 dBm ARRIS-7D32
+-74.00 dBm Linux
+-74.00 dBm The Unreserves
+-75.00 dBm ARRIS-7173
+-78.00 dBm HP-Print-E9-ENVY 4500 series
+-78.00 dBm Power Rangers
+-79.00 dBm BeyHive-5G
+-79.00 dBm hpsetup
+-80.00 dBm It Hurts When IP
+-80.00 dBm The Unreserves-guest
+-81.00 dBm ARRIS-372A
+-87.00 dBm Lord Voldemodem
+-88.00 dBm ARRIS-7173-5G
+-91.00 dBm Castillo_5G
+	Extended capabilities: Extended Channel Switching, TFS, WNM-Sleep Mode, TIM Broadcast, BSS Transition, SSID List, 6 -81.00 dBm
+Linux-5G -71.00 dBm
+~
+[x] Tue Jun 12 15:11:06 CDT 2018:
+ 
+-55.00 dBm NETGEAR66
+-56.00 dBm Renee
+-60.00 dBm BeyHive
+-67.00 dBm ARRIS-7D32
+-72.00 dBm hpsetup
+-74.00 dBm BeyHive-5G
+-74.00 dBm d21b30
+-74.00 dBm Linux
+-78.00 dBm TP-LINK_5F34
+-79.00 dBm It Hurts When IP
+-80.00 dBm Power Rangers
+-81.00 dBm ARRIS-372A
+-81.00 dBm The Unreserves
+-82.00 dBm The Unreserves-guest
+ -86.00 dBm
+-86.00 dBm Lord Voldemodem
+-88.00 dBm ARRIS-7173-5G
+-91.00 dBm Castillo_5G
+-91.00 dBm WOKE INTERNET_5GHz
+	Extended capabilities: Extended Channel Switching, TFS, WNM-Sleep Mode, TIM Broadcast, BSS Transition, SSID List, 6 -91.00 dBm
+Linux-5G -59.00 dBm
+~

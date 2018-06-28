@@ -1,0 +1,37 @@
+[x] Thu Jun 14 20:50:11 CDT 2018:
+"ir2-hotspot"  84/100  
+"ir5-hotspot"  100/100  
+"ir6-hotspot"  92/100  
+"TexasStateUniversity"  100/100  
+"TexasStateUniversity"  64/100  
+"TexasStateUniversity"  72/100  
+"TexasStateUniversity"  84/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  47/100  
+"TexasStateWPA"  67/100  
+"TexasStateWPA"  74/100  
+"TexasStateWPA"  76/100  
+"TSUSVisitor"  100/100  
+"TSUSVisitor"  64/100  
+"TSUSVisitor"  72/100  
+"TSUSVisitor"  84/100  
+"YeyDerones"  100/100  
+~
+[x] Thu Jun 14 20:50:19 CDT 2018:
+"ir5-hotspot"  88/100  
+"ir6-hotspot"  100/100  
+"TexasStateUniversity"  100/100  
+"TexasStateUniversity"  64/100  
+"TexasStateUniversity"  64/100  
+"TexasStateUniversity"  84/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  44/100  
+"TexasStateWPA"  62/100  
+"TexasStateWPA"  64/100  
+"TexasStateWPA"  84/100  
+"TSUSVisitor"  100/100  
+"TSUSVisitor"  64/100  
+"TSUSVisitor"  64/100  
+"TSUSVisitor"  84/100  
+"YeyDerones"  100/100  
+~

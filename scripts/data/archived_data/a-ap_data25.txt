@@ -1,0 +1,153 @@
+[x] Thu Jun 14 12:07:53 CDT 2018:
+"TexasStateUniversity"  60/100  
+"TexasStateUniversity"  60/100  
+"TexasStateUniversity"  92/100  
+"TexasStateWPA"  47/100  
+"TexasStateWPA"  60/100  
+"TexasStateWPA"  60/100  
+"TexasStateWPA"  92/100  
+"TSUSVisitor"  60/100  
+"TSUSVisitor"  60/100  
+"TSUSVisitor"  96/100  
+"TWCWiFi-Passpoint"  42/100  
+~
+[x] Thu Jun 14 12:08:16 CDT 2018:
+"CableWiFi"  43/100  
+"PNet6534968"  23/100  
+"SpectrumWiFi Plus"  43/100  
+"TexasStateUniversity"  60/100  
+"TexasStateWPA"  47/100  
+"TSUSVisitor"  61/100  
+"TWCWiFi"  43/100  
+~
+[x] Thu Jun 14 12:08:38 CDT 2018:
+"PNet6951039"  23/100  
+~
+[x] Thu Jun 14 12:08:59 CDT 2018:
+"RobTan"  23/100  
+"TexasStateUniversity"  56/100  
+"TexasStateUniversity"  92/100  
+"TexasStateWPA"  56/100  
+"TexasStateWPA"  96/100  
+"TSUSVisitor"  56/100  
+"TSUSVisitor"  92/100  
+"TWCWiFi"  47/100  
+~
+[x] Thu Jun 14 12:09:21 CDT 2018:
+"TexasStateUniversity"  62/100  
+"TexasStateUniversity"  72/100  
+"TexasStateWPA"  48/100  
+"TexasStateWPA"  62/100  
+"TexasStateWPA"  70/100  
+"TSUSVisitor"  48/100  
+"TSUSVisitor"  63/100  
+"TSUSVisitor"  71/100  
+~
+[x] Thu Jun 14 12:09:42 CDT 2018:
+"TexasStateUniversity"  64/100  
+"TexasStateUniversity"  70/100  
+"TexasStateWPA"  70/100  
+"TSUSVisitor"  70/100  
+~
+[x] Thu Jun 14 12:10:04 CDT 2018:
+"TexasStateUniversity"  68/100  
+"TexasStateWPA"  69/100  
+"TSUSVisitor"  70/100  
+~
+[x] Thu Jun 14 12:10:25 CDT 2018:
+"TexasStateUniversity"  61/100  
+"TexasStateUniversity"  67/100  
+"TexasStateWPA"  62/100  
+"TexasStateWPA"  66/100  
+"TSUSVisitor"  56/100  
+"TSUSVisitor"  62/100  
+"TSUSVisitor"  64/100  
+~
+[x] Thu Jun 14 12:10:47 CDT 2018:
+"TexasStateUniversity"  64/100  
+"TexasStateUniversity"  70/100  
+"TexasStateWPA"  64/100  
+"TexasStateWPA"  68/100  
+"TSUSVisitor"  70/100  
+~
+[x] Thu Jun 14 12:11:08 CDT 2018:
+"TexasStateUniversity"  70/100  
+"TexasStateWPA"  70/100  
+"TSUSVisitor"  70/100  
+~
+[x] Thu Jun 14 12:11:30 CDT 2018:
+"TexasStateUniversity"  100/100  
+"TexasStateUniversity"  58/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  58/100  
+"TSUSVisitor"  100/100  
+"TSUSVisitor"  58/100  
+"TSUSVisitor"  58/100  
+~
+[x] Thu Jun 14 12:11:51 CDT 2018:
+"TexasStateUniversity"  100/100  
+"TexasStateUniversity"  58/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  58/100  
+"TSUSVisitor"  100/100  
+"TSUSVisitor"  58/100  
+~
+[x] Thu Jun 14 12:12:13 CDT 2018:
+"TexasStateUniversity"  56/100  
+"TexasStateUniversity"  62/100  
+"TexasStateWPA"  62/100  
+"TSUSVisitor"  56/100  
+"TSUSVisitor"  62/100  
+~
+[x] Thu Jun 14 12:12:34 CDT 2018:
+"TexasStateUniversity"  100/100  
+"TexasStateUniversity"  62/100  
+"TexasStateWPA"  100/100  
+"TexasStateWPA"  62/100  
+"TSUSVisitor"  100/100  
+"TSUSVisitor"  62/100  
+"TSUSVisitor"  70/100  
+"TSUSVisitor"  74/100  
+~
+[x] Thu Jun 14 12:12:56 CDT 2018:
+"inception2"  23/100  
+"PNet6534968"  23/100  
+"TexasStateUniversity"  72/100  
+"TexasStateWPA"  74/100  
+"TSUSVisitor"  72/100  
+~
+[x] Thu Jun 14 12:13:18 CDT 2018:
+""  26/100  
+"TexasStateUniversity"  62/100  
+"TexasStateUniversity"  68/100  
+"TexasStateUniversity"  92/100  
+"TexasStateWPA"  62/100  
+"TexasStateWPA"  64/100  
+"TexasStateWPA"  92/100  
+"TSUSVisitor"  62/100  
+"TSUSVisitor"  62/100  
+"TSUSVisitor"  88/100  
+"TWCWiFi-Passpoint"  45/100  
+~
+[x] Thu Jun 14 12:13:39 CDT 2018:
+"TexasStateUniversity"  60/100  
+"TexasStateUniversity"  84/100  
+"TexasStateWPA"  76/100  
+"TSUSVisitor"  56/100  
+~
+[x] Thu Jun 14 12:14:01 CDT 2018:
+"TexasStateUniversity"  62/100  
+"TexasStateUniversity"  92/100  
+"TexasStateWPA"  62/100  
+"TexasStateWPA"  92/100  
+"TSUSVisitor"  92/100  
+~
+[x] Thu Jun 14 12:14:22 CDT 2018:
+""  23/100  
+"TexasStateUniversity"  64/100  
+"TexasStateUniversity"  88/100  
+"TexasStateWPA"  61/100  
+"TexasStateWPA"  64/100  
+"TSUSVisitor"  64/100  
+"TSUSVisitor"  88/100  
+~
