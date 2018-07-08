@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     {
         char choice = 'X';
 
-        printf("\n\nEnter MAVLink Option \n\tTakeoff Mission Item - T\n\tAdd Waypoint - W\n\tStart Video Capture - V\n\tStop Video Capture - X\n\tCapture Image - I\n\tAdd Delay at Waypoint (ms) - D\n\tLand Mission Item - L\n");
+        printf("\nEnter MAVLink Option \n\tTakeoff Mission Item - T\n\tAdd Waypoint - W\n\tStart Video Capture - V\n\tStop Video Capture - X\n\tCapture Image - I\n\tAdd Delay at Waypoint (ms) - D\n\tLand Mission Item - L\n");
         scanf(" %c", &choice);
 
         switch(choice)
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
             printf("\nEnter Latitude, Longitude, and Altitude(m) on where to land: ");
             scanf("%f %f %f", &latitude, &longitude, &altitude);
 
-            error = ARMAVLINK_MissionItemUtils_CreateMavlinkLandMissionItem(&item, longitude, latitude, altitude, 0);
+            error = ARMAVLINK_MissionItemUtils_CreateMavlinkLandMissionItem(&item, longitude, latitude,   altitude, 0);
             error = ARMAVLINK_FileGenerator_AddMissionItem(generator, &item);
             break;
 
@@ -72,11 +72,19 @@ int main(int argc, char *argv[])
         scanf(" %c", &proceed);
 
     };
+    
+char c = ' ';
+printf("Output file to desktop? (Y/N)\n");
+scanf(" %c", &c);
 
-
-	printf("MAVLink file generated.");    
-    char* filePath = "/home/irobot7/Desktop/flightplan.mavlink";
+if (c == 'Y'){
+    char* filePath = "/home/ir7/Desktop/flightplan.mavlink";
 	ARMAVLINK_FileGenerator_CreateMavlinkFile(generator, filePath);
+printf("File saved to desktop.\n");
+}
+else {
+printf("Exitting without outputting.\n");
+}
 
     return 0;
 }
