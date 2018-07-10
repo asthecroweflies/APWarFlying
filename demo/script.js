@@ -195,6 +195,15 @@ function handleClick(d, i) {
     generateSignalIndicators();
 }
 
+function gaussianRandom(start, end) {
+    var rand = 0;
+    for (var i = 0; i < 6; i += 1) 
+      rand += Math.random();
+    
+    rand /= 6;
+    return Math.floor(start + rand * (end - start + 1));
+  }
+  
 function findPathLoss(d) {
 
     // Log Distance Path Loss Model:
@@ -206,9 +215,8 @@ function findPathLoss(d) {
     // P(d) = P(d0) + 10*n*log10(d) + X
     
     refLoss = 15;
-    pathLossExponent = 2;
-    signalNoise = Math.floor(10 * Math.random()); //TODO: Replace temp. noise with actual noise
-
+    pathLossExponent = 2.9;
+    signalNoise = gaussianRandom(0, 100) / 100; 
     return (refLoss + 10 * pathLossExponent * Math.log10(d) + signalNoise);
     //return d;
 };
@@ -220,12 +228,16 @@ function flyDrone() {
     //droneImg.style.top = DroneSquares[0].y;
     totalAPDistances = [];
     // Plotly.purge('strengthChart');
-    $("#droneImg").transition({                         // Move drone div to initial position
+   /* $("#droneImg").transition({                         // Move drone div to initial position
         x: DroneSquares[0].x + 'px',
         y: DroneSquares[0].y + 'px',
-        duration: 10,
+        duration: 0,
         delay: 0
      });
+     */
+    droneImg.style.position = "absolute";
+    droneImg.style.left = DroneSquares[0].x + 'px';
+    droneImg.style.top =  DroneSquares[0].y + 'px';
     animateDrone();
     generateSignalIndicators();
     //console.log(APs);
@@ -278,8 +290,8 @@ function animateDrone() {
         adjustedDroneX = droneX + droneImg.offsetWidth / 2;
         adjustedDroneY = droneY + droneImg.offsetHeight / 2;
         //console.log(apX + ", " + apY + " aoX: " + aoX + " aoY: " + aoY);
-        console.log("Drone x: " + adjustedDroneX.toFixed(2) + " Drone y: " + adjustedDroneY.toFixed(2));
-        currentAPStrengths = [];
+        //console.log("Drone x: " + adjustedDroneX.toFixed(2) + " Drone y: " + adjustedDroneY.toFixed(2));
+        currentAPStrengths = [];                        // Reset on each probing
         
         for (var ap = 0; ap < APs.length; ap++) {
             distance = 0;
@@ -289,29 +301,37 @@ function animateDrone() {
             var pathLoss = findPathLoss(distance);
 
             currentAPStrengths.push(-1 * pathLoss);
-            console.log("Path Loss from AP" + ap + ": " + pathLoss.toFixed(5) + ".");
+            //console.log("Path Loss from AP" + ap + ": " + pathLoss.toFixed(5) + ".");
             
         }
         totalAPDistances.push(currentAPStrengths);
-        console.log("Scan " + iterations + ")-------------------------")
+        //console.log("Scan " + iterations + ")-------------------------")
         if (iterations * probingInterval > flightTime * DroneCoords.length) {//end of flight, stop tracking
             clearInterval(scanForAPs);
-            // TODO: Link data with chart.js
             plotDataPlotly(totalAPDistances);
-            //console.log(totalAPDistances);
         }
         iterations++;
     }, probingInterval);
 
     // Move droneImg
     for (var d = 0; d < DroneCoords.length; d++) {
-        console.log("Drone location: (" + adjustedDroneX + "," + adjustedDroneY + ")");
+        //console.log("Drone location: (" + adjustedDroneX + "," + adjustedDroneY + ")");
         newX = DroneCoords[d][0];
         newY = DroneCoords[d][1];
-        // Animate drone to next waypoint location 
+        droneX = $("#droneImg").position().left;
+        droneY = $("#droneImg").position().top;
+
+        var aoX = $("#droneImg").offset().left;
+        var aoY = $("#droneImg").offset().top;
+        adjustedDroneX = droneX + droneImg.offsetWidth / 2;
+        adjustedDroneY = droneY + droneImg.offsetHeight / 2;
+        console.log("newX: " + newX + " newY: " + newY);
+        console.log("droneX: " + droneX + " droneY: " + droneY);
         $("#droneImg").transition({
-            x: newX - (droneWidth / 2) + (cellWidth / 2) + 'px',
-            y: newY - (droneHeight / 2) + (cellHeight / 2) + 'px',
+            //x: newX - (droneWidth / 2) + (cellWidth / 2) + 'px',
+            //y: newY - (droneHeight / 2) + (cellHeight / 2) + 'px',
+            x: newX - droneX - (cellWidth / 1.5) + 'px',
+            y: newY - droneY - (cellHeight / 1.5) +  'px',
             duration: flightTime,
             delay: 0
          });
@@ -320,7 +340,7 @@ function animateDrone() {
 
 function generateSignalIndicators() {
 
-    var radiusInBlocks = 4; // size of signal strength radius in terms of grid squares
+    var radiusInBlocks = 8; // size of signal strength radius in terms of grid squares
                             // Should use path attenuation model
     var multFactor = 4;     // for changing radius on click (or something else in the future)
     var min = 0;            // lowerbound for color array range calculation
@@ -479,7 +499,7 @@ function plotDataPlotly(totalAPDistances) {
             size: 14,
             color: '#7f7f7f'
           },
-          range: [-100, 0]
+          //range: [-100, 0]
         }
       };
 
