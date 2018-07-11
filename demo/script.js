@@ -1,5 +1,5 @@
 //TODO: Add lines between DronePos
-//IDEA: for grid scale: have div's along the edge protrude line depecting distance
+//IDEA: for grid scale: have div's along the edge protrude line depicting distance
 
 var divWidth, divHeight, cellWidth, cellHeight;
 var APToggled = 0, DroneToggled = 0, gridToggled = 0;
@@ -10,18 +10,14 @@ var totalAPDistances = [];
 var DroneSquares = [];
 var pi = 3.1415926535897932384626433832795028841971693993751058209749445923078164;
 var svgUsed = false;
+var probeSvgUsed = false;
 var AP_id = false;
 var Drone_id = false;
 var droneImage = new Image(75, 35);
-var plotted = false;   
+var droneProbingLocations = [];
+var plotted = false;
+var dimensionality;
 droneImage.src = '/res/drone_nobg.png';
-
-$(document).ready(function(){
-    $("#genMask").dblclick(function() { // Clear grid on double-click
-        //clearGrid();
-
-    });
-});
 
 window.onload = function() {
     divWidth = document.getElementById("grid").offsetWidth;
@@ -29,6 +25,7 @@ window.onload = function() {
     document.getElementById("toggleAP").disabled = true;
     document.getElementById("toggleDrone").disabled = true;
     document.getElementById("plotOnAP").disabled = true;
+    dimensionality = $("#dimension").val();
 };
 
 function clearGrid() { 
@@ -36,10 +33,9 @@ function clearGrid() {
     APs = [];
     DroneSquares = [];
     svgUsed = 0;
+    probeSvgUsed = 0;
     AP_id = 0;
     Drone_id = 0;
-    //grid = d3.select("#grid").html("");
-    //d3.select("g.parent").selectAll("*").remove();
 
     craftGrid();
 }
@@ -87,8 +83,6 @@ var craftGrid = function() {
         gridToggled = true;
     } 
 
-    var dimensionality = $("#dimension").val();
-
     // Input validation
     if ((750 % dimensionality !== 0) || dimensionality < 5) {
         alert("dimensionality must be a factor of 750 [10, 15, 25, 30, 50, 75, 125, 150, 250] & > 5")
@@ -107,6 +101,10 @@ var craftGrid = function() {
         .enter().append("g")
         .attr("class", "row");
 
+    var lineThickness = 1;
+    if (dimensionality <= 25) 
+        lineThickness = 3;
+    
     var column = row.selectAll(".square")
         .data(function(d) { return d; })
         .enter().append("rect")
@@ -117,14 +115,7 @@ var craftGrid = function() {
         .attr("height", function(d) { return d.height; })
         .style("fill", "#ffefd5")
         .style("stroke", "#222")
-
-       /* if (dimensionality > 100) {
-            column = row.style("stroke-width", 0);
-        }
-        else {
-            column = row.style("stroke-width", 2);
-        }*/
-        .style("stroke-width", 1)
+        .style("stroke-width", lineThickness)
         .on('mouseover', handleMouseOver)
         .on('mouseout', handleMouseOut)
         .on('contextmenu', function (d, i) {
@@ -215,27 +206,24 @@ function findPathLoss(d) {
     // P(d) = P(d0) + 10*n*log10(d) + X
     
     refLoss = 15;
-    pathLossExponent = 2.9;
+    pathLossExponent = 2.2;
     signalNoise = gaussianRandom(0, 100) / 100; 
+
     return (refLoss + 10 * pathLossExponent * Math.log10(d) + signalNoise);
     //return d;
 };
 
- 
+function pixelToMeters(d) {
+    var gridResolution = 750.0 / dimensionality;
+    return (d / gridResolution);
+} 
+
 function flyDrone() {
     var droneImg = document.getElementById("droneImg");
     //droneImg.style.left = DroneSquares[0].x;
     //droneImg.style.top = DroneSquares[0].y;
     totalAPDistances = [];
-    // Plotly.purge('strengthChart');
-   /* $("#droneImg").transition({                         // Move drone div to initial position
-        x: DroneSquares[0].x + 'px',
-        y: DroneSquares[0].y + 'px',
-        duration: 0,
-        delay: 0
-     });
-     */
-    droneImg.style.position = "absolute";
+    droneImg.style.position = "absolute";               // Move drone to initial AP location
     droneImg.style.left = DroneSquares[0].x + 'px';
     droneImg.style.top =  DroneSquares[0].y + 'px';
     animateDrone();
@@ -247,6 +235,16 @@ function flyDrone() {
 // Drone movement 
 function animateDrone() {
 
+    var droneReady = false;                                 // Start animation once drone is at first AP
+
+    /*while (!droneReady) {
+        var droneImg = document.getElementById("droneImg");
+        var dx = $("#droneImg").position().left;
+        var dy = $("#droneImg").position().top;
+        if (dx == droneImg.style.left && dy == droneImg.style.top) {
+            droneReady = true;
+        }v
+    }*/
     DroneCoords = [];                                   // Contain x & y coordinates for all waypoints
     
     for (var i = 0; i < DroneSquares.length; i++) {
@@ -275,40 +273,37 @@ function animateDrone() {
     var droneX, droneY, adjustedDroneX, adjustedDroneY; // Determine drone's center location with reference to grid
     
     var scanForAPs = setInterval(function () {
-
-        var grid = d3.select("#probeLocations")         //TODO: Mark where on grid probing happens
-        .append("svg")
-        .attr("width", "752px")
-        .attr("height", "752px");
-
-        // Position and offset of the element during the animation
+                                                        // Position and offset of the element during the animation
         droneX = $("#droneImg").position().left;
         droneY = $("#droneImg").position().top;
-
-        var aoX = $("#droneImg").offset().left;
-        var aoY = $("#droneImg").offset().top;
         adjustedDroneX = droneX + droneImg.offsetWidth / 2;
         adjustedDroneY = droneY + droneImg.offsetHeight / 2;
         //console.log(apX + ", " + apY + " aoX: " + aoX + " aoY: " + aoY);
         //console.log("Drone x: " + adjustedDroneX.toFixed(2) + " Drone y: " + adjustedDroneY.toFixed(2));
         currentAPStrengths = [];                        // Reset on each probing
         
-        for (var ap = 0; ap < APs.length; ap++) {
+        for (var ap = 0; ap < APs.length; ap++) {       // Probe for AP signal strengths
             distance = 0;
             apCenter = [APs[ap].x + (cellWidth / 2), APs[ap].y + (cellHeight / 2)];
             // d = sqrt[(receiverX - AP's x)^2 + (recieverY - AP's y)^2]
             distance = Math.pow((Math.pow(adjustedDroneX - apCenter[0], 2) + Math.pow(adjustedDroneY - apCenter[1], 2)), 0.5);
-            var pathLoss = findPathLoss(distance);
+            var pathLoss = findPathLoss(pixelToMeters(distance));
 
-            currentAPStrengths.push(-1 * pathLoss);
-            //console.log("Path Loss from AP" + ap + ": " + pathLoss.toFixed(5) + ".");
-            
+            currentAPStrengths.push(0 - pathLoss);
+            console.log("Path Loss from AP" + ap + ": " + pathLoss.toFixed(5) + " @ " + pixelToMeters(distance) + "m");
         }
         totalAPDistances.push(currentAPStrengths);
+        var droneLoc = [];                              // Tuple location
+        droneLoc.push(droneX); droneLoc.push(droneY);
+        droneProbingLocations.push(droneLoc);
+
+        //generateProbeLocations(droneProbingLocations);
         //console.log("Scan " + iterations + ")-------------------------")
         if (iterations * probingInterval > flightTime * DroneCoords.length) {//end of flight, stop tracking
             clearInterval(scanForAPs);
+            generateProbeLocations(droneProbingLocations);
             plotDataPlotly(totalAPDistances);
+
         }
         iterations++;
     }, probingInterval);
@@ -320,13 +315,8 @@ function animateDrone() {
         newY = DroneCoords[d][1];
         droneX = $("#droneImg").position().left;
         droneY = $("#droneImg").position().top;
-
-        var aoX = $("#droneImg").offset().left;
-        var aoY = $("#droneImg").offset().top;
         adjustedDroneX = droneX + droneImg.offsetWidth / 2;
         adjustedDroneY = droneY + droneImg.offsetHeight / 2;
-        console.log("newX: " + newX + " newY: " + newY);
-        console.log("droneX: " + droneX + " droneY: " + droneY);
         $("#droneImg").transition({
             //x: newX - (droneWidth / 2) + (cellWidth / 2) + 'px',
             //y: newY - (droneHeight / 2) + (cellHeight / 2) + 'px',
@@ -338,9 +328,38 @@ function animateDrone() {
     }
 };
 
+function generateProbeLocations(probeLocations) {
+    var probeID = 0;
+    var probeContainer;
+
+    if (probeSvgUsed == 1) {
+        //d3.select("#probeLocations").remove();
+        probeSvgUsed = false;
+    }
+    if (probeSvgUsed == 0) {
+        var probeContainer = d3.select("#probeLocations")
+        .append("svg")
+        .attr("width", 752)
+        .attr("height", 752);
+        probeSvgUsed = true;
+    }
+    console.log(probeLocations);
+
+    var locs = probeContainer.selectAll("circle")
+                            .data(probeLocations)
+                            .enter()
+                            .append("circle")
+                            .attr("cx", function(d){ return d[0]; })
+                            .attr("cy", function(d){ return d[1]; })
+                            .attr("r", 5)
+                            .style("fill-opacity", 0.4)
+                            .attr("stroke", "#ba813a")
+                            .attr("id", probeID++)
+}
+
 function generateSignalIndicators() {
 
-    var radiusInBlocks = 8; // size of signal strength radius in terms of grid squares
+    var radiusInBlocks = 6; // size of signal strength radius in terms of grid squares (visual only)
                             // Should use path attenuation model
     var multFactor = 4;     // for changing radius on click (or something else in the future)
     var min = 0;            // lowerbound for color array range calculation
