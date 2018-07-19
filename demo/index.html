@@ -25,7 +25,7 @@
                     <div id="genMask"></div>
                 </div>
                 <br><br>
-                <input type="button" id="toggleAP" value="Place AP" onclick="plotAP()" style="width: 100%">
+                <input type="button" id="toggleAP" value="Place AP" onclick="plotAP()">
                 <br>
                 <input type="button" id="toggleDrone" value="Drone Waypoint" onclick="plotDrone()" style="width:74%">
                 <input type="button" id="plotOnAP" value="Map" onclick="plotOnAP()" style="text-align: center; width: 24%; float: right;">
@@ -40,7 +40,7 @@
                     Scan every (ms):
                     <input type="text" id="probeInterval" value="250" style="float: right; text-align: center; width: 50px;">
                 </p>
-                
+                <input type="button" id="csvData" value="Save data to CSV file" onclick="csvify()" style="width: 100%;">
             </div>
     
             <div class="gridContainer" id="grid">
@@ -50,6 +50,7 @@
             </div>
     
         </div>
+        
         <div class="graph">
             <div id="strengthChart" width="752px" height="752px" style="z-index: 99;"></div>
         </div>

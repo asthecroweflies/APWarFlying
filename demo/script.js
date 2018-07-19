@@ -25,6 +25,7 @@ window.onload = function() {
     document.getElementById("toggleAP").disabled = true;
     document.getElementById("toggleDrone").disabled = true;
     document.getElementById("plotOnAP").disabled = true;
+    document.getElementById("csvData").disabled = true;
     dimensionality = $("#dimension").val();
 };
 
@@ -142,7 +143,7 @@ var craftGrid = function() {
 // Determines square state on left click
 function handleClick(d, i) {
 
-    if (APToggled) {// create new access point
+    if (APToggled){                             // create new access point
         if (d.type == "blank") {
             d.AP_id = AP_id;
             AP_id++;
@@ -188,7 +189,7 @@ function handleClick(d, i) {
 
 function gaussianRandom(start, end) {
     var rand = 0;
-    for (var i = 0; i < 6; i += 1) 
+    for (var i = 0; i < 6; i += 1)                      // 6 is pretty sufficient
       rand += Math.random();
     
     rand /= 6;
@@ -207,7 +208,7 @@ function findPathLoss(d) {
     
     refLoss = 15;
     pathLossExponent = 2.2;
-    signalNoise = gaussianRandom(0, 100) / 100; 
+    signalNoise = Math.floor(gaussianRandom(0, 100) / 50); 
 
     return (refLoss + 10 * pathLossExponent * Math.log10(d) + signalNoise);
     //return d;
@@ -235,15 +236,15 @@ function flyDrone() {
 // Drone movement 
 function animateDrone() {
 
-    var droneReady = false;                                 // Start animation once drone is at first AP
+    var droneReady = false;                             // Start animation once drone is at first AP
 
     /*while (!droneReady) {
         var droneImg = document.getElementById("droneImg");
         var dx = $("#droneImg").position().left;
         var dy = $("#droneImg").position().top;
-        if (dx == droneImg.style.left && dy == droneImg.style.top) {
+        if (Math.abs(dx - droneImg.style.left) < 10 && Math.abs(dy - droneImg.style.top) < 10) {
             droneReady = true;
-        }v
+        }
     }*/
     DroneCoords = [];                                   // Contain x & y coordinates for all waypoints
     
@@ -290,11 +291,11 @@ function animateDrone() {
             var pathLoss = findPathLoss(pixelToMeters(distance));
 
             currentAPStrengths.push(0 - pathLoss);
-            console.log("Path Loss from AP" + ap + ": " + pathLoss.toFixed(5) + " @ " + pixelToMeters(distance) + "m");
+            //console.log("Path Loss from AP" + ap + ": " + pathLoss.toFixed(5) + " @ " + pixelToMeters(distance) + "m");
         }
         totalAPDistances.push(currentAPStrengths);
         var droneLoc = [];                              // Tuple location
-        droneLoc.push(droneX); droneLoc.push(droneY);
+        droneLoc.push(droneX + gaussianRandom(0, 50)); droneLoc.push(droneY + gaussianRandom(0, 50)); // Simulate probing location imprecision
         droneProbingLocations.push(droneLoc);
 
         //generateProbeLocations(droneProbingLocations);
@@ -303,7 +304,8 @@ function animateDrone() {
             clearInterval(scanForAPs);
             generateProbeLocations(droneProbingLocations);
             plotDataPlotly(totalAPDistances);
-
+            document.getElementById("csvData").disabled = false;
+            //csvify(totalAPDistances);
         }
         iterations++;
     }, probingInterval);
@@ -333,17 +335,18 @@ function generateProbeLocations(probeLocations) {
     var probeContainer;
 
     if (probeSvgUsed == 1) {
-        //d3.select("#probeLocations").remove();
+        d3.select("#probeSvg").remove();
         probeSvgUsed = false;
     }
     if (probeSvgUsed == 0) {
         var probeContainer = d3.select("#probeLocations")
         .append("svg")
+        .attr("id", "probeSvg")
         .attr("width", 752)
         .attr("height", 752);
         probeSvgUsed = true;
     }
-    console.log(probeLocations);
+    //console.log(probeLocations);
 
     var locs = probeContainer.selectAll("circle")
                             .data(probeLocations)
@@ -360,9 +363,8 @@ function generateProbeLocations(probeLocations) {
 function generateSignalIndicators() {
 
     var radiusInBlocks = 6; // size of signal strength radius in terms of grid squares (visual only)
-                            // Should use path attenuation model
+                            // Should use path attenuation model for coloring
     var multFactor = 4;     // for changing radius on click (or something else in the future)
-    var min = 0;            // lowerbound for color array range calculation
     var radius = (radiusInBlocks - 1) * cellWidth + (cellWidth / 2);// radius is (n-1) + 1/2 where n: num. of blocks
 
     if (svgUsed == 1) {
@@ -389,7 +391,7 @@ function generateSignalIndicators() {
                             .attr("stop-color", color(-1));
           
     radialGradient.append("stop")
-                            .attr("offset", "50%")
+                            .attr("offset", "25%")
                             .attr("stop-color", color(0));
           
     radialGradient.append("stop")
@@ -416,7 +418,7 @@ function generateSignalIndicators() {
                             .attr("cy", function(d){ return d.y + cellHeight / 2; })
                             .attr("r", function(d) { return ((d.clickCount + 1) % multFactor) * radius;})
                             .attr("id", function(d){ return d.AP_id; })
-                            .style("fill-opacity", 0.4)
+                            .style("fill-opacity", 0.3)
                             .attr("stroke-dasharray", "5 5")
                             .attr("stroke-width", "3px")
                             .attr("stroke", "#fc813a")
@@ -475,13 +477,39 @@ function fillArray(n) {
     return a;
 }
 
+
+function csvify() {
+    console.log("Saving data to file.");
+    //var csvContent = "SSID,RSS,Unit,Time,Batch";
+    var lineArray = [];
+    lineArray.push("data:text/csv;charset=utf-8");
+    lineArray.push("null,SSID,RSS,Unit,Time,Batch");         /// null not saved for some reason
+    transposedData = transpose(totalAPDistances);
+
+    transposedData.forEach(function (apArray, index1) {
+        apArray.forEach(function (apData, index2) { 
+            apEntry = "AP" + index1 + "," + apArray[index2] + ",dBm" + ",00:00:00" + "," + index2;
+            lineArray.push(apEntry);
+        });
+    });
+
+    var csvContent = lineArray.join("\n");
+    var encodedURI = encodeURI(csvContent);
+    var downloadLink = document.createElement("a");
+    downloadLink.setAttribute("href", encodedURI);
+    downloadLink.setAttribute("download", "aps.csv");
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+}
+
+
 function plotDataPlotly(totalAPDistances) {
 
     if (plotted)
         Plotly.purge('strengthChart');
 
     transposedData = transpose(totalAPDistances);
-    //console.log(transposedData);
+    console.log(transposedData);
     var data = [];
 
     for (var apIndex = 0; apIndex < transposedData.length; apIndex++) {
@@ -490,7 +518,7 @@ function plotDataPlotly(totalAPDistances) {
             x: oneToN,
             y: transposedData[apIndex],
             mode: 'lines+markers',
-            line: {shape: "spline"},
+            line: {shape: "linear"},
         };
         data.push(individualAPStrength);
     }
