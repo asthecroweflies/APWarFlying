@@ -483,7 +483,7 @@ function csvify() {
     //var csvContent = "SSID,RSS,Unit,Time,Batch";
     var lineArray = [];
     lineArray.push("data:text/csv;charset=utf-8");
-    lineArray.push("null,SSID,RSS,Unit,Time,Batch");         /// null not saved for some reason
+    lineArray.push("null,SSID,RSS,Unit,Time,Batch");         /// 1st entry not saved for some reason
     transposedData = transpose(totalAPDistances);
 
     transposedData.forEach(function (apArray, index1) {
