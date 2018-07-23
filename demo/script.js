@@ -522,35 +522,29 @@ function findOrder (APs) {
     var displayOrder = document.getElementById("queueOrder");
     displayOrder.innerHTML = "Order of APs: ";
     displayOrder.style.display = "block";
-    var AP_Strengths = transpose(APs);
-    var maxIndices = [];
-    var strengthBatchPair = []; 
-    var strongestBatch = -1;
 
+    var AP_Strengths = transpose(APs);
+    var strongestBatch = -1;
     var strongestAPStrength = [];
 
-    //console.log(transpose(APs));
-
-    for (var ap = 0; ap < AP_Strengths.length; ap++) {//Locate when max SS occurs f.e. AP
+    for (var ap = 0; ap < AP_Strengths.length; ap++) {                  // Locate when max SS occurs f.e. AP
         var maxStrength = AP_Strengths[ap][0];
         strongestBatch = -1;
         strengthBatchPair = [];
-        for (var batch = 0; batch < AP_Strengths[ap].length; batch++) {
+        for (var batch = 0; batch < AP_Strengths[ap].length; batch++) { // Determine in which batch strongest measurement made
             if (AP_Strengths[ap][batch] > maxStrength) {
                 maxStrength = AP_Strengths[ap][batch];
                 strongestBatch = batch;
             }
         }
-        //strengthBatchPair.push(maxStrength); strengthBatchPair.push(strongestBatch);
         strongestAPStrength.push({
             name: "AP" + ap,
             strength: maxStrength,
             batchLocation: strongestBatch
         });
-
-        // maxIndices.push(strengthBatchPair);
     }
-    strongestAPStrength.sort(function(a, b) {return a.batchLocation - b.batchLocation })
+
+    strongestAPStrength.sort(function(a, b) {return a.batchLocation - b.batchLocation });
     
     for (var a = 0; a < strongestAPStrength.length; a++) {
         var apName = strongestAPStrength[a].name + " "
