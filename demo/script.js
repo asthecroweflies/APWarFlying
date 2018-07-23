@@ -523,6 +523,7 @@ function findOrder (APs) {
     displayOrder.innerHTML = "Order of APs: ";
     displayOrder.style.display = "block";
 
+    
     var AP_Strengths = transpose(APs);
     var strongestBatch = -1;
     var strongestAPStrength = [];
