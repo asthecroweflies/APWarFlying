@@ -41,6 +41,7 @@ function clearGrid() {
     craftGrid();
 }
 
+// Creates data object array for each grid square
 function generateGridData(dimensionality) {
 
     var data = new Array();
@@ -103,7 +104,7 @@ var craftGrid = function() {
         .attr("class", "row");
 
     var lineThickness = 1;
-    if (dimensionality <= 25) 
+    if (dimensionality <= 15) 
         lineThickness = 3;
     
     var column = row.selectAll(".square")
@@ -208,7 +209,7 @@ function findPathLoss(d) {
     
     refLoss = 15;
     pathLossExponent = 2.2;
-    signalNoise = Math.floor(gaussianRandom(0, 100) / 50); 
+    signalNoise = Math.floor(gaussianRandom(0, 100) / 60); 
 
     return (refLoss + 10 * pathLossExponent * Math.log10(d) + signalNoise);
     //return d;
@@ -423,6 +424,21 @@ function generateSignalIndicators() {
                             .attr("stroke-width", "3px")
                             .attr("stroke", "#fc813a")
                             .style("fill", "url(#radial-gradient)");
+
+    var text = svgContainer.selectAll("text")
+                           .data(APs)
+                           .enter()
+                           .append("text")
+    var apLabels = text
+                    .attr("x", function(d) { return d.x - 10; })
+                    .attr("y", function(d) { return d.y - 10; })
+                    .text( function(d) { 
+                        if (d.AP_id == 0) return "AP0";
+                        else return "AP" + d.AP_id; })
+                    .attr("font-family", "Trebuchet MS")
+                    .attr("font-size", "24px")
+                    
+
 }
 
 function handleMouseOver(d, i) {
@@ -502,6 +518,47 @@ function csvify() {
     downloadLink.click();
 }
 
+function findOrder (APs) {
+    var displayOrder = document.getElementById("queueOrder");
+    displayOrder.innerHTML = "Order of APs: ";
+    displayOrder.style.display = "block";
+    var AP_Strengths = transpose(APs);
+    var maxIndices = [];
+    var strengthBatchPair = []; 
+    var strongestBatch = -1;
+
+    var strongestAPStrength = [];
+
+    //console.log(transpose(APs));
+
+    for (var ap = 0; ap < AP_Strengths.length; ap++) {//Locate when max SS occurs f.e. AP
+        var maxStrength = AP_Strengths[ap][0];
+        strongestBatch = -1;
+        strengthBatchPair = [];
+        for (var batch = 0; batch < AP_Strengths[ap].length; batch++) {
+            if (AP_Strengths[ap][batch] > maxStrength) {
+                maxStrength = AP_Strengths[ap][batch];
+                strongestBatch = batch;
+            }
+        }
+        //strengthBatchPair.push(maxStrength); strengthBatchPair.push(strongestBatch);
+        strongestAPStrength.push({
+            name: "AP" + ap,
+            strength: maxStrength,
+            batchLocation: strongestBatch
+        });
+
+        // maxIndices.push(strengthBatchPair);
+    }
+    strongestAPStrength.sort(function(a, b) {return a.batchLocation - b.batchLocation })
+    
+    for (var a = 0; a < strongestAPStrength.length; a++) {
+        var apName = strongestAPStrength[a].name + " "
+        $("#queueOrder").append(apName); 
+    }
+    console.log(strongestAPStrength);
+}
+
 
 function plotDataPlotly(totalAPDistances) {
 
@@ -509,6 +566,7 @@ function plotDataPlotly(totalAPDistances) {
         Plotly.purge('strengthChart');
 
     transposedData = transpose(totalAPDistances);
+    console.log(totalAPDistances);
     console.log(transposedData);
     var data = [];
 
@@ -551,5 +609,6 @@ function plotDataPlotly(totalAPDistances) {
       };
 
     Plotly.newPlot('strengthChart', data, layout);
+    findOrder(totalAPDistances);
     plotted = true;
 }
