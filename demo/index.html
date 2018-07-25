@@ -1,6 +1,6 @@
 </html>
 <head>
-    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>-->
     <link rel="stylesheet" href="stylesheet.css">
     <script src="scripts/d3.js"></script>
@@ -42,6 +42,12 @@
                     <input type="text" id="probeInterval" value="250" style="float: right; text-align: center; width: 50px;">
                 </p>
                 <input type="button" id="csvData" value="Save data to CSV file" onclick="csvify()" style="width: 100%;">
+                <input type="button" id="loadAP" value="Load APs" onclick="loadLayout.call(this)" style="width: 48%; margin-top: 10px">
+                <input type="button" id="saveAP" value="Save APs" onclick="saveLayout.call(this)" style="width: 48%;">
+                <input type="button" id="loadWP" value="Load WPs" onclick="loadLayout.call(this)" style="width: 48%; margin-top: 10px">
+                <input type="button" id="saveWP" value="Save WPs" onclick="saveLayout.call(this)" style="width: 48%;">
+
+                <input type="file" id="file-input" style="display: none;">
             </div>
     
             <div class="gridContainer" id="grid">

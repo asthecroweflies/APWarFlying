@@ -1,4 +1,6 @@
 //TODO: Add lines between DronePos
+//      load ap's from file, find model for drone path & ap order
+//      roomba movements & AP movements
 //IDEA: for grid scale: have div's along the edge protrude line depicting distance
 
 var divWidth, divHeight, cellWidth, cellHeight;
@@ -6,6 +8,8 @@ var APToggled = 0, DroneToggled = 0, gridToggled = 0;
 var gridArray;
 var APs = [];
 var totalAPDistances = [];
+var apsLoaded = false;
+var wpsLoaded = false;
 
 var DroneSquares = [];
 var pi = 3.1415926535897932384626433832795028841971693993751058209749445923078164;
@@ -17,6 +21,7 @@ var droneImage = new Image(75, 35);
 var droneProbingLocations = [];
 var plotted = false;
 var dimensionality;
+var loadedLayout = [];
 droneImage.src = '/res/drone_nobg.png';
 
 window.onload = function() {
@@ -26,6 +31,8 @@ window.onload = function() {
     document.getElementById("toggleDrone").disabled = true;
     document.getElementById("plotOnAP").disabled = true;
     document.getElementById("csvData").disabled = true;
+    document.getElementById("saveAP").disabled = true;
+    document.getElementById("saveWP").disabled = true;
     dimensionality = $("#dimension").val();
 };
 
@@ -129,6 +136,9 @@ var craftGrid = function() {
                 d.Drone_id = 0;
                 AP_id--;
                 Drone_id--;
+                if(DroneSquares.length == 0) {
+                    document.getElementById("saveWP").disabled = true;
+                }
                 var svgContainer = d3.select("#gradients");
                 svgContainer.exit().remove();
             }
@@ -160,6 +170,7 @@ function handleClick(d, i) {
             d3.select(this).style("fill", "#f4ce42");
             APs.push(d);
         }
+        generateSignalIndicators();
     }
     if (DroneToggled) {
         if (d.type == "blank") {
@@ -168,6 +179,7 @@ function handleClick(d, i) {
             d3.select(this).style("fill", "#aa3c36");
             d.type = "DronePos";
             DroneSquares.push(d);
+            document.getElementById("saveWP").disabled = false;
         }
         else if (d.type == "DronePos") {
             //d3.select(this).style("fill", "#ffffff");
@@ -185,7 +197,6 @@ function handleClick(d, i) {
             DroneSquares.push(d);
         }
     }
-    generateSignalIndicators();
 }
 
 function gaussianRandom(start, end) {
@@ -209,7 +220,7 @@ function findPathLoss(d) {
     
     refLoss = 15;
     pathLossExponent = 2.2;
-    signalNoise = Math.floor(gaussianRandom(0, 100) / 60); 
+    signalNoise = Math.floor(gaussianRandom(0, 100)); 
 
     return (refLoss + 10 * pathLossExponent * Math.log10(d) + signalNoise);
     //return d;
@@ -362,6 +373,7 @@ function generateProbeLocations(probeLocations) {
 }
 
 function generateSignalIndicators() {
+    document.getElementById("saveAP").disabled = false; // Enable ability to save APs
 
     var radiusInBlocks = 6; // size of signal strength radius in terms of grid squares (visual only)
                             // Should use path attenuation model for coloring
@@ -493,7 +505,6 @@ function fillArray(n) {
     return a;
 }
 
-
 function csvify() {
     console.log("Saving data to file.");
     //var csvContent = "SSID,RSS,Unit,Time,Batch";
@@ -518,12 +529,67 @@ function csvify() {
     downloadLink.click();
 }
 
+function loadWP() {
+    console.log("populating grid with WPs!");
+}
+
+function loadAP() {
+    console.log("populating grid with APs!");
+}
+
+function saveLayout() {
+    var saveContent = [];
+    var saveName = "";
+    saveContent.push("data:text/txt;charset=utf-8");
+    console.log(APs);
+    var APJSON = JSON.stringify(APs);
+    saveContent.push(dimensionality);
+    saveContent.push(APJSON);
+    var gridData = saveContent;
+    var encodedURI = encodeURI(gridData);
+    var downloadLink = document.createElement("a");
+    downloadLink.setAttribute("href", encodedURI);
+
+    if (this.id == "saveAP")
+        saveName = "AP_layout-" + gaussianRandom(0, 1000).toString() + ".txt";
+    else if (this.id == "saveWP")
+        saveName = "Waypoint_layout-" + gaussianRandom(0, 1000).toString() + ".txt";
+
+    downloadLink.setAttribute("download", saveName);
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+}
+
+function loadLayout() {
+    var buttonType = this.id;
+    var fileInput = document.getElementById("file-input");
+    $("#file-input").trigger("click");
+    var fileData;
+    fileInput.addEventListener('change', function(e) {
+        var file = fileInput.files[0];
+        var textType = /text.*/;
+        if (file.type.match(textType)) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                fileData = reader.result;
+                if (buttonType == "loadAP") 
+                    loadAP(fileData);
+                else if (buttonType == "loadWP") 
+                    loadWP(fileData);
+                console.log(fileData);
+            }
+            reader.readAsText(file);
+        }
+    });  
+    
+}
+
 function findOrder (APs) {
     var displayOrder = document.getElementById("queueOrder");
     displayOrder.innerHTML = "Order of APs: ";
     displayOrder.style.display = "block";
 
-    
+
     var AP_Strengths = transpose(APs);
     var strongestBatch = -1;
     var strongestAPStrength = [];
@@ -551,7 +617,7 @@ function findOrder (APs) {
         var apName = strongestAPStrength[a].name + " "
         $("#queueOrder").append(apName); 
     }
-    console.log(strongestAPStrength);
+    //console.log(strongestAPStrength);
 }
 
 
@@ -561,8 +627,8 @@ function plotDataPlotly(totalAPDistances) {
         Plotly.purge('strengthChart');
 
     transposedData = transpose(totalAPDistances);
-    console.log(totalAPDistances);
-    console.log(transposedData);
+    //console.log(totalAPDistances);
+    //console.log(transposedData);
     var data = [];
 
     for (var apIndex = 0; apIndex < transposedData.length; apIndex++) {
