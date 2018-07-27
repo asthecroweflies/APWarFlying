@@ -112,7 +112,7 @@ var craftGrid = function() {
 
     var lineThickness = 1;
     if (dimensionality <= 15) 
-        lineThickness = 3;
+        lineThickness = 5;
     
     var column = row.selectAll(".square")
         .data(function(d) { return d; })
@@ -201,7 +201,7 @@ function handleClick(d, i) {
 
 function gaussianRandom(start, end) {
     var rand = 0;
-    for (var i = 0; i < 6; i += 1)                      // 6 is pretty sufficient
+    for (var i = 0; i < 6; i += 1)                      // 6 is pretty sufficient for dist.
       rand += Math.random();
     
     rand /= 6;
@@ -529,35 +529,66 @@ function csvify() {
     downloadLink.click();
 }
 
-function loadWP() {
+function loadWP(wpData) {
+    var dataDimensionality = wpData.substring(0,2);
+    if (dataDimensionality != dimensionality) {
+        alert("Error: WP Data is for " + dataDimensionality + "x"
+             + dataDimensionality + " grid, not " + dimensionality + "x" + dimensionality);
+        return;
+    }
     console.log("populating grid with WPs!");
+    loadedWPs = [];
+    var jsonData = JSON.parse(wpData.substring(3));
+    
+    console.log(jsonData);
 }
 
-function loadAP() {
+function loadAP(apData) {
+    var dataDimensionality = apData.substring(0,2);
+    if (dataDimensionality != dimensionality) {
+        alert("Error: AP Data is for " + dataDimensionality + "x"
+             + dataDimensionality + " grid, not " + dimensionality + "x" + dimensionality);
+        return;
+    }
     console.log("populating grid with APs!");
+    loadedAPs = [];
+    var jsonData = JSON.parse(apData.substring(3));
+
+    jsonData.forEach(function(ap) {
+        loadedAPs.push(ap);
+    });
+    plotLayout(loadedAPs);
+    //console.log(loadedAPs);
 }
 
 function saveLayout() {
+    console.log("saving content");
+    console.log(this.id);
     var saveContent = [];
     var saveName = "";
     saveContent.push("data:text/txt;charset=utf-8");
-    console.log(APs);
-    var APJSON = JSON.stringify(APs);
     saveContent.push(dimensionality);
-    saveContent.push(APJSON);
+
+    if (this.id == "saveAP"){
+        console.log("saving aps");
+        var APJSON = JSON.stringify(APs);
+        saveContent.push(APJSON);
+        saveName = "AP_layout-" + gaussianRandom(0, 1000).toString() + ".txt";
+    }
+    else if (this.id == "saveWP") {
+        var WPJSON = JSON.stringify(DroneSquares);
+        saveContent.push(WPJSON);
+        saveName = "Waypoint_layout-" + gaussianRandom(0, 1000).toString() + ".txt";
+    }
+
     var gridData = saveContent;
     var encodedURI = encodeURI(gridData);
     var downloadLink = document.createElement("a");
     downloadLink.setAttribute("href", encodedURI);
-
-    if (this.id == "saveAP")
-        saveName = "AP_layout-" + gaussianRandom(0, 1000).toString() + ".txt";
-    else if (this.id == "saveWP")
-        saveName = "Waypoint_layout-" + gaussianRandom(0, 1000).toString() + ".txt";
-
     downloadLink.setAttribute("download", saveName);
     document.body.appendChild(downloadLink);
     downloadLink.click();
+    console.log("done");
 }
 
 function loadLayout() {
@@ -572,16 +603,69 @@ function loadLayout() {
             var reader = new FileReader();
             reader.onload = function(e) {
                 fileData = reader.result;
-                if (buttonType == "loadAP") 
+                if (buttonType == "loadAP" && !apsLoaded) {
                     loadAP(fileData);
-                else if (buttonType == "loadWP") 
+                    apsLoaded = true;
+                }
+                else if (buttonType == "loadWP" && !wpsLoaded) {
                     loadWP(fileData);
-                console.log(fileData);
+                    wpsLoaded = true;
+                } 
+                //console.log(fileData);
             }
             reader.readAsText(file);
         }
     });  
     
+}
+
+function plotLayout(dataToPlot) {
+    console.log("plotting new data");
+    var grid = d3.select("#grid");
+
+    var row = grid.selectAll(".row")
+        .data(dataToPlot)
+        .enter().append("g")
+        .attr("class", "row");
+
+    var lineThickness = 1;
+    if (dimensionality <= 15) 
+        lineThickness = 5;
+    
+    var column = row.selectAll(".square")
+        .data(function(d) { return d; })
+        .enter().append("rect")
+        .attr("class", "square")
+        .attr("x", function(d) { return d.x; })
+        .attr("y", function(d) { return d.y; })
+        .attr("width", function(d) { return d.width; })
+        .attr("height", function(d) { return d.height; })
+        .style("fill", "#acefd5")
+        .style("stroke", "#222")
+        .style("stroke-width", lineThickness)
+        .on('mouseover', handleMouseOver)
+        .on('mouseout', handleMouseOut)
+        .on('contextmenu', function (d, i) {
+            d3.event.preventDefault();
+            if (d.type == "AP") {
+                var removeIndex = APs.map(function(AP) { return AP.AP_id; }).indexOf(d.AP_id);
+                ~removeIndex && APs.splice(removeIndex, 1);
+                d.AP_id = 0;
+                d.Drone_id = 0;
+                AP_id--;
+                Drone_id--;
+                if(DroneSquares.length == 0) {
+                    document.getElementById("saveWP").disabled = true;
+                }
+                var svgContainer = d3.select("#gradients");
+                svgContainer.exit().remove();
+            }
+            d.type = "blank";
+            d3.select(this).style("fill", "#ffffff");
+        })
+        .on('click', handleClick);
+    document.getElementById("toggleDrone").disabled = false;
+    document.getElementById("toggleAP").disabled = false;
 }
 
 function findOrder (APs) {
