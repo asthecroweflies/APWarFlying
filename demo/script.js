@@ -219,7 +219,7 @@ function findPathLoss(d) {
     // P(d) = P(d0) + 10*n*log10(d) + X
     
     refLoss = 15;
-    pathLossExponent = 2.2;
+    pathLossExponent = 2.0;
     signalNoise = Math.floor(gaussianRandom(0, 100)); 
 
     return (refLoss + 10 * pathLossExponent * Math.log10(d) + signalNoise);
