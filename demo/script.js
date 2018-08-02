@@ -1,10 +1,13 @@
-//TODO: Add lines between DronePos
+//TODO: 
+//      Add lines between WP
 //      load ap's from file, find model for drone path & ap order
 //      roomba movements & AP movements
-//IDEA: for grid scale: have div's along the edge protrude line depicting distance
+//      Fix initial drone movement (or at least prevent probing until "arrived" at first AP)
+//      Map feature: plot WP on all APs
+//     
 
 var divWidth, divHeight, cellWidth, cellHeight;
-var APToggled = 0, DroneToggled = 0, gridToggled = 0;
+var APToggled = 0, DroneToggled = 0, gridToggled = 0, drawToggled = 0;
 var gridArray;
 var APs = [];
 var totalAPDistances = [];
@@ -17,11 +20,13 @@ var svgUsed = false;
 var probeSvgUsed = false;
 var AP_id = false;
 var Drone_id = false;
+var pathDrawn = false;
 var droneImage = new Image(75, 35);
 var droneProbingLocations = [];
 var plotted = false;
 var dimensionality;
 var loadedLayout = [];
+var APCount = 0;
 droneImage.src = '/res/drone_nobg.png';
 
 window.onload = function() {
@@ -29,7 +34,8 @@ window.onload = function() {
     divHeight = document.getElementById("grid").offsetHeight;    
     document.getElementById("toggleAP").disabled = true;
     document.getElementById("toggleDrone").disabled = true;
-    document.getElementById("plotOnAP").disabled = true;
+    //document.getElementById("plotOnAP").disabled = true;
+    document.getElementById("toggleDraw").disabled = true;
     document.getElementById("csvData").disabled = true;
     document.getElementById("saveAP").disabled = true;
     document.getElementById("saveWP").disabled = true;
@@ -84,6 +90,8 @@ function generateGridData(dimensionality) {
 }
 
 var craftGrid = function() {
+    document.getElementById("toggleDrone").disabled = false;
+    document.getElementById("toggleAP").disabled = false;
 
     if (gridToggled === true) return;// should only make svg element once
     else if (gridToggled == false) {
@@ -133,22 +141,26 @@ var craftGrid = function() {
                 var removeIndex = APs.map(function(AP) { return AP.AP_id; }).indexOf(d.AP_id);
                 ~removeIndex && APs.splice(removeIndex, 1);
                 d.AP_id = 0;
-                d.Drone_id = 0;
                 AP_id--;
+                if(APs.length == 0) {
+                    document.getElementById("saveAP").disabled = true;
+                }
+                var svgContainer = d3.select("#gradients");
+                svgContainer.exit().remove();
+            }
+            else if (d.type == "WP") {
+                var removeIndex = DroneSquares.map(function(WP) { return WP.Drone_id; }).indexOf(d.Drone_id);
+                ~removeIndex && DroneSquares.splice(removeIndex, 1);
+                d.Drone_id = 0;
                 Drone_id--;
                 if(DroneSquares.length == 0) {
                     document.getElementById("saveWP").disabled = true;
                 }
-                var svgContainer = d3.select("#gradients");
-                svgContainer.exit().remove();
             }
             d.type = "blank";
             d3.select(this).style("fill", "#ffffff");
         })
         .on('click', handleClick);
-    document.getElementById("toggleDrone").disabled = false;
-    document.getElementById("toggleAP").disabled = false;
-
 };
 
 // Determines square state on left click
@@ -165,28 +177,26 @@ function handleClick(d, i) {
         else if (d.type == "AP") {
             d.clickCount++;// to handle multiple clicks on same square (e.g. increase signal power)
         }
-        else if (d.type == "DronePos") {
+        else if (d.type == "WP") {
             d.type = "both";
             d3.select(this).style("fill", "#f4ce42");
             APs.push(d);
         }
         generateSignalIndicators();
     }
-    if (DroneToggled) {
+    else if (DroneToggled) {
         if (d.type == "blank") {
             d.Drone_id = Drone_id;
             Drone_id++;
             d3.select(this).style("fill", "#aa3c36");
-            d.type = "DronePos";
+            d.type = "WP";
             DroneSquares.push(d);
             document.getElementById("saveWP").disabled = false;
         }
-        else if (d.type == "DronePos") {
+        else if (d.type == "WP") {
             //d3.select(this).style("fill", "#ffffff");
-
             //Drone spends x more time here?
             //consider darkening 
-            
         }
 
         else if (d.type == "AP") {
@@ -218,8 +228,8 @@ function findPathLoss(d) {
     //
     // P(d) = P(d0) + 10*n*log10(d) + X
     
-    refLoss = 15;
-    pathLossExponent = 2.0;
+    refLoss = 0;
+    pathLossExponent = 2.2;
     signalNoise = Math.floor(gaussianRandom(0, 100)); 
 
     return (refLoss + 10 * pathLossExponent * Math.log10(d) + signalNoise);
@@ -284,7 +294,8 @@ function animateDrone() {
     var apCenter = 0;                                   // center of AP
     var currentAPStrengths = [];                        // Array to hold distances to APs during scan
     var droneX, droneY, adjustedDroneX, adjustedDroneY; // Determine drone's center location with reference to grid
-    
+    droneProbingLocations = [];
+
     var scanForAPs = setInterval(function () {
                                                         // Position and offset of the element during the animation
         droneX = $("#droneImg").position().left;
@@ -294,7 +305,7 @@ function animateDrone() {
         //console.log(apX + ", " + apY + " aoX: " + aoX + " aoY: " + aoY);
         //console.log("Drone x: " + adjustedDroneX.toFixed(2) + " Drone y: " + adjustedDroneY.toFixed(2));
         currentAPStrengths = [];                        // Reset on each probing
-        
+
         for (var ap = 0; ap < APs.length; ap++) {       // Probe for AP signal strengths
             distance = 0;
             apCenter = [APs[ap].x + (cellWidth / 2), APs[ap].y + (cellHeight / 2)];
@@ -350,7 +361,7 @@ function generateProbeLocations(probeLocations) {
         d3.select("#probeSvg").remove();
         probeSvgUsed = false;
     }
-    if (probeSvgUsed == 0) {
+    else if (probeSvgUsed == 0) {
         var probeContainer = d3.select("#probeLocations")
         .append("svg")
         .attr("id", "probeSvg")
@@ -473,31 +484,90 @@ function handleMouseOut(d, i) {
     }
 }
 
-function plotAP() {
+function drawPath() {
+    drawToggled = (drawToggled == 0) ? 1 : 0;
     DroneToggled = 0;
+    APToggled = 0;
+
+    if (drawToggled == 0)
+        return;
+
+    var pathCoords = [];                                            // Contains locations of AP path
+    document.getElementById("toggleAP").disabled = false;
+    document.getElementById("toggleDrone").disabled = false;
+    document.getElementById("toggleDraw").disabled = true;
+
+    var line = d3.line()
+                 .curve(d3.curveBasis);
+    var svg = d3.select("svg")
+                .call(d3.drag()
+                .container(function() { return this; })
+                .subject(function() { var p = [d3.event.x, d3.event.y]; return [p, p]; })
+                .on("start", dragStarted)
+                .on("end", dragFinished));
+
+    function dragStarted() {
+        
+        if (drawToggled === 0) return;
+        if (pathDrawn) {
+            d3.select("#linePath").remove();
+            pathDrawn = false;
+        }
+        if (!pathDrawn) {
+            pathCoords = [];
+            var d = d3.event.subject,
+                active = svg.append("path").datum(d).attr("id", "linePath"),
+                x0 = d3.event.x,
+                y0 = d3.event.y;
+
+            d3.event.on("drag", function() {
+            var x1 = d3.event.x,
+                y1 = d3.event.y,
+                dx = x1 - x0,
+                dy = y1 - y0;
+                var coordTuple = [];
+                coordTuple.push(parseInt(x1), y1);
+
+                pathCoords.push(coordTuple);
+            if (dx * dx + dy * dy > 100)
+                d.push([x0 = x1, y0 = y1]);
+            else 
+                d[d.length - 1] = [x1, y1];
+                active.attr("d", line);
+            });
+        }
+    }
+    
+    function dragFinished() {
+        if (!pathDrawn) 
+            console.log(pathCoords);
+        pathDrawn = true;
+
+    }
+}
+
+function plotAP() {
+    APToggled = (APToggled == 0) ? 1 : 0;
+    DroneToggled = 0;
+    drawToggled = 0;
     document.getElementById("toggleAP").disabled = true;
     document.getElementById("toggleDrone").disabled = false;
-    APToggled = (APToggled == 0) ? 1 : 0;
-
-    if (APToggled == 1) {
-        //var APButton = $()
-    }
+    document.getElementById("toggleDraw").disabled = false;
 }
 
 function plotDrone() {
+    DroneToggled = (DroneToggled == 0) ? 1 : 0;
     APToggled = 0;
+    drawToggled = 0;
     document.getElementById("toggleDrone").disabled = true;
     document.getElementById("toggleAP").disabled = false;
-    DroneToggled = (DroneToggled == 0) ? 1 : 0;
-    //console.log("DroneToggled: " + DroneToggled);
-    //console.log("APToggled: " + APToggled);
-
-    if (DroneToggled == 1) {
-        //var APButton = $()
-    }
+    document.getElementById("toggleDraw").disabled = false;
 }
 
-function transpose(matrix) { return matrix[0].map((col, c) => matrix.map((row, r) => matrix[r][c])); }
+function transpose(matrix) { 
+    return matrix[0].map((col, c) => matrix.map((row, r) => matrix[r][c]));
+}
+
 function fillArray(n) {
     a = [];
     for (var i = 0; i < n; i++)
@@ -507,10 +577,9 @@ function fillArray(n) {
 
 function csvify() {
     console.log("Saving data to file.");
-    //var csvContent = "SSID,RSS,Unit,Time,Batch";
     var lineArray = [];
     lineArray.push("data:text/csv;charset=utf-8");
-    lineArray.push("null,SSID,RSS,Unit,Time,Batch");         /// 1st entry not saved for some reason
+    lineArray.push("null,SSID,RSS,Unit,Time,Batch");         /// 1st entry (null) not saved for some reason
     transposedData = transpose(totalAPDistances);
 
     transposedData.forEach(function (apArray, index1) {
@@ -529,6 +598,7 @@ function csvify() {
     downloadLink.click();
 }
 
+//TODO: Dynamically populate grid with loaded layout
 function loadWP(wpData) {
     var dataDimensionality = wpData.substring(0,2);
     if (dataDimensionality != dimensionality) {
@@ -588,7 +658,6 @@ function saveLayout() {
     downloadLink.setAttribute("download", saveName);
     document.body.appendChild(downloadLink);
     downloadLink.click();
-    console.log("done");
 }
 
 function loadLayout() {
@@ -616,10 +685,11 @@ function loadLayout() {
             reader.readAsText(file);
         }
     });  
-    
 }
 
+// Load AP/WP onto grid from CSV file
 function plotLayout(dataToPlot) {
+    ("#svg").remove();
     console.log("plotting new data");
     var grid = d3.select("#grid");
 
@@ -673,7 +743,6 @@ function findOrder (APs) {
     displayOrder.innerHTML = "Order of APs: ";
     displayOrder.style.display = "block";
 
-
     var AP_Strengths = transpose(APs);
     var strongestBatch = -1;
     var strongestAPStrength = [];
@@ -695,17 +764,18 @@ function findOrder (APs) {
         });
     }
 
-    strongestAPStrength.sort(function(a, b) {return a.batchLocation - b.batchLocation });
+    strongestAPStrength.sort(function(a, b) {return a.batchLocation - b.batchLocation }); // Compare when AP's max SS occured with each other
     
     for (var a = 0; a < strongestAPStrength.length; a++) {
         var apName = strongestAPStrength[a].name + " "
         $("#queueOrder").append(apName); 
     }
-    //console.log(strongestAPStrength);
 }
 
 
 function plotDataPlotly(totalAPDistances) {
+
+    $("path").css('dasharray','10,0');
 
     if (plotted)
         Plotly.purge('strengthChart');

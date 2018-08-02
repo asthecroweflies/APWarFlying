@@ -4,6 +4,25 @@ body {
   clear: left;
 }
 
+#linePath {
+  fill: none;
+  stroke: #4286f4;
+  stroke-width: 6px;
+  stroke-linejoin: round;
+  stroke-linecap: butt;
+  stroke-dasharray: 8,10;
+}
+
+/*
+path {
+  fill: none;
+  stroke: #ce2d2d;
+  stroke-width: 5px;
+  stroke-linejoin: round;
+  stroke-linecap: butt;
+  stroke-dasharray: 10,10;
+}*/
+
 .scene {
   width: 1920px;
   height: 800px;
