@@ -23,6 +23,10 @@ path {
   stroke-dasharray: 10,10;
 }*/
 
+h2 {
+  font-family: courier;
+}
+
 .scene {
   width: 1920px;
   height: 800px;
@@ -41,9 +45,10 @@ path {
 }
 
 p {
-  text-align: center;
+  text-align: left;
   width: 100%;
-  font-size: 18px;
+  font-size: 16px;
+  font-family: courier;
 }
 
 .gridContainer {
@@ -100,4 +105,30 @@ input[type=button] {
   z-index: 10;
   background-color: rgba(245, 43, 43, 0.4);
   display: none;
+}
+
+#sliderHandle {
+  width: 3px;
+  height: 2px;
+  text-align: center;
+  line-height: 1px;
+  top: 50%;
+}
+
+#simulateFlight {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+}
+
+#toggleDraw {
+  background-color: #6da3f9;
+  border: none;
+  color: white;
+}
+
+#toggleDraw:active {
+  background-color: #154ea8;
+  border: none;
+  color: white;
 }
