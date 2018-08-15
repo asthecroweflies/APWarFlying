@@ -69,6 +69,7 @@ p {
     display: block;
     position: absolute;
     right: 5%;
+    margin-top: 10%;
   }
 
 .options {

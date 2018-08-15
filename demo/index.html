@@ -31,7 +31,7 @@
                 <input type="button" id="toggleDrone" value="Drone Waypoint" onclick="plotDrone()" style="width:100%">
                 <!--<input type="button" id="plotOnAP" value="Map" onclick="plotOnAP()" style="text-align: center; width: 24%; float: right;">-->
                 <br><br>
-                <input type="button" id="simulateFlight" value="Simulate War Flying" onclick="flyDrone()">
+                <input type="button" id="toggleDraw" value="Draw AP Movement Path" onclick="drawPath()" style="width: 100%;">
                 <br>
                 <p>Flight Time (s):
                     <input type="text" id="flightDuration" value="5" style="float: right; text-align: center; width: 50px;">
@@ -50,7 +50,7 @@
                 <input type="button" id="saveWP" value="Save WPs" onclick="saveLayout.call(this)" style="width: 48%;">
                 <input type="file" id="file-input" style="display: none;">
                 <br><br>
-                <input type="button" id="toggleDraw" value="Draw AP Movement Path" onclick="drawPath()" style="width: 100%;">
+                <input type="button" id="simulateFlight" value="Simulate War Flying" onclick="flyDrone()">
                 <input type="range" min="0" max="10" value="3" step="1" class="slider" id="apSpeedSlider" style="width: 80%; margin-top: 10%" onchange="sliderMoved(this.value)">
 
                 <p id="APSpeed" style="width: 100%; text-align: left">AP Speed: 3 m/s</p>

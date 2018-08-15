@@ -32,6 +32,9 @@ var grid, row, column;                                          // d3 grid eleme
 var APCount = 0;
 var APSpeed = 0;
 var APTimer = 0;
+var newAPs = [];
+var adjustedAP = 0;
+
 droneImage.src = '/res/drone_nobg.png';
 
 window.onload = function() {
@@ -181,7 +184,7 @@ var craftGrid = function() {
                 }
             }
             d.type = "blank";
-            d3.select(this).style("fill", "#ffffff");
+            d3.select(this).style("fill", "#ffefd5");
         })
         .on('click', handleClick);
 };
@@ -257,7 +260,8 @@ function findPathLoss(d) {
     
     refLoss = 0;
     pathLossExponent = 2.2;
-    signalNoise = Math.floor(gaussianRandom(0, 100)); 
+    var tuningParameter = 4;
+    signalNoise = Math.floor(gaussianRandom(0, 100) / tuningParameter); 
 
     return (refLoss + 10 * pathLossExponent * Math.log10(d) + signalNoise);
 };
@@ -283,53 +287,74 @@ function flyDrone() {
 }
 
 // Removes green AP square on grid & clears array
-function clearAPs() {
-    APs.forEach(element => {
+function clearAPs(oldAPs) {
+    oldAPs.forEach(element => {
         squareID = "#square-" + findSquareID(element.x, element.y);
         d3.select(squareID).dispatch('contextmenu');                // Simulate right-clicking each AP (which resets square)
     });
-    APs = [];
+    oldAPs = [];
 }
 
 function findClosestPathCoord(APx, APy, pathCoords) {
-    var min = 999;
+    var min = 9999;
     var closestIndex = 0;
     pathCoords.forEach(function(element, i) {
-        d = euclideanDistance(APx, APy, element.x, element.y);
+        d = euclideanDistance(APx, APy, element[0], element[1]);
+        //console.log("APx: " + APx + " APy: " + APy + " path.x: " + element[0] + " path.y: " + element[1]);
         if (d < min) {
             min = d;
             closestIndex = i;
         }
     });
-
     return [pathCoords[closestIndex][0], pathCoords[closestIndex][1], closestIndex];
 }
 
 function animateAPs() {
-    var jumpSize = Math.floor(findPathLength(pathCoords) / APSpeed); // How far each AP should jump in list of path coordinates for new location
-    var newAPs = APs;
-    var adjusted = false;
+    console.log(pathCoords);
+    var resolutionConstant = 2;
+    var jumpSize = Math.floor(findPathLength(pathCoords) / (APSpeed * resolutionConstant)); // How far each AP should jump in list of path coordinates for new location
+    APToggled = true;
 
-    if (!adjusted) {                                                // Find closest point on path for each AP & put them there (once)
+    //console.log("Jump size: " + jumpSize + " Path length: " + findPathLength(pathCoords));
+
+    if (adjustedAP == 0) {                                                // Find closest point on path for each AP & put them there (once)
+        newAPs = APs.slice();
+        console.log(newAPs);
         newAPs.forEach(ap => {                                      // Also determine where AP begins on each path (pathIndex)   
             var newStartingCoords = findClosestPathCoord(ap.x, ap.y, pathCoords);
             ap.x = newStartingCoords[0];
             ap.y = newStartingCoords[1];
             ap.pathIndex = newStartingCoords[2];
+            console.log("AP" + ap.AP_id + " pathindex: " + ap.pathIndex + " will move to " + ap.x + "," + ap.y);
             squareID = "#square-" + findSquareID(ap.x, ap.y);
+            console.log("clicking " + squareID);
             d3.select(squareID).dispatch('click');
         });
-        adjusted = true;
+        clearAPs(APs);
+        adjustedAP = 1;
     }
 
+    if (newAPs.length === 0) 
+        newAPs = tempAPs.slice();
+
+    console.log(newAPs);
     newAPs.forEach(ap => {
-        ap.x = pathCoords[ap.pathIndex + jumpSize][0];
-        ap.y = pathCoords[ap.pathIndex + jumpSize][1];
-        console.log("New ap location: " + ap.x + " , " + ap.y);
-        squareID = "#square-" + findSquareID(ap.x, ap.y);
+        var nextPathIndex = (ap.pathIndex + jumpSize);
+        //if (nextPathIndex > pathCoords.length)
+            //nextPathIndex = nextPathIndex % pathCoords.length;
+
+        ap.x = pathCoords[nextPathIndex][0];
+        ap.y = pathCoords[nextPathIndex][1];
+        ap.pathIndex = nextPathIndex;
+
+        console.log("New AP" + AP_id + " location: " + ap.x + " , " + ap.y);
+        squareID = "#square-" + findSquareID(ap.x, Math.floor(ap.y));
+        console.log("clicking square" + squareID);
         d3.select(squareID).dispatch('click');
     });
-    //clearAPs();
+    var tempAPs = newAPs.slice();
+
+    //clearAPs(newAPs);
 }
 
 // Drone movement 
@@ -593,6 +618,7 @@ function drawPath() {
 
             if (dx * dx + dy * dy > 100)
                 d.push([x0 = x1, y0 = y1]);
+                
             else 
                 d[d.length - 1] = [x1, y1];
                 active.attr("d", line);
@@ -710,7 +736,7 @@ function saveLayout() {
     else if (this.id == "saveWP") {
         var WPJSON = JSON.stringify(WPs);
         saveContent.push(WPJSON);
-        saveName = "Waypoint_layout[" + dimensionality + "]-" + gaussianRandom(0, 1000).toString() + ".txt";
+        saveName = "WP_layout[" + dimensionality + "]-" + gaussianRandom(0, 1000).toString() + ".txt";
     }
 
     var gridData = saveContent;
@@ -745,11 +771,13 @@ function loadLayout() {
 
 // Calculates length of drawn path in meters
 function findPathLength(pathCoords) {
-    var length = 0;
+    var length = 0;                                     // Total path length
     for (var pc = 0; pc < pathCoords.length-1; pc++) {
-        length += Math.pow(
-                  Math.pow(pixelToMeters(pathCoords[pc][0]) - pixelToMeters(Math.floor(pathCoords[pc+1][0])), 2) +  
-                  Math.pow(pixelToMeters(pathCoords[pc][1]) - pixelToMeters(Math.floor(pathCoords[pc+1][1])), 2), 0.5);
+        // x1, y1, x2, y2
+        length += euclideanDistance(pixelToMeters(pathCoords[pc][0]),
+                                    pixelToMeters(Math.floor(pathCoords[pc][1])),
+                                    pixelToMeters(Math.floor(pathCoords[pc+1][0])),
+                                    pixelToMeters(Math.floor(pathCoords[pc+1][1])));
     }
     return length;
 }
