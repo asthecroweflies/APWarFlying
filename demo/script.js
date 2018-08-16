@@ -1,7 +1,4 @@
 //TODO: 
-//      Add lines between WP
-//      load ap's from file, find model for drone path & ap order
-//      roomba movements & AP movements
 //      Fix initial drone movement (or at least prevent probing until "arrived" at first AP)
 //      Map feature: plot WP on all APs
 //     
@@ -10,9 +7,8 @@ var gridWidth, gridHeight, cellWidth, cellHeight;
 var APToggled = 0, DroneToggled = 0, gridToggled = 0, drawToggled = 0;
 var gridArray;
 var APs = [];
-var totalAPDistances = [];
-var apsLoaded = false;
-var wpsLoaded = false;
+var totalAPStrengths = [];
+var apsLoaded, wpsLoaded = false;
 
 var WPs = [];
 var pi = 3.1415926535897932384626433832795028841971693993751058209749445923078164;
@@ -34,8 +30,6 @@ var APSpeed = 0;
 var APTimer = 0;
 var newAPs = [];
 var adjustedAP = 0;
-
-droneImage.src = '/res/drone_nobg.png';
 
 window.onload = function() {
     gridWidth = document.getElementById("grid").offsetWidth;
@@ -258,7 +252,7 @@ function findPathLoss(d) {
     //
     // P(d) = P(d0) + 10*n*log10(d) + X
     
-    refLoss = 0;
+    refLoss = 15;
     pathLossExponent = 2.2;
     var tuningParameter = 4;
     signalNoise = Math.floor(gaussianRandom(0, 100) / tuningParameter); 
@@ -273,7 +267,7 @@ function pixelToMeters(d) {
 
 function flyDrone() {
     var droneImg = document.getElementById("droneImg");
-    totalAPDistances = [];
+    totalAPStrengths = [];
     droneImg.style.position = "absolute";               // Move drone to initial AP location
     droneImg.style.left = WPs[0].x + 'px';
     droneImg.style.top =  WPs[0].y + 'px';
@@ -310,7 +304,6 @@ function findClosestPathCoord(APx, APy, pathCoords) {
 }
 
 function animateAPs() {
-    console.log(pathCoords);
     var resolutionConstant = 2;
     var jumpSize = Math.floor(findPathLength(pathCoords) / (APSpeed * resolutionConstant)); // How far each AP should jump in list of path coordinates for new location
     APToggled = true;
@@ -319,8 +312,9 @@ function animateAPs() {
 
     if (adjustedAP == 0) {                                                // Find closest point on path for each AP & put them there (once)
         newAPs = APs.slice();
+        clearAPs(newAPs);
         console.log(newAPs);
-        newAPs.forEach(ap => {                                      // Also determine where AP begins on each path (pathIndex)   
+        newAPs.forEach(ap => {                                            // Also determine where AP begins on each path (pathIndex)   
             var newStartingCoords = findClosestPathCoord(ap.x, ap.y, pathCoords);
             ap.x = newStartingCoords[0];
             ap.y = newStartingCoords[1];
@@ -330,29 +324,35 @@ function animateAPs() {
             console.log("clicking " + squareID);
             d3.select(squareID).dispatch('click');
         });
-        clearAPs(APs);
+
+        //newAPs = [];
         adjustedAP = 1;
+    } else {
+        if (newAPs.length === 0) 
+        newAPs = APs.slice();
+        clearAPs(newAPs);
+        console.log(newAPs);
+        console.log(APs);
+        newAPs.forEach(ap => {
+            var nextPathIndex = (ap.pathIndex + jumpSize);
+            //if (nextPathIndex > pathCoords.length)
+                //nextPathIndex = nextPathIndex % pathCoords.length;
+
+            ap.x = pathCoords[nextPathIndex][0];
+            ap.y = pathCoords[nextPathIndex][1];
+            ap.pathIndex = nextPathIndex;
+
+            console.log("New AP" + AP_id + " location: " + ap.x + " , " + ap.y);
+            squareID = "#square-" + findSquareID(ap.x, Math.floor(ap.y));
+            console.log("clicking square" + squareID);
+            d3.select(squareID).dispatch('click');
+            newAPs = APs.slice();
+        });
+
+        //newAPs = [];
     }
 
-    if (newAPs.length === 0) 
-        newAPs = tempAPs.slice();
 
-    console.log(newAPs);
-    newAPs.forEach(ap => {
-        var nextPathIndex = (ap.pathIndex + jumpSize);
-        //if (nextPathIndex > pathCoords.length)
-            //nextPathIndex = nextPathIndex % pathCoords.length;
-
-        ap.x = pathCoords[nextPathIndex][0];
-        ap.y = pathCoords[nextPathIndex][1];
-        ap.pathIndex = nextPathIndex;
-
-        console.log("New AP" + AP_id + " location: " + ap.x + " , " + ap.y);
-        squareID = "#square-" + findSquareID(ap.x, Math.floor(ap.y));
-        console.log("clicking square" + squareID);
-        d3.select(squareID).dispatch('click');
-    });
-    var tempAPs = newAPs.slice();
 
     //clearAPs(newAPs);
 }
@@ -407,7 +407,7 @@ function animateDrone() {
             currentAPStrengths.push(0 - pathLoss);
             //console.log("Path Loss from AP" + ap + ": " + pathLoss.toFixed(5) + " @ " + pixelToMeters(distance) + "m");
         }
-        totalAPDistances.push(currentAPStrengths);
+        totalAPStrengths.push(currentAPStrengths);
         var droneLoc = [];                                                                            // Tuple location
         droneLoc.push(droneX + gaussianRandom(0, 50)); droneLoc.push(droneY + gaussianRandom(0, 50)); // Simulate probing location imprecision
         droneProbingLocations.push(droneLoc);
@@ -416,9 +416,9 @@ function animateDrone() {
             clearInterval(scanForAPs);
             clearInterval(APTimer);
             generateProbeLocations(droneProbingLocations);
-            plotDataPlotly(totalAPDistances);
+            plotDataPlotly(totalAPStrengths);
             document.getElementById("csvData").disabled = false;
-            //csvify(totalAPDistances);
+            //csvify(totalAPStrengths);
         }
         iterations++;
     }, probingInterval);
@@ -669,7 +669,7 @@ function csvify() {
     var lineArray = [];
     lineArray.push("data:text/csv;charset=utf-8");
     lineArray.push("null,SSID,RSS,Unit,Time,Batch");         /// 1st entry (null) not saved for some reason
-    transposedData = transpose(totalAPDistances);
+    transposedData = transpose(totalAPStrengths);
 
     transposedData.forEach(function (apArray, index1) {
         apArray.forEach(function (apData, index2) { 
@@ -852,15 +852,15 @@ function findOrder (APs) {
 }
 
 
-function plotDataPlotly(totalAPDistances) {
+function plotDataPlotly(totalAPStrengths) {
 
     $("path").css('dasharray','10,0');
 
     if (plotted)
         Plotly.purge('strengthChart');
 
-    transposedData = transpose(totalAPDistances);
-    //console.log(totalAPDistances);
+    transposedData = transpose(totalAPStrengths);
+    //console.log(totalAPStrengths);
     //console.log(transposedData);
     var data = [];
 
@@ -889,7 +889,7 @@ function plotDataPlotly(totalAPDistances) {
           ticklen: 4,
           tickwidth: 2,
           tickcolor: '#000',
-          range: [0, totalAPDistances.length],
+          range: [0, totalAPStrengths.length],
         },
         yaxis: {
           title: 'Signal Strength (dBm)',
@@ -903,7 +903,7 @@ function plotDataPlotly(totalAPDistances) {
       };
 
     Plotly.newPlot('strengthChart', data, layout);
-    findOrder(totalAPDistances);
+    findOrder(totalAPStrengths);
     plotted = true;
 }
 
