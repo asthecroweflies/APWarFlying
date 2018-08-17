@@ -284,6 +284,7 @@ function flyDrone() {
 function clearAPs(oldAPs) {
     oldAPs.forEach(element => {
         squareID = "#square-" + findSquareID(element.x, element.y);
+        //console.log("right-clicking " + squareID);
         d3.select(squareID).dispatch('contextmenu');                // Simulate right-clicking each AP (which resets square)
     });
     oldAPs = [];
@@ -304,36 +305,53 @@ function findClosestPathCoord(APx, APy, pathCoords) {
 }
 
 function animateAPs() {
-    var resolutionConstant = 2;
+    var resolutionConstant = 1;
     var jumpSize = Math.floor(findPathLength(pathCoords) / (APSpeed * resolutionConstant)); // How far each AP should jump in list of path coordinates for new location
     APToggled = true;
-
-    //console.log("Jump size: " + jumpSize + " Path length: " + findPathLength(pathCoords));
+    var tempAPs = [];
+    console.log("Jump size: " + jumpSize + " Path length: " + findPathLength(pathCoords));
 
     if (adjustedAP == 0) {                                                // Find closest point on path for each AP & put them there (once)
-        newAPs = APs.slice();
+
+        newAPs = $.map(APs, function(obj) {
+            return $.extend(true, {}, obj);
+        });
+        tempAPs = $.map(APs, function(obj) {
+            return $.extend(true, {}, obj);
+        });
         clearAPs(newAPs);
-        console.log(newAPs);
-        newAPs.forEach(ap => {                                            // Also determine where AP begins on each path (pathIndex)   
+        APs = $.map(tempAPs, function(obj) {
+            return $.extend(true, {}, obj);
+        });
+
+        APs.forEach(ap => {                                            // Also determine where AP begins on each path (pathIndex)   
             var newStartingCoords = findClosestPathCoord(ap.x, ap.y, pathCoords);
             ap.x = newStartingCoords[0];
             ap.y = newStartingCoords[1];
             ap.pathIndex = newStartingCoords[2];
-            console.log("AP" + ap.AP_id + " pathindex: " + ap.pathIndex + " will move to " + ap.x + "," + ap.y);
             squareID = "#square-" + findSquareID(ap.x, ap.y);
-            console.log("clicking " + squareID);
+            console.log("AP" + ap.AP_id + " will move to " + squareID);
             d3.select(squareID).dispatch('click');
         });
 
         //newAPs = [];
         adjustedAP = 1;
     } else {
-        if (newAPs.length === 0) 
-        newAPs = APs.slice();
+        newAPs = $.map(APs, function(obj) {
+            return $.extend(true, {}, obj);
+        });
+        tempAPs = $.map(APs, function(obj) {
+            return $.extend(true, {}, obj);
+        });
         clearAPs(newAPs);
-        console.log(newAPs);
-        console.log(APs);
-        newAPs.forEach(ap => {
+        APs = $.map(tempAPs, function(obj) {
+            return $.extend(true, {}, obj);
+        });
+        //console.log(newAPs);
+        
+
+        //console.log(new)
+        APs.forEach(ap => {
             var nextPathIndex = (ap.pathIndex + jumpSize);
             //if (nextPathIndex > pathCoords.length)
                 //nextPathIndex = nextPathIndex % pathCoords.length;
@@ -342,11 +360,10 @@ function animateAPs() {
             ap.y = pathCoords[nextPathIndex][1];
             ap.pathIndex = nextPathIndex;
 
-            console.log("New AP" + AP_id + " location: " + ap.x + " , " + ap.y);
+            //console.log("New AP" + AP_id + " location: " + ap.x + " , " + ap.y);
             squareID = "#square-" + findSquareID(ap.x, Math.floor(ap.y));
-            console.log("clicking square" + squareID);
+            //console.log("clicking square" + squareID);
             d3.select(squareID).dispatch('click');
-            newAPs = APs.slice();
         });
 
         //newAPs = [];
